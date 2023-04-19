@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "pHrKm+xh1MsQK7fjFbM3QjP66u0EZXndlwu3w/tpUfg=",
+  "Source": "App.EnglishBuddy.API",
+  "BasePath": "_content/App.EnglishBuddy.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
