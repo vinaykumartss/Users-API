@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "utOG48O2uychcRiBfJu4y3A6eEfMiBzMFvmk4Es8twhyQW3NQ85iXt8KO5AFDZXiO2z/6thKGlU7sfq1O4fIXA==",
+  "dgSpecHash": "z/CkfVzqqnqjyFLAr5u/6Om2pZbdISTedLZtBKrE6ADCnc3iLPPT0WV+yaP86a2GCVgOcIdXK5jun3q5vQrfPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\App.EnglishBuddy.API.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "C:\\Users\\Vinay\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Vinay\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\npgsql\\7.0.2\\npgsql.7.0.2.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.3\\npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.2\\sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",

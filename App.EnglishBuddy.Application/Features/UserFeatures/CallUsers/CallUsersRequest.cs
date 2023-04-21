@@ -1,5 +1,4 @@
-﻿using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
-using MediatR;
+﻿using MediatR;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.CallUsers
 {

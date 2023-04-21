@@ -29,12 +29,6 @@ namespace App.EnglishBuddy.Domain.Entities
         public BigInteger? QuickBloxId { get; set; }
 
 
-        [Column("otp")]
-        public int? Otp { get; set; }
-
-
-        [Column("otp_generated")]
-        public int? OtpGenerated { get; set; }
 
 
 

@@ -1,5 +1,4 @@
-﻿using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 

@@ -1,5 +1,4 @@
-﻿using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
-using MediatR;
+﻿using MediatR;
 using System.Numerics;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.CreateUser
@@ -16,8 +15,6 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.CreateUser
 
         public BigInteger? QuickBloxId { get; set; }
 
-        public int? Otp { get; set; }
-
-        public int? OtpGenerated { get; set; }
+        
     }
 }

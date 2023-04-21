@@ -13,7 +13,5 @@ public interface IBaseRepository<T> where T : BaseEntity
     Task<T> GetById(Guid id, CancellationToken cancellationToken);
     Task<List<T>> GetAll(CancellationToken cancellationToken);
     Task<List<T>> FindByCondition(Expression<Func<T, bool>> expression, CancellationToken cancellationToken);
-
-
     Task<T> FindByUserId(Expression<Func<T, bool>> expression, CancellationToken cancellationToken);
 }

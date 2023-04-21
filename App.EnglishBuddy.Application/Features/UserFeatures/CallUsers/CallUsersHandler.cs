@@ -1,6 +1,4 @@
-﻿using App.EnglishBuddy.Application.Common.AppMessage;
-using App.EnglishBuddy.Application.Common.Exceptions;
-using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;

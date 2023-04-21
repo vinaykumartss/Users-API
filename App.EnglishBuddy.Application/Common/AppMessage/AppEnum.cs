@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace App.EnglishBuddy.Application.Common.AppMessage
 {
-    internal class AppEnum
-    {
-    }
+ 
+        enum MethodType
+        {
+            Get,
+            Post,
+            Put,
+            Delete
+        }
+    
 }

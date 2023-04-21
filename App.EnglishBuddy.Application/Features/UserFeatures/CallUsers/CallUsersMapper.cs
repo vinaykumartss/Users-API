@@ -1,6 +1,5 @@
 ﻿using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
-using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 

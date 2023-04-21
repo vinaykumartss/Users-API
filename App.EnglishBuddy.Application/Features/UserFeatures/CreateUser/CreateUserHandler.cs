@@ -17,14 +17,23 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
         _userRepository = userRepository;
         _mapper = mapper;
     }
-    
+
     public async Task<CreateUserResponse> Handle(CreateUserRequest request, CancellationToken cancellationToken)
     {
-       
+        CreateUserResponse response = new CreateUserResponse();
+        try
+        {
             var user = _mapper.Map<Users>(request);
             _userRepository.Create(user);
             await _unitOfWork.Save(cancellationToken);
-            return _mapper.Map<CreateUserResponse>(user);
-       
+            response.IsSuccess = true;
+            response.Id = user.Id;
+        }
+        catch (Exception)
+        {
+            response.IsSuccess = false;
+            throw;
+        }
+        return response;
     }
 }
