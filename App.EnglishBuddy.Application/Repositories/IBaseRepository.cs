@@ -2,9 +2,7 @@
 
 using App.EnglishBuddy.Domain.Common;
 using System.Linq.Expressions;
-
 namespace App.EnglishBuddy.Application.Repositories;
-
 public interface IBaseRepository<T> where T : BaseEntity
 {
     void Create(T entity);

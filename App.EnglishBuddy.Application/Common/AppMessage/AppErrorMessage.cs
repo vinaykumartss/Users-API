@@ -9,5 +9,6 @@ namespace App.EnglishBuddy.Application.Common.AppMessage
     public class AppErrorMessage
     {
         public static string NoRecord = "No Record Found";
+        public static string OtpInvalid = "Otp is invalid";
     }
 }

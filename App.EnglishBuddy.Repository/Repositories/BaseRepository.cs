@@ -2,7 +2,6 @@
 using App.EnglishBuddy.Domain.Common;
 using App.EnglishBuddy.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace App.EnglishBuddy.Infrastructure.Repositories;

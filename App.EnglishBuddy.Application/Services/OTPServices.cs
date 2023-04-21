@@ -28,7 +28,7 @@ namespace App.EnglishBuddy.Application.Services
             string otp = GenerateOtp();
             string otpUrls = string.Format(AppUrls.MessageAPI, mobileNumber, otp);
             string message = await Utility.CallAPIsAsync(otpUrls, MethodType.Get.ToString());
-            return message;
+            return otp;
         }
     }
 }

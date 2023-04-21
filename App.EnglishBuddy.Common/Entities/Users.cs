@@ -14,7 +14,10 @@ namespace App.EnglishBuddy.Domain.Entities
     [Table("users")]
     public class Users: BaseEntity
     {
-       
+        //public Users() {
+        //    Otps = new HashSet<Otp>();
+        //}
+
         [Column("email")]
         public string? Email { get; set; }
 
@@ -24,13 +27,10 @@ namespace App.EnglishBuddy.Domain.Entities
         [Column("name")]
         public string? Name { get; set; }
 
-
         [Column("quick_blox_id")]
-        public BigInteger? QuickBloxId { get; set; }
+        public long? QuickBloxId { get; set; }
 
-
-
-
+        //public ICollection<Otp>? Otps { get; set; }
 
     }
 }

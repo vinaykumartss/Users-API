@@ -19,7 +19,7 @@ namespace App.EnglishBuddy.API.Controllers
 
        
 
-        [HttpGet("sendotp/{mobile}")]
+        [HttpGet("{mobile}")]
         public async Task<ActionResult<OTPResponse>> Create(string mobile,
             CancellationToken cancellationToken)
         {
@@ -27,6 +27,14 @@ namespace App.EnglishBuddy.API.Controllers
             {
                 Mobile = mobile
             };
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpPost("verify")]
+        public async Task<ActionResult<OTPResponse>> Verify(OTPVerifyRequest request,
+            CancellationToken cancellationToken)
+        {
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }

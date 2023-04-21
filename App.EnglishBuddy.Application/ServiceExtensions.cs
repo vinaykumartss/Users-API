@@ -3,6 +3,7 @@ using App.EnglishBuddy.Application.Services;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System.Reflection;
 
 namespace App.EnglishBuddy.Application;
@@ -16,5 +17,7 @@ public static class ServiceExtensions
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         services.AddTransient<IOTPServices, OTPServices>();
+
+     
     }
 }

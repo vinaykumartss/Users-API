@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 
 namespace App.EnglishBuddy.Domain.Common
 {
-    
-
     public abstract class BaseEntity
     {
         [Key]

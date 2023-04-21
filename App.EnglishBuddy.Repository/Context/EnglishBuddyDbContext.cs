@@ -11,4 +11,6 @@ public class EnglishBuddyDbContext : DbContext
 
     public DbSet<Users> Users { get; set; }
     public DbSet<Calls> Calls { get; set; }
+
+    public DbSet<Otp> Otp { get; set; }
 }

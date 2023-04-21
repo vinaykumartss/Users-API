@@ -4,7 +4,7 @@ using App.EnglishBuddy.Infrastructure;
 using App.EnglishBuddy.Infrastructure.Context;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Logging.AddLog4Net(); 
 builder.Services.ConfigurePersistence(builder.Configuration);
 builder.Services.ConfigureApplication();
 

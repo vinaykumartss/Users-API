@@ -107,7 +107,6 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.AssemblyInfoInputs.cache
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.AssemblyInfo.cs
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.csproj.CoreCompileInputs.cache
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\staticwebassets\msbuild.App.EnglishBuddy.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\staticwebassets\msbuild.build.App.EnglishBuddy.API.props
@@ -124,3 +123,7 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.genruntimeconfig.cache
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\ref\App.EnglishBuddy.API.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\log4net.config
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\log4net.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.MvcApplicationPartsAssemblyInfo.cs
