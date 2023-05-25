@@ -126,4 +126,5 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\log4net.config
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\log4net.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.MvcApplicationPartsAssemblyInfo.cs

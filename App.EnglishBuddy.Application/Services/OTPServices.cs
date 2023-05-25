@@ -23,10 +23,10 @@ namespace App.EnglishBuddy.Application.Services
             return otp;
         }
 
-        public async Task<string> SendOTP(string? mobileNumber)
+        public async Task<string> SendOTP(string? mobileNumber, int code)
         {
             string otp = GenerateOtp();
-            string otpUrls = string.Format(AppUrls.MessageAPI, mobileNumber, otp);
+            string otpUrls = string.Format(AppUrls.MessageAPI, mobileNumber, code, otp);
             string message = await Utility.CallAPIsAsync(otpUrls, MethodType.Get.ToString());
             return otp;
         }

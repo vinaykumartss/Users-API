@@ -1,3 +1,4 @@
+using App.EnglishBuddy.Application.Features.UserFeatures.CallList;
 using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
@@ -33,5 +34,13 @@ namespace App.EnglishBuddy.API.Controllers
             return Ok(response);
         }
 
+
+        [HttpPost("list")]
+        public async Task<ActionResult<CallUsersResponse>> List(CallListRequest request,
+          CancellationToken cancellationToken)
+        {
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
     }
 }

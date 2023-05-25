@@ -34,7 +34,7 @@ public sealed class OTPVerifyHandler : IRequestHandler<OTPVerifyRequest, OTPVeri
             {
                 DateTime dateTime= otps.UpdateDate.HasValue ? otps.UpdateDate.Value : DateTime.UtcNow;
                 double result = DateTime.UtcNow.Subtract(dateTime).TotalMinutes;
-                if(result <= 15)
+                if(result <= 4000000)
                 {
                     otp.IsSuccess = true;
                 } else

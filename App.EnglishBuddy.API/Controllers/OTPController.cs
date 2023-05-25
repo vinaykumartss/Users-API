@@ -1,32 +1,23 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
-using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
-using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace App.EnglishBuddy.API.Controllers
 {
     [ApiController]
-    [Route("OTP")]
+    [Route("otp")]
     public class OTPController : ControllerBase
     {
         private readonly IMediator _mediator;
-
         public OTPController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-       
-
-        [HttpGet("{mobile}")]
-        public async Task<ActionResult<OTPResponse>> Create(string mobile,
+        [HttpPost("send")]
+        public async Task<ActionResult<OTPResponse>> Create(OTPRequest request,
             CancellationToken cancellationToken)
         {
-            OTPRequest request = new OTPRequest()
-            {
-                Mobile = mobile
-            };
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }

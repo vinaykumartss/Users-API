@@ -16,12 +16,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
-
 var serviceScope = app.Services.CreateScope();
-
-
-
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseErrorHandler();

@@ -15,10 +15,8 @@ public static class ErrorHandlerExtensions
             {
                 var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                 if (contextFeature == null) return;
-
                 context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
                 context.Response.ContentType = "application/json";
-
                 context.Response.StatusCode = contextFeature.Error switch
                 {
                     BadRequestException => (int) HttpStatusCode.BadRequest,
@@ -32,7 +30,6 @@ public static class ErrorHandlerExtensions
                     statusCode = context.Response.StatusCode,
                     message = contextFeature.Error.GetBaseException().Message
                 };
-
                 await context.Response.WriteAsync(JsonSerializer.Serialize(errorResponse));
             });
         });

@@ -34,7 +34,7 @@ public sealed class OTPHandler : IRequestHandler<OTPRequest, OTPResponse>
         OTPResponse otp = new OTPResponse();
         try
         {
-            string otpResponse = "123";// await _iOTPServices.SendOTP(request.Mobile);
+            string otpResponse = await _iOTPServices.SendOTP(request.Mobile, request.Code);
             Users user = await _iUserRepository.FindByUserId(x => x.Mobile == request.Mobile, cancellationToken);
 
             if (user != null)

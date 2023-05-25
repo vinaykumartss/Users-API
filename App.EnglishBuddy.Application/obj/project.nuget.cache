@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JGy3ZjHo/aXxkzp5uUR14dZgSRGsVEl1GPiFuxIZ2nh92Px3ap/uhHGdOD7XOeb4BtUoDx1yDHEq+homhRTFYA==",
+  "dgSpecHash": "EkCqFKeF6Zdbd/OU3XJ5vIOoXDSF29tE3NHADXeYuPVwEKWsx4DS0ujJlg3X7PsOeDbPxYEGQjZ2+1UkYMp8eg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj",
   "expectedPackageFiles": [
@@ -55,6 +55,7 @@
     "C:\\Users\\Vinay\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\Vinay\\.nuget\\packages\\system.linq.dynamic.core\\1.3.2\\system.linq.dynamic.core.1.3.2.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

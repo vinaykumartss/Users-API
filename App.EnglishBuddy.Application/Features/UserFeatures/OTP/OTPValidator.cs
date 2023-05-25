@@ -8,13 +8,13 @@ public sealed class OTPValidator : AbstractValidator<OTPRequest>
 {
     public OTPValidator()
     {
-        RuleFor(x => x.Mobile)
-            .NotEmpty()
-            .MinimumLength(10)
-            .WithMessage(AppValidationMessage.Mobile)
-            .MaximumLength(10)
-            .WithMessage(AppValidationMessage.Mobile)
-            .Matches(new Regex(@"^[0-9]{10}$")).WithMessage(AppValidationMessage.Mobile); ;
+        //RuleFor(x => x.Mobile)
+        //    .NotEmpty()
+        //    .MinimumLength(10)
+        //    .WithMessage(AppValidationMessage.Mobile)
+        //    .MaximumLength(10)
+        //    .WithMessage(AppValidationMessage.Mobile)
+        //    .Matches(new Regex(@"^[0-9]{10}$")).WithMessage(AppValidationMessage.Mobile); 
 
     }
 }

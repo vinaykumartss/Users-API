@@ -23,7 +23,7 @@ namespace App.EnglishBuddy.API.Controllers
             return Ok(response);
         }
 
-        [HttpPost("User")]
+        [HttpPost("create")]
         public async Task<ActionResult<CreateUserResponse>> Create(CreateUserRequest request,
             CancellationToken cancellationToken)
         {
