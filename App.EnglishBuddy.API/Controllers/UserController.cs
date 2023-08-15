@@ -1,5 +1,6 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
+using App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,6 +28,18 @@ namespace App.EnglishBuddy.API.Controllers
         public async Task<ActionResult<CreateUserResponse>> Create(CreateUserRequest request,
             CancellationToken cancellationToken)
         {
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CreateUserResponse>> Get(Guid id,
+            CancellationToken cancellationToken)
+        {
+            GetUserRequest request = new GetUserRequest()
+            {
+                Id = id
+            };
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }

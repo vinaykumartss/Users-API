@@ -127,3 +127,10 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Releas
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\log4net.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\cashfree-pg-sdk-dotnet.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\JsonSubTypes.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\Polly.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\RestSharp.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\Sentry.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\System.Linq.Dynamic.Core.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\Sentry.Attributes.cs

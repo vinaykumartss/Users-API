@@ -13,3 +13,4 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\ob
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Release\net6.0\refint\App.EnglishBuddy.Application.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Release\net6.0\App.EnglishBuddy.Application.pdb
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Release\net6.0\ref\App.EnglishBuddy.Application.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Release\net6.0\Sentry.Attributes.cs

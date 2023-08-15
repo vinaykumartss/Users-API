@@ -18,4 +18,7 @@ public class EnglishBuddyDbContext : DbContext
     public DbSet<Ratings> Ratings { get; set; }
     public DbSet<TotalRatings> TotalRatings { get; set; }
 
+    public DbSet<Meetings> Meetings { get; set; }
+
+    public DbSet<RandomCalls> RandomCalls { get; set; }
 }

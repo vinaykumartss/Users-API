@@ -4,6 +4,7 @@ using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
+using Sentry;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.OTP;
 
@@ -37,6 +38,14 @@ public sealed class OTPVerifyHandler : IRequestHandler<OTPVerifyRequest, OTPVeri
                 if(result <= 4000000)
                 {
                     otp.IsSuccess = true;
+                    otp.Mobile = request.Mobile;
+                    otp.UserId = otps.UserId;
+                    Users userInfo = await _iUserRepository.FindByUserId(x => x.Id == otps.UserId, cancellationToken);
+                    if (userInfo != null)
+                    {
+                        otp.EmailId = userInfo.Email;
+                        otp.FullName = $"{userInfo.FirstName} {userInfo.LastName}";
+                    }
                 } else
                 {
                     throw new Exception(AppErrorMessage.OtpInvalid);

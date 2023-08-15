@@ -10,6 +10,7 @@ namespace App.EnglishBuddy.Application.Common.AppMessage
     {
         #region User
         public const string Mobile = "Please enter valid mobile number";
+        public const string UserIdEmptyMessage = "UserId can not be blank";
         #endregion
     }
 }
