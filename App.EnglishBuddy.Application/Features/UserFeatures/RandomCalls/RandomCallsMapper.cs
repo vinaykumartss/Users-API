@@ -7,7 +7,7 @@ public sealed class RandomCallsMapper : Profile
 {
     public RandomCallsMapper()
     {
-        CreateMap<RandomCallsRequest, App.EnglishBuddy.Domain.Entities.RandomCalls>();
+        CreateMap<RandomCallsRequest, App.EnglishBuddy.Domain.Entities.RandomUsers>();
         CreateMap<RandomCallsRequest, RandomCallsResponse>();
     }
 }

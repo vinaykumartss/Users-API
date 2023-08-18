@@ -20,5 +20,8 @@ public class EnglishBuddyDbContext : DbContext
 
     public DbSet<Meetings> Meetings { get; set; }
 
-    public DbSet<RandomCalls> RandomCalls { get; set; }
+    public DbSet<RandomUsers> RandomUsers { get; set; }
+
+    public DbSet<MeetingIds> MeetingIds { get; set; }
+    
 }

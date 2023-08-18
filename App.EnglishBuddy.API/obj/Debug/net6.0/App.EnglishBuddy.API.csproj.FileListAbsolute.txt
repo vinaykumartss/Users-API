@@ -1,3 +1,4 @@
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\log4net.config
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\appsettings.json
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\App.EnglishBuddy.API.exe
@@ -9,8 +10,11 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\cashfree-pg-sdk-dotnet.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\JsonSubTypes.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\log4net.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\MediatR.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\MediatR.Contracts.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
@@ -30,6 +34,7 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
@@ -43,8 +48,12 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Npgsql.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Polly.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\RestSharp.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Sentry.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\SQLitePCLRaw.core.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\SQLitePCLRaw.provider.e_sqlite3.dll
@@ -54,6 +63,7 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\System.Memory.Data.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\System.Runtime.Caching.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
@@ -104,9 +114,11 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\App.EnglishBuddy.Domain.pdb
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.csproj.AssemblyReference.cache
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\Sentry.Attributes.cs
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.AssemblyInfoInputs.cache
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.AssemblyInfo.cs
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.csproj.CoreCompileInputs.cache
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\staticwebassets\msbuild.App.EnglishBuddy.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\staticwebassets\msbuild.build.App.EnglishBuddy.API.props
@@ -122,15 +134,3 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.pdb
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.genruntimeconfig.cache
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\ref\App.EnglishBuddy.API.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Newtonsoft.Json.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\log4net.config
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\log4net.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\App.EnglishBuddy.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\cashfree-pg-sdk-dotnet.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\JsonSubTypes.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Polly.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\RestSharp.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Debug\net6.0\Sentry.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Debug\net6.0\Sentry.Attributes.cs

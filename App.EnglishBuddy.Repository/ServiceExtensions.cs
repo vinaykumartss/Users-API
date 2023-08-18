@@ -18,7 +18,8 @@ public static class ServiceExtensions
         services.AddScoped<ICallInfoRepository, CallsInfoRepository>();
         services.AddScoped<IRatingsRepository, RatingsRepository>();
         services.AddScoped<ITotalRatingsRepository, TotalRatingsRepository>();
-        services.AddScoped<IRandomCallsRepository, RandomCallsRepository>();
+        services.AddScoped<IRandomUsersRepository, RandomUsersRepository>();
         services.AddScoped<IMeetingsRepository, MeetingsRepository>();
+        services.AddScoped<IMeetingIdsRepository, MeetingIdsRepository>();
     }
 }
