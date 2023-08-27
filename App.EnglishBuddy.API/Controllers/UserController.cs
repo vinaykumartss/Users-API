@@ -1,6 +1,7 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
+using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -41,6 +42,15 @@ namespace App.EnglishBuddy.API.Controllers
                 Id = id
             };
             var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpPost("/upload/{userId}")]
+        public async Task<ActionResult<CreateUserResponse>> Upload(UsersImagesRequest file, Guid userId,
+            CancellationToken cancellationToken)
+        {
+           
+            var response = await _mediator.Send(file, cancellationToken);
             return Ok(response);
         }
     }

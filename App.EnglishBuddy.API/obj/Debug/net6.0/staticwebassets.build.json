@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "pHrKm+xh1MsQK7fjFbM3QjP66u0EZXndlwu3w/tpUfg=",
+  "Hash": "TeTFU2gFqINf9RmvCdEXSxhFKqVT4F6fPBmdy59LzPI=",
   "Source": "App.EnglishBuddy.API",
   "BasePath": "_content/App.EnglishBuddy.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "App.EnglishBuddy.API\\wwwroot",
+      "Source": "App.EnglishBuddy.API",
+      "ContentRoot": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\",
+      "BasePath": "_content/App.EnglishBuddy.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\3fa85f64-5717-4562-b3fc-2c963f66afa6.jpeg",
+      "SourceId": "App.EnglishBuddy.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\",
+      "BasePath": "_content/App.EnglishBuddy.API",
+      "RelativePath": "user_images/3fa85f64-5717-4562-b3fc-2c963f66afa6.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user_images\\3fa85f64-5717-4562-b3fc-2c963f66afa6.jpeg"
+    }
+  ]
 }

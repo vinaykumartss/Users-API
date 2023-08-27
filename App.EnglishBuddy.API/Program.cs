@@ -1,7 +1,6 @@
 using App.EnglishBuddy.API.Extensions;
 using App.EnglishBuddy.Application;
 using App.EnglishBuddy.Infrastructure;
-using App.EnglishBuddy.Infrastructure.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddLog4Net(); 

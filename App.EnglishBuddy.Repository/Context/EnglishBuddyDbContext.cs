@@ -11,17 +11,12 @@ public class EnglishBuddyDbContext : DbContext
 
     public DbSet<Users> Users { get; set; }
     public DbSet<Calls> Calls { get; set; }
-
     public DbSet<Otp> Otp { get; set; }
     public DbSet<CallInfo> CallInfo { get; set; }
-
     public DbSet<Ratings> Ratings { get; set; }
     public DbSet<TotalRatings> TotalRatings { get; set; }
-
     public DbSet<Meetings> Meetings { get; set; }
-
     public DbSet<RandomUsers> RandomUsers { get; set; }
-
     public DbSet<MeetingIds> MeetingIds { get; set; }
-    
+    public DbSet<ContactUs> ContactUs { get; set; }
 }
