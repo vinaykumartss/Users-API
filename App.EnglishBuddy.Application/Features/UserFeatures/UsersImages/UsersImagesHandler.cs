@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.SqlServer.Server;
 using Microsoft.VisualBasic.FileIO;
 using RestSharp;
+using Sentry;
 using System.Security.Cryptography.X509Certificates;
 
 
@@ -16,29 +17,23 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
 public sealed class UsersImagesHandler : IRequestHandler<UsersImagesRequest, UsersImagesResponse>
 {
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IRandomUsersRepository _iRandomCallsRepository;
-    private readonly IMeetingIdsRepository _iIMeetingIdsRepository;
-
-    private readonly IUserRepository _iUserRepository;
+    private readonly IUsersImagesRepository _iUsersImagesRepository;
     private readonly IMapper _mapper;
 
     public UsersImagesHandler(IUnitOfWork unitOfWork,
-        IRandomUsersRepository iRandomCallsRepository,
-        IUserRepository iUserRepository,
-        IMeetingIdsRepository iIMeetingIdsRepository,
+       IUsersImagesRepository iUsersImagesRepository,
         IMapper mapper
         )
     {
+        _iUsersImagesRepository = iUsersImagesRepository;
         _unitOfWork = unitOfWork;
-        _iRandomCallsRepository = iRandomCallsRepository;
-        _iUserRepository = iUserRepository;
         _mapper = mapper;
-        _iIMeetingIdsRepository = iIMeetingIdsRepository;
-
     }
 
     public async Task<UsersImagesResponse> Handle(UsersImagesRequest request, CancellationToken cancellationToken)
     {
+        var fileName = Path.GetFileName($"{Guid.NewGuid()}");
+
         UsersImagesResponse response = new UsersImagesResponse();
         try
         {
@@ -51,17 +46,35 @@ public sealed class UsersImagesHandler : IRequestHandler<UsersImagesRequest, Use
             if (request.File.Length > 0)
             {
                 byte[] imgByteArray = Convert.FromBase64String(request.File);
-
-
-                var fileName = Path.GetFileName($"{request.UserId}");
                 var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\user_images", fileName);
-                //using (var fileStream = new FileStream(filePath, FileMode.Create))
-                //{
-                //    await request.File.CopyToAsync(fileStream);
-                //}
-                var fileExtension = filePath + "." + "jpeg";
-                File.WriteAllBytes(fileExtension, imgByteArray);
+                var imageName = $"{filePath}.{request.FileType}";
+                File.WriteAllBytes(imageName, imgByteArray);
+               
+                response.ImagePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\user_images", fileName + "." + "jpeg");
+
+                Domain.Entities.UsersImages userImage = await _iUsersImagesRepository.FindByUserId(x => x.UserId == request.UserId, cancellationToken);
+                if (userImage == null)
+                {
+                    Domain.Entities.UsersImages usersImages = new Domain.Entities.UsersImages()
+                    {
+                        UserId = request.UserId,
+                        CreatedDate = DateTime.UtcNow,
+                        ImagePath = $"{fileName}.{request.FileType}"
+                    };
+                    _iUsersImagesRepository.Create(usersImages);
+                    await _unitOfWork.Save(cancellationToken);
+                }
+                else
+                {
+                    userImage.ImagePath = $"{fileName}.{request.FileType}";
+                    userImage.CreatedDate = DateTime.UtcNow;
+                    _iUsersImagesRepository.Update(userImage);
+                    await _unitOfWork.Save(cancellationToken);
+                }
+
                 response.IsSuccess = true;
+                response.UserId = request.UserId;
+                response.ImagePath = $"/app-images/{fileName}.{request.FileType}";
                 return response;
             }
         }

@@ -1,6 +1,7 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
+using App.EnglishBuddy.Application.Features.UserFeatures.GetUserImage;
 using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -50,6 +51,18 @@ namespace App.EnglishBuddy.API.Controllers
             CancellationToken cancellationToken)
         {
            
+            var response = await _mediator.Send(file, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpGet("/upload/{userId}")]
+        public async Task<ActionResult<CreateUserResponse>> GetImage( Guid userId,
+           CancellationToken cancellationToken)
+        {
+            GetUserImageRequest file = new GetUserImageRequest()
+            {
+                UserId = userId
+            };
             var response = await _mediator.Send(file, cancellationToken);
             return Ok(response);
         }

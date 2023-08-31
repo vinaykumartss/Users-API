@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace App.EnglishBuddy.Domain.Entities
 {
 
-    [Table("randomusers")]
+    [Table("users_images")]
     public class UsersImages : BaseEntity
     {
         [Column("user_id")]

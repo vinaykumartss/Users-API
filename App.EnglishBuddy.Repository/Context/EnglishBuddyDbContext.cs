@@ -19,4 +19,5 @@ public class EnglishBuddyDbContext : DbContext
     public DbSet<RandomUsers> RandomUsers { get; set; }
     public DbSet<MeetingIds> MeetingIds { get; set; }
     public DbSet<ContactUs> ContactUs { get; set; }
+    public DbSet<UsersImages> UsersImages { get; set; }
 }

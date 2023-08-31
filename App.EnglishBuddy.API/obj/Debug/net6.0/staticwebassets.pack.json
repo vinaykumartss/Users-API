@@ -1,8 +1,24 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\3fa85f64-5717-4562-b3fc-2c963f66afa6.jpeg",
-      "PackagePath": "staticwebassets\\user_images\\3fa85f64-5717-4562-b3fc-2c963f66afa6.jpeg"
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\3eca1322-e7d3-45dc-87d8-746e4fd595ae.jpeg",
+      "PackagePath": "staticwebassets\\3eca1322-e7d3-45dc-87d8-746e4fd595ae.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\6efe0a23-006b-42cf-8d5b-69f7800018ae.jpg",
+      "PackagePath": "staticwebassets\\user_images\\6efe0a23-006b-42cf-8d5b-69f7800018ae.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\a826d1f9-8130-428f-b551-43c1967c83ca.jpg",
+      "PackagePath": "staticwebassets\\user_images\\a826d1f9-8130-428f-b551-43c1967c83ca.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\f3b85977-28f5-409a-935d-37aab049f24c.jpeg",
+      "PackagePath": "staticwebassets\\user_images\\f3b85977-28f5-409a-935d-37aab049f24c.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\fe2f4a71-0c32-4891-8c9d-cc1578b5f134.jpg",
+      "PackagePath": "staticwebassets\\user_images\\fe2f4a71-0c32-4891-8c9d-cc1578b5f134.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.App.EnglishBuddy.API.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -10,8 +10,7 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.UsersImages
     {
         public string? File { get; set; }
         public string? FileType { get; set; }
-        public string? UserId { get; set; }
+        public Guid UserId { get; set; }
         
-       
     }
 }

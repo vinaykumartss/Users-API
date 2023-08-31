@@ -22,5 +22,6 @@ public static class ServiceExtensions
         services.AddScoped<IMeetingsRepository, MeetingsRepository>();
         services.AddScoped<IMeetingIdsRepository, MeetingIdsRepository>();
         services.AddScoped<IContactUsRepository, ContactUsRepository>();
+        services.AddScoped<IUsersImagesRepository, UsersImagesRepository>();
     }
 }

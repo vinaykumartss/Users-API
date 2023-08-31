@@ -1,6 +1,7 @@
 using App.EnglishBuddy.API.Extensions;
 using App.EnglishBuddy.Application;
 using App.EnglishBuddy.Infrastructure;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddLog4Net(); 
@@ -25,6 +26,15 @@ app.UseCors(builder =>
     .AllowAnyOrigin()
     .AllowAnyMethod()
     .AllowAnyHeader();
+});
+app.UseStaticFiles();
+
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+           Path.Combine(builder.Environment.ContentRootPath, "wwwroot/user_images")),
+    RequestPath = "/app-images"
 });
 
 app.MapControllers();
