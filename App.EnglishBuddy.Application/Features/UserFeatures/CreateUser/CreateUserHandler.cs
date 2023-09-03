@@ -1,4 +1,5 @@
-﻿using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
+﻿using App.EnglishBuddy.Application.Common.Exceptions;
+using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
@@ -26,27 +27,53 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
 
     public async Task<CreateUserResponse> Handle(CreateUserRequest request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Hi");
         CreateUserResponse response = new CreateUserResponse();
         try
         {
-            var user = _mapper.Map<Users>(request);
-            _userRepository.Create(user);
-            await _unitOfWork.Save(cancellationToken);
-
-            OTPRequest otpRequest = new OTPRequest()
+            Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Mobile == request.Mobile, cancellationToken);
+            if (users == null)
             {
-                Code = Convert.ToInt32(request.CountryCode)  ,
-                Mobile = request.Mobile
-            };
-            await _mediator.Send(otpRequest, cancellationToken);
-            response.IsSuccess = true;
-            response.Id = user.Id;
+                var user = _mapper.Map<Users>(request);
+                _userRepository.Create(user);
+                await _unitOfWork.Save(cancellationToken);
+                OTPRequest otpRequest = new OTPRequest()
+                {
+                    Mobile = request.Mobile
+                };
+                await _mediator.Send(otpRequest, cancellationToken);
+                response.IsSuccess = true;
+                response.Id = user.Id;
+            }
+            else
+            {
+                if (request.Id == null)
+                {
+                    throw new BadRequestException("User already exist, please try with other mobile number");
+                }
+                else
+                {
+                    users.CreatedDate = DateTime.UtcNow;
+                    users.UpdateDate = DateTime.UtcNow;
+                    users.FirstName = request.FirstName;
+                    users.LastName = request.LastName;
+                    users.StateId = request.StateId;
+                    users.CityId = request.CityId;
+                    _userRepository.Update(users);
+                    await _unitOfWork.Save(cancellationToken);
+                    response.IsSuccess = true;
+                }
+            }
         }
-        catch (Exception)
+        
+
+        catch (BadRequestException ex)
         {
-            response.IsSuccess = false;
             throw;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Something went wrong, please try again");
+
         }
         return response;
     }

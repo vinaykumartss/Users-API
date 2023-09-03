@@ -1,4 +1,5 @@
-﻿using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
+﻿using App.EnglishBuddy.Application.Common.Exceptions;
+using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Application.Services;
 using App.EnglishBuddy.Domain.Entities;
@@ -61,12 +62,19 @@ public sealed class OTPHandler : IRequestHandler<OTPRequest, OTPResponse>
                 }
                 await _unitOfWork.Save(cancellationToken);
 
+            }else
+            {
+                throw new BadRequestException("Mobile does not exist; please complete the registration.");
             }
+        }
+        catch (BadRequestException ex)
+        {
+            throw;
         }
         catch (Exception ex)
         {
+            throw new Exception("Something went wrong, please try again");
 
-            throw;
         }
         return otp;
     }
