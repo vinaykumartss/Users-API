@@ -7,9 +7,12 @@ public sealed record GetUserResponse
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
     public string? CountryCode { get; set; }
-    public string? Country { get; set; }
-    public string? CallingCode { get; set; }
-    public long? QuickBloxId { get; set; }
+    public string? CountryId { get; set; }
+    public string? StateId { get; set; }
+
+    public string? CityId { get; set; }
+    public string? MobilePrefix { get; set; }
+    public Guid? Id { get; set; }
 }
 
 

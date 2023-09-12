@@ -20,4 +20,6 @@ public class EnglishBuddyDbContext : DbContext
     public DbSet<MeetingIds> MeetingIds { get; set; }
     public DbSet<ContactUs> ContactUs { get; set; }
     public DbSet<UsersImages> UsersImages { get; set; }
+
+    public DbSet<MeetingUsers> MeetingUsers { get; set; }
 }

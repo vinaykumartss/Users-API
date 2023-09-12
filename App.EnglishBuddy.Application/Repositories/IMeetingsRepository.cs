@@ -3,7 +3,7 @@ using App.EnglishBuddy.Domain.Entities;
 
 namespace App.EnglishBuddy.Application.Repositories;
 
-public interface IMeetingsRepository : IBaseRepository<Meetings>
+public interface IMeetingsUsersRepository : IBaseRepository<MeetingUsers>
 {
     Task<List<SaveMeetingsResponse>> CallDetails(Guid id, CancellationToken cancellationToken);
 }

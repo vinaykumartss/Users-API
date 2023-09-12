@@ -11,7 +11,7 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.CreateUser
         public string? CountryId { get; set; }
         public string? StateId { get; set; }
         public string? CityId { get; set; }
-
+        public string? MobilePrefix { get; set; }
         public Guid? Id { get; set; }
     }
 }

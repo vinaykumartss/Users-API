@@ -34,7 +34,7 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
             if (users == null)
             {
                 var user = _mapper.Map<Users>(request);
-                _userRepository.Create(user);
+               _userRepository.Create(user);
                 await _unitOfWork.Save(cancellationToken);
                 OTPRequest otpRequest = new OTPRequest()
                 {

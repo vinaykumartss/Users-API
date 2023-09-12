@@ -7,7 +7,7 @@ public sealed class CreateUserValidator : AbstractValidator<CreateUserRequest>
 {
     public CreateUserValidator()
     {
-        RuleFor(x => x.Mobile).NotEmpty().MaximumLength(10).MaximumLength(10).WithMessage(AppValidationMessage.Mobile);
+       
        
     }
 }

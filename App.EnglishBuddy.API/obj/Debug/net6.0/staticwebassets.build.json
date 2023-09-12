@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rMqZymzpXxOisx4mvSxMjLCWXch6TpB6QS+JK++3v6Y=",
+  "Hash": "/o/LcGFtYY7l8RtidTHkCL8Slt/tvg6MSEQm3/cEU50=",
   "Source": "App.EnglishBuddy.API",
   "BasePath": "_content/App.EnglishBuddy.API",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\user_images\\a826d1f9-8130-428f-b551-43c1967c83ca.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\abac7e31-d48b-49fc-90c1-902119a89734.jpg",
+      "SourceId": "App.EnglishBuddy.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\",
+      "BasePath": "_content/App.EnglishBuddy.API",
+      "RelativePath": "user_images/abac7e31-d48b-49fc-90c1-902119a89734.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user_images\\abac7e31-d48b-49fc-90c1-902119a89734.jpg"
     },
     {
       "Identity": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\f3b85977-28f5-409a-935d-37aab049f24c.jpeg",
