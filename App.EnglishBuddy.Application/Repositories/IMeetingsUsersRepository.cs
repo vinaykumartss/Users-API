@@ -6,5 +6,5 @@ namespace App.EnglishBuddy.Application.Repositories;
 
 public interface IMeetingsRepository : IBaseRepository<Meetings>
 {
-    Task<List<GetAllMeetingsResponse>> CallDetails(Guid id, CancellationToken cancellationToken);
+    Task<List<GetAllMeetingsResponse>> CallDetails(CancellationToken cancellationToken);
 }

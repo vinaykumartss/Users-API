@@ -27,8 +27,8 @@ public sealed class GetAllMeetingsHandler : IRequestHandler<GetAllMeetingsReques
         List<GetAllMeetingsResponse> response = new List<GetAllMeetingsResponse>();
         try
         {
-            List<Meetings> listMeestings = await _iMeetingsRepository.GetAll(cancellationToken);
-            response = _mapper.Map<List<GetAllMeetingsResponse>>(listMeestings);
+            List<GetAllMeetingsResponse> listMeestings = await _iMeetingsRepository.CallDetails(cancellationToken);
+            return listMeestings;
         }
         catch (Exception ex)
         {
