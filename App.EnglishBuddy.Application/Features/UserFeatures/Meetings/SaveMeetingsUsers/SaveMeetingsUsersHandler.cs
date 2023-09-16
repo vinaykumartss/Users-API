@@ -2,6 +2,7 @@
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
+using Sentry;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetingsUsers;
 
@@ -24,10 +25,25 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
         SaveMeetingsUsersResponse response = new SaveMeetingsUsersResponse();
         try
         {
-            var user = _mapper.Map<MeetingUsers>(request);
-            _iMeetingsRepository.Create(user);
-            await _unitOfWork.Save(cancellationToken);
-            response.IsSuccess = true;
+            if (request.Isactive)
+            {
+                var user = _mapper.Map<MeetingUsers>(request);
+                _iMeetingsRepository.Create(user);
+                await _unitOfWork.Save(cancellationToken);
+                response.IsSuccess = true;
+            }
+            else
+            {
+                var meetings = await _iMeetingsRepository.FindByUserId(x => x.MeetingId == request.MeetingId, cancellationToken);
+                if(meetings != null)
+                {
+                    meetings.IsActive = false;
+                    _iMeetingsRepository.Update(meetings);
+                    await _unitOfWork.Save(cancellationToken);
+                    response.IsSuccess = true;
+                }
+            }
+
         }
         catch (Exception ex)
         {

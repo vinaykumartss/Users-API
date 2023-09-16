@@ -46,10 +46,14 @@ namespace App.EnglishBuddy.API.Controllers
             return Ok(response);
         }
 
-        [HttpGet("meetingusers")]
-        public async Task<ActionResult<SaveMeetingsResponse>> Get(GetMeetingsUsersRequest request,
+        [HttpGet("meetingusers/{meetingId}")]
+        public async Task<ActionResult<SaveMeetingsResponse>> Get(Guid meetingId,
             CancellationToken cancellationToken)
         {
+            GetMeetingsUsersRequest request = new GetMeetingsUsersRequest()
+            {
+                MeetingId = meetingId
+            };
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }

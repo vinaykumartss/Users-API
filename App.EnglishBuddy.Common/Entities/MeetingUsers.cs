@@ -12,7 +12,9 @@ namespace App.EnglishBuddy.Domain.Entities
         [Column("meeting_id")]
         public Guid MeetingId { get; set; }
 
-        [Column("ismeetingAdmin")]
+        [Column("ismeetingadmin")]
         public bool IsmeetingAdmin { get; set; }
+
+       
     }
 }

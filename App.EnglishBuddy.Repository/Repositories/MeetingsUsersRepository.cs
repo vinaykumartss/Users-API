@@ -1,4 +1,5 @@
-﻿using App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetings;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.GetAllMeetings;
+using App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetings;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using App.EnglishBuddy.Infrastructure.Context;
@@ -13,7 +14,7 @@ public class MeetingsUsersRepository : BaseRepository<MeetingUsers>, IMeetingsUs
         _context = context;
     }
 
-    public Task<List<SaveMeetingsResponse>> CallDetails(Guid id, CancellationToken cancellationToken)
+    public Task<List<GetAllMeetingsResponse>> CallDetails(Guid id, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

@@ -24,7 +24,7 @@ public sealed class GetMeetingsUsersHandler : IRequestHandler<GetMeetingsUsersRe
         GetMeetingsUsersResponse response = new GetMeetingsUsersResponse();
         try
         {
-            var isMeetingExist = await _iMeetingsRepository.FindByCondition(x => x.MeetingId == request.MeetingId, cancellationToken);
+            var isMeetingExist = await _iMeetingsRepository.FindByCondition(x => x.MeetingId == request.MeetingId && x.IsActive ==true, cancellationToken);
             if(isMeetingExist.Count>0)
             {
                 response.TotalUsers = isMeetingExist.Count;
