@@ -18,8 +18,10 @@ public class MeetingsRepository : BaseRepository<Meetings>, IMeetingsRepository
     {
         var result = await (from a in _context.Meetings
                             join b in _context.MeetingUsers on a.Id equals b.MeetingId
-                            select new GetAllMeetingsResponse { MeetingId = a.MeetingId, Subject = a.Subject, Name = a.Name } into x
+                            where a.IsActive == true
+                            select new GetAllMeetingsResponse { MeetingId = a.Id, Subject = a.Subject, Name = a.Name } into x
                             group x by new { x.MeetingId, x.Subject, x.Name } into g
+                         
                             select new GetAllMeetingsResponse
                             {
                                 MeetingId = g.Key.MeetingId,

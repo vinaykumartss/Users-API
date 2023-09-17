@@ -10,16 +10,18 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
-    private readonly IMeetingsUsersRepository _iMeetingsRepository;
+    private readonly IMeetingsRepository _iMeetingsRepository;
+    private readonly IMeetingsUsersRepository _iMeetingsUserRepository;
     public SaveMeetingsUsersHandler(IUnitOfWork unitOfWork,
-        IMapper mapper, IMeetingsUsersRepository iMeetingsRepository
+        IMapper mapper, IMeetingsRepository iMeetingsRepository,
+        IMeetingsUsersRepository iMeetingsUserRepository
        )
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _iMeetingsRepository = iMeetingsRepository;
+        _iMeetingsUserRepository = iMeetingsUserRepository;
     }
-
     public async Task<SaveMeetingsUsersResponse> Handle(SaveMeetingsUsersRequest request, CancellationToken cancellationToken)
     {
         SaveMeetingsUsersResponse response = new SaveMeetingsUsersResponse();
@@ -28,22 +30,36 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
             if (request.Isactive)
             {
                 var user = _mapper.Map<MeetingUsers>(request);
-                _iMeetingsRepository.Create(user);
+                user.UpdateDate = DateTime.UtcNow;
+                user.CreatedDate = DateTime.UtcNow;
+                _iMeetingsUserRepository.Create(user);
                 await _unitOfWork.Save(cancellationToken);
                 response.IsSuccess = true;
             }
             else
             {
-                var meetings = await _iMeetingsRepository.FindByUserId(x => x.MeetingId == request.MeetingId, cancellationToken);
-                if(meetings != null)
+                CancellationToken cancellation = new CancellationToken(false);
+                var meetings = await _iMeetingsUserRepository.FindByUserId(x => x.MeetingId == request.MeetingId, cancellation);
+                if (meetings != null)
                 {
                     meetings.IsActive = false;
-                    _iMeetingsRepository.Update(meetings);
-                    await _unitOfWork.Save(cancellationToken);
+                    meetings.UpdateDate = DateTime.UtcNow;
+                    meetings.CreatedDate = DateTime.UtcNow;
+                    _iMeetingsUserRepository.Update(meetings);
+                    await _unitOfWork.Save(cancellation);
                     response.IsSuccess = true;
                 }
+                var userMeeting = await _iMeetingsRepository.FindByUserId(x => x.Id == request.MeetingId, cancellation);
+                if (userMeeting != null && userMeeting.UserId == request.UserId)
+                {
+                    userMeeting.IsActive = false;
+                    userMeeting.UpdateDate = DateTime.UtcNow;
+                    userMeeting.CreatedDate = DateTime.UtcNow;
+                    userMeeting.StartDate = DateTime.UtcNow;
+                    _iMeetingsRepository.Update(userMeeting);
+                    await _unitOfWork.Save(cancellation);
+                }
             }
-
         }
         catch (Exception ex)
         {

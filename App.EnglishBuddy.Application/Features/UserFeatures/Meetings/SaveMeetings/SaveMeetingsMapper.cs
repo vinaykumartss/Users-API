@@ -9,6 +9,7 @@ public sealed class SaveMeetingsMapper : Profile
     public SaveMeetingsMapper()
     {
         CreateMap<SaveMeetingsRequest, Meetings>();
+        CreateMap<SaveMeetingsRequest, SaveMeetingsResponse>();
     }
        
 }
