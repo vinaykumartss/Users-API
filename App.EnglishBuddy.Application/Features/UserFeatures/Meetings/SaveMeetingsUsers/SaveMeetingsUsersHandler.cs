@@ -38,27 +38,27 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
             }
             else
             {
-                CancellationToken cancellation = new CancellationToken(false);
-                var meetings = await _iMeetingsUserRepository.FindByUserId(x => x.MeetingId == request.MeetingId, cancellation);
-                if (meetings != null)
-                {
-                    meetings.IsActive = false;
-                    meetings.UpdateDate = DateTime.UtcNow;
-                    meetings.CreatedDate = DateTime.UtcNow;
-                    _iMeetingsUserRepository.Update(meetings);
-                    await _unitOfWork.Save(cancellation);
-                    response.IsSuccess = true;
-                }
-                var userMeeting = await _iMeetingsRepository.FindByUserId(x => x.Id == request.MeetingId, cancellation);
-                if (userMeeting != null && userMeeting.UserId == request.UserId)
-                {
-                    userMeeting.IsActive = false;
-                    userMeeting.UpdateDate = DateTime.UtcNow;
-                    userMeeting.CreatedDate = DateTime.UtcNow;
-                    userMeeting.StartDate = DateTime.UtcNow;
-                    _iMeetingsRepository.Update(userMeeting);
-                    await _unitOfWork.Save(cancellation);
-                }
+                //CancellationToken cancellation = new CancellationToken(false);
+                //var meetings = await _iMeetingsUserRepository.FindByUserId(x => x.MeetingId == request.MeetingId, cancellation);
+                //if (meetings != null)
+                //{
+                //    meetings.IsActive = false;
+                //    meetings.UpdateDate = DateTime.UtcNow;
+                //    meetings.CreatedDate = DateTime.UtcNow;
+                //    _iMeetingsUserRepository.Update(meetings);
+                //    await _unitOfWork.Save(cancellation);
+                //    response.IsSuccess = true;
+                //}
+                //var userMeeting = await _iMeetingsRepository.FindByUserId(x => x.Id == request.MeetingId, cancellation);
+                //if (userMeeting != null && userMeeting.UserId == request.UserId)
+                //{
+                //    userMeeting.IsActive = false;
+                //    userMeeting.UpdateDate = DateTime.UtcNow;
+                //    userMeeting.CreatedDate = DateTime.UtcNow;
+                //    userMeeting.StartDate = DateTime.UtcNow;
+                //    _iMeetingsRepository.Update(userMeeting);
+                //    await _unitOfWork.Save(cancellation);
+                //}
             }
         }
         catch (Exception ex)

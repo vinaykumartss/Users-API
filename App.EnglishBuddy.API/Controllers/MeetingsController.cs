@@ -1,9 +1,7 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllMeetings;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetMeetingsUsers;
-using App.EnglishBuddy.Application.Features.UserFeatures.GetUserRating;
 using App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetings;
 using App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetingsUsers;
-using App.EnglishBuddy.Application.Features.UserFeatures.UserRating;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

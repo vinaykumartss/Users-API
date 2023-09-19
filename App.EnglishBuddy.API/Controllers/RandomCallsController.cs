@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace App.EnglishBuddy.API.Controllers
 {
     [ApiController]
-    [Route("calls")]
+    [Route("random")]
     public class RandomCallsController : ControllerBase
     {
         private readonly IMediator _mediator;
