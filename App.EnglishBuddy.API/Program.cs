@@ -36,6 +36,6 @@ app.UseStaticFiles(new StaticFileOptions
            Path.Combine(builder.Environment.ContentRootPath, "wwwroot/user_images")),
     RequestPath = "/app-images"
 });
-
+app.UseForwardedHeaders();
 app.MapControllers();
 app.Run();
