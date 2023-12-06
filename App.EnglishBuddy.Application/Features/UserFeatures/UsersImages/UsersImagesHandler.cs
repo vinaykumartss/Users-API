@@ -47,6 +47,7 @@ public sealed class UsersImagesHandler : IRequestHandler<UsersImagesRequest, Use
             {
                 byte[] imgByteArray = Convert.FromBase64String(request.File);
                 var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\user_images", fileName);
+                filePath = filePath.Replace("/", @"\");
                 var imageName = $"{filePath}.{request.FileType}";
                 File.WriteAllBytes(imageName, imgByteArray);
                

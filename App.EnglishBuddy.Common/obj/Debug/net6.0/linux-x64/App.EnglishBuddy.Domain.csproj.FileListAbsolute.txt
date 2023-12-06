@@ -1,0 +1,14 @@
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\bin\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.deps.json
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\bin\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.runtimeconfig.json
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\bin\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\bin\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.pdb
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.csproj.AssemblyReference.cache
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.AssemblyInfoInputs.cache
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.AssemblyInfo.cs
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\refint\App.EnglishBuddy.Domain.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.pdb
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.genruntimeconfig.cache
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Common\obj\Debug\net6.0\linux-x64\ref\App.EnglishBuddy.Domain.dll

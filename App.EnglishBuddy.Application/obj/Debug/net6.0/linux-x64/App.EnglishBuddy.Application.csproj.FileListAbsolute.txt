@@ -1,0 +1,16 @@
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\bin\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.deps.json
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\bin\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\bin\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.pdb
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\bin\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\bin\Debug\net6.0\linux-x64\App.EnglishBuddy.Domain.pdb
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.csproj.AssemblyReference.cache
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\Sentry.Attributes.cs
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.AssemblyInfoInputs.cache
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.AssemblyInfo.cs
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.csproj.CoreCompileInputs.cache
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.csproj.CopyComplete
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\refint\App.EnglishBuddy.Application.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\App.EnglishBuddy.Application.pdb
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.Application\obj\Debug\net6.0\linux-x64\ref\App.EnglishBuddy.Application.dll

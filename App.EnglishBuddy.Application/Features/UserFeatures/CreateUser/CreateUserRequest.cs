@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.CreateUser
 {
@@ -12,6 +13,10 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.CreateUser
         public string? StateId { get; set; }
         public string? CityId { get; set; }
         public string? MobilePrefix { get; set; }
+        public string? StateName { get; set; }
+
+     
+        public string? CityName { get; set; }
         public Guid? Id { get; set; }
     }
 }

@@ -5,6 +5,22 @@
       "PackagePath": "staticwebassets\\3eca1322-e7d3-45dc-87d8-746e4fd595ae.jpeg"
     },
     {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\ContactUs.html",
+      "PackagePath": "staticwebassets\\MailTempate\\ContactUs.html"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\1adc8d10-d98f-4467-a31c-f201b74b3c3c.jpg",
+      "PackagePath": "staticwebassets\\user_images\\1adc8d10-d98f-4467-a31c-f201b74b3c3c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\2d70eb20-a964-4e36-9a7c-e33daa9304b7.jpg",
+      "PackagePath": "staticwebassets\\user_images\\2d70eb20-a964-4e36-9a7c-e33daa9304b7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\42795ae2-4a65-4113-b9d3-4f8d96b13f80.jpg",
+      "PackagePath": "staticwebassets\\user_images\\42795ae2-4a65-4113-b9d3-4f8d96b13f80.jpg"
+    },
+    {
       "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\6efe0a23-006b-42cf-8d5b-69f7800018ae.jpg",
       "PackagePath": "staticwebassets\\user_images\\6efe0a23-006b-42cf-8d5b-69f7800018ae.jpg"
     },
@@ -17,8 +33,20 @@
       "PackagePath": "staticwebassets\\user_images\\abac7e31-d48b-49fc-90c1-902119a89734.jpg"
     },
     {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\efe1ebf6-a476-48d3-baf9-72ad609dba7f.jpg",
+      "PackagePath": "staticwebassets\\user_images\\efe1ebf6-a476-48d3-baf9-72ad609dba7f.jpg"
+    },
+    {
       "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\f3b85977-28f5-409a-935d-37aab049f24c.jpeg",
       "PackagePath": "staticwebassets\\user_images\\f3b85977-28f5-409a-935d-37aab049f24c.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\f498a1dc-0a23-47b9-8df6-04b3527760a4.jpg",
+      "PackagePath": "staticwebassets\\user_images\\f498a1dc-0a23-47b9-8df6-04b3527760a4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\fa32ad72-38f2-4549-b9eb-9ca4653e88e7.jpg",
+      "PackagePath": "staticwebassets\\user_images\\fa32ad72-38f2-4549-b9eb-9ca4653e88e7.jpg"
     },
     {
       "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\fe2f4a71-0c32-4891-8c9d-cc1578b5f134.jpg",

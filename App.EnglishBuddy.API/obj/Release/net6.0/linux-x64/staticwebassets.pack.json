@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\3eca1322-e7d3-45dc-87d8-746e4fd595ae.jpeg",
+      "PackagePath": "staticwebassets\\3eca1322-e7d3-45dc-87d8-746e4fd595ae.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\ContactUs.html",
+      "PackagePath": "staticwebassets\\MailTempate\\ContactUs.html"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\42795ae2-4a65-4113-b9d3-4f8d96b13f80.jpg",
+      "PackagePath": "staticwebassets\\user_images\\42795ae2-4a65-4113-b9d3-4f8d96b13f80.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\6efe0a23-006b-42cf-8d5b-69f7800018ae.jpg",
+      "PackagePath": "staticwebassets\\user_images\\6efe0a23-006b-42cf-8d5b-69f7800018ae.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\a826d1f9-8130-428f-b551-43c1967c83ca.jpg",
+      "PackagePath": "staticwebassets\\user_images\\a826d1f9-8130-428f-b551-43c1967c83ca.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\abac7e31-d48b-49fc-90c1-902119a89734.jpg",
+      "PackagePath": "staticwebassets\\user_images\\abac7e31-d48b-49fc-90c1-902119a89734.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\efe1ebf6-a476-48d3-baf9-72ad609dba7f.jpg",
+      "PackagePath": "staticwebassets\\user_images\\efe1ebf6-a476-48d3-baf9-72ad609dba7f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\f3b85977-28f5-409a-935d-37aab049f24c.jpeg",
+      "PackagePath": "staticwebassets\\user_images\\f3b85977-28f5-409a-935d-37aab049f24c.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\f498a1dc-0a23-47b9-8df6-04b3527760a4.jpg",
+      "PackagePath": "staticwebassets\\user_images\\f498a1dc-0a23-47b9-8df6-04b3527760a4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.API\\wwwroot\\user_images\\fe2f4a71-0c32-4891-8c9d-cc1578b5f134.jpg",
+      "PackagePath": "staticwebassets\\user_images\\fe2f4a71-0c32-4891-8c9d-cc1578b5f134.jpg"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\linux-x64\\staticwebassets\\msbuild.App.EnglishBuddy.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\linux-x64\\staticwebassets\\msbuild.build.App.EnglishBuddy.API.props",
+      "PackagePath": "build\\App.EnglishBuddy.API.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\linux-x64\\staticwebassets\\msbuild.buildMultiTargeting.App.EnglishBuddy.API.props",
+      "PackagePath": "buildMultiTargeting\\App.EnglishBuddy.API.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\linux-x64\\staticwebassets\\msbuild.buildTransitive.App.EnglishBuddy.API.props",
+      "PackagePath": "buildTransitive\\App.EnglishBuddy.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

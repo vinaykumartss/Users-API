@@ -1,10 +1,6 @@
-﻿using App.EnglishBuddy.Application.Features.UserFeatures.GetAllMeetings;
-using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
-using App.EnglishBuddy.Application.Repositories;
-using App.EnglishBuddy.Domain.Entities;
+﻿using App.EnglishBuddy.Application.Repositories;
 using AutoMapper;
 using MediatR;
-using Sentry;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.GetAllMeetings;
 

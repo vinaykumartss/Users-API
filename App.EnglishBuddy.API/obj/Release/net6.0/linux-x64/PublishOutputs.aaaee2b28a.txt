@@ -1,4 +1,5 @@
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\App.EnglishBuddy.API
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\log4net.config
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.Development.json
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.json
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\App.EnglishBuddy.API.dll
@@ -261,12 +262,10 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Releas
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Features.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.FileProviders.Composite.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.FileSystemGlobbing.dll
-C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Hosting.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Http.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
@@ -307,8 +306,11 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Releas
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Azure.Core.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Azure.Identity.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\cashfree-pg-sdk-dotnet.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\FluentValidation.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\JsonSubTypes.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\log4net.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\MediatR.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\MediatR.Contracts.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\MediatR.Extensions.Microsoft.DependencyInjection.dll
@@ -326,8 +328,11 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Releas
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Logging.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Options.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Extensions.Primitives.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Identity.Client.dll
@@ -341,8 +346,12 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Releas
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.OpenApi.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.SqlServer.Server.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Newtonsoft.Json.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Npgsql.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Polly.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\RestSharp.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\Sentry.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\SQLitePCLRaw.batteries_v2.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\SQLitePCLRaw.core.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\SQLitePCLRaw.provider.e_sqlite3.dll
@@ -352,6 +361,7 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Releas
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\System.Configuration.ConfigurationManager.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\System.Drawing.Common.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\System.Linq.Dynamic.Core.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\System.Memory.Data.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\System.Runtime.Caching.dll
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll

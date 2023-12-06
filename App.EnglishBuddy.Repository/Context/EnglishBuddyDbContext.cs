@@ -7,6 +7,8 @@ public class EnglishBuddyDbContext : DbContext
 {
     public EnglishBuddyDbContext(DbContextOptions<EnglishBuddyDbContext> options) : base(options)
     {
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
     }
 
     public DbSet<Users> Users { get; set; }

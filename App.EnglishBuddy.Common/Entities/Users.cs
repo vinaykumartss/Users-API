@@ -28,6 +28,14 @@ namespace App.EnglishBuddy.Domain.Entities
         [Column("cityid")]
         public string? CityId { get; set; }
 
+
+        [Column("state_name")]
+        public string? StateName { get; set; }
+
+        [Column("city_name")]
+        public string? CityName { get; set; }
+
+
         [Column("mobile_prefix")]
         public string? MobilePrefix { get; set; }
         

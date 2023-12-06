@@ -58,6 +58,14 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
                     users.LastName = request.LastName;
                     users.StateId = request.StateId;
                     users.CityId = request.CityId;
+                    if(request.CityName != null)
+                    {
+                        users.CityName = request.CityName;
+                    }
+                    if (request.StateName != null)
+                    {
+                        users.StateName = request.StateName;
+                    }
                     _userRepository.Update(users);
                     await _unitOfWork.Save(cancellationToken);
                     response.IsSuccess = true;

@@ -1,4 +1,5 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.CallList;
+using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using App.EnglishBuddy.Infrastructure.Context;
 
@@ -12,4 +13,8 @@ public class ContactUsRepository : BaseRepository<ContactUs>, IContactUsReposito
         _context = context;
     }
 
+    public Task<List<CallsDetailsResponse>> CallDetails(Guid id, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
 }

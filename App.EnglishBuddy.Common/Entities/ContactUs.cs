@@ -4,16 +4,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace App.EnglishBuddy.Domain.Entities
 {
 
-    [Table("contact_us")]
+    [Table("contactus")]
     public class ContactUs : BaseEntity
     {
-        [Column("user_id")]
-        public Guid UserId { get; set; }
+     
+        [Column("firstname")]
+        public string? FirstName { get; set; }
 
-        [Column("mobile_no")]
-        public string? MobileNo { get; set; }
+        [Column("lastname")]
+        public string? LastName { get; set; }
 
-        [Column("comments")]
-        public string? Comments { get; set; }
+        [Column("mobile")]
+        public string? Mobile { get; set; }
+
+
+        [Column("emailadress")]
+        public string? EmailAdress { get; set; }
+
+        [Column("question")]
+        public string? Question { get; set; }
+
     }
 }

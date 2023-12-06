@@ -34,7 +34,18 @@ public sealed class RandomCallsHandler : IRequestHandler<RandomCallsRequest, Ran
         RandomCallsResponse response = new RandomCallsResponse();
         try
         {
-            var isMeetingExist = await _iIMeetingIdsRepository.FindByCondition(x => x.Status == 1 || x.Status == 0, cancellationToken);
+
+            var isMeetingFind = await _iIMeetingIdsRepository.FindByUserId(x => x.Status == 2 & (x.FromUserId == request.UserId || x.ToUserId == request.UserId), cancellationToken);
+            if(isMeetingFind != null)
+            {
+                response.Status = isMeetingFind.Status;
+                response.JistiId = isMeetingFind.JitsiId;
+                response.FromUserId = isMeetingFind.FromUserId;
+                response.ToUserId = isMeetingFind.ToUserId;
+                return response;
+            }
+
+            var isMeetingExist = await _iIMeetingIdsRepository.FindByCondition(x => x.Status <=1, cancellationToken);
             if (isMeetingExist.Count == 0)
             {
                 MeetingIds entity = new MeetingIds()

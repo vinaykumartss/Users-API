@@ -15,14 +15,17 @@ public sealed class GetUserHandler : IRequestHandler<GetUserRequest, GetUserResp
     private readonly IMapper _mapper;
     private readonly ILogger<GetUserHandler> _logger;
     private readonly IMediator _mediator;
+    private readonly IUsersImagesRepository _iUsersImagesRepository;
+    
     public GetUserHandler(IUnitOfWork unitOfWork, IUserRepository userRepository,
-        IMapper mapper, ILogger<GetUserHandler> logger, IMediator mediator)
+        IMapper mapper, ILogger<GetUserHandler> logger, IMediator mediator, IUsersImagesRepository iUsersImagesRepository)
     {
         _unitOfWork = unitOfWork;
         _userRepository = userRepository;
         _mapper = mapper;
         _logger = logger;
         _mediator = mediator;
+        _iUsersImagesRepository= iUsersImagesRepository;
     }
 
     public async Task<GetUserResponse> Handle(GetUserRequest request, CancellationToken cancellationToken)
@@ -32,6 +35,11 @@ public sealed class GetUserHandler : IRequestHandler<GetUserRequest, GetUserResp
         {
             Users user = await _userRepository.GetById(request.Id, cancellationToken);
             response = _mapper.Map<GetUserResponse>(user);
+            Domain.Entities.UsersImages userImage = await _iUsersImagesRepository.FindByUserId(x => x.UserId == user.Id, cancellationToken);
+            if (userImage != null)
+            {
+                response.ImagePath = $"/app-images/{userImage.ImagePath}";
+            }
             return response;
         }
         catch (Exception ex)

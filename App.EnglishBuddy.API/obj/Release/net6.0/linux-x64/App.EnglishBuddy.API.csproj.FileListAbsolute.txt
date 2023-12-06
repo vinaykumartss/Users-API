@@ -387,3 +387,15 @@ C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Releas
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\App.EnglishBuddy.API.pdb
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\App.EnglishBuddy.API.genruntimeconfig.cache
 C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\ref\App.EnglishBuddy.API.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\log4net.config
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\App.EnglishBuddy.API.staticwebassets.runtime.json
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\cashfree-pg-sdk-dotnet.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\JsonSubTypes.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\log4net.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\Newtonsoft.Json.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\Polly.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\RestSharp.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\Sentry.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\System.Linq.Dynamic.Core.dll
+C:\Users\Vinay\source\repos\App.EnglishBuddy.API\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\Sentry.Attributes.cs

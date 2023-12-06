@@ -13,6 +13,12 @@ public sealed record GetUserResponse
     public string? CityId { get; set; }
     public string? MobilePrefix { get; set; }
     public Guid? Id { get; set; }
+    public string? StateName { get; set; }
+
+    public string? CountryName { get; set; }
+
+    public string? CityName { get; set; }
+    public string? ImagePath { get; set; }
 }
 
 
