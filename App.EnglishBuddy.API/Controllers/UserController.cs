@@ -2,6 +2,8 @@ using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUserImage;
+using App.EnglishBuddy.Application.Features.UserFeatures.LoginByUserName;
+using App.EnglishBuddy.Application.Features.UserFeatures.Password;
 using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -64,6 +66,28 @@ namespace App.EnglishBuddy.API.Controllers
                 UserId = userId
             };
             var response = await _mediator.Send(file, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpGet("/{loginId}/{password}")]
+        public async Task<ActionResult<LoginByUserNameResponse>> LoginByUserName(string? loginId, string? password, 
+          CancellationToken cancellationToken)
+        {
+            LoginByUserNameRequest file = new LoginByUserNameRequest()
+            {
+                Password = password,
+                Login   = loginId
+            };
+            var response = await _mediator.Send(file, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpPut("setPassword/{loginId}")]
+        public async Task<ActionResult<PasswordResponse>> SetPassword(PasswordRequest request,
+          CancellationToken cancellationToken)
+        {
+            
+            var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }
     }

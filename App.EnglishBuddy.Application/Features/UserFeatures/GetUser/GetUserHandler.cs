@@ -1,10 +1,9 @@
-﻿using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
-using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using Sentry;
+using Newtonsoft.Json;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
 
@@ -34,8 +33,10 @@ public sealed class GetUserHandler : IRequestHandler<GetUserRequest, GetUserResp
         try
         {
             Users user = await _userRepository.GetById(request.Id, cancellationToken);
+            _logger.LogInformation("user" + JsonConvert.SerializeObject(user));
             response = _mapper.Map<GetUserResponse>(user);
             Domain.Entities.UsersImages userImage = await _iUsersImagesRepository.FindByUserId(x => x.UserId == user.Id, cancellationToken);
+            _logger.LogInformation("userImage" + JsonConvert.SerializeObject(userImage));
             if (userImage != null)
             {
                 response.ImagePath = $"/app-images/{userImage.ImagePath}";
@@ -44,6 +45,7 @@ public sealed class GetUserHandler : IRequestHandler<GetUserRequest, GetUserResp
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             throw;
         }
     }

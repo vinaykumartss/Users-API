@@ -6,7 +6,9 @@ namespace App.EnglishBuddy.Domain.Entities
     [Table("users")]
     public class Users: BaseEntity
     {
-      
+        [Column("password")]
+        public string? Password { get; set; }
+
         [Column("email")]
         public string? Email { get; set; }
 

@@ -23,6 +23,14 @@ namespace App.EnglishBuddy.Domain.Entities
         [Column("jitsi_id")]
         public Guid JitsiId { get; set; }
 
+        [Column("from_token")]
+        public String? FromToken { get; set; }
+
+
+        [Column("to_token")]
+        public String? ToToken { get; set; }
+
+
         [Column("status")]
         public int Status { get; set; }
     }

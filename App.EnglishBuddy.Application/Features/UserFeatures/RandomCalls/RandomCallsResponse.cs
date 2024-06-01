@@ -10,4 +10,6 @@ public sealed record RandomCallsResponse
     public Guid? CallId { get; set; }
 
     public int Status { get; set; }
+
+    public string? Token { get; set; }
 }
