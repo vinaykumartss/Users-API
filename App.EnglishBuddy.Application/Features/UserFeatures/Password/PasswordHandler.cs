@@ -32,7 +32,6 @@ public sealed class PasswordHandler : IRequestHandler<PasswordRequest, PasswordR
 
     public async Task<PasswordResponse> Handle(PasswordRequest request, CancellationToken cancellationToken)
     {
-       
         PasswordResponse response = new PasswordResponse();
         var paasword = await _userRepository.FindByUserId(x => x.Email == request.Login, cancellationToken);
         try
@@ -45,7 +44,6 @@ public sealed class PasswordHandler : IRequestHandler<PasswordRequest, PasswordR
             } else {
                 throw new Exception("User is not found");
             }
-            
         }
         catch (Exception ex)
         {

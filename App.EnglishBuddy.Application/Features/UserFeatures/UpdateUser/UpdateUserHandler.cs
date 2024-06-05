@@ -1,5 +1,6 @@
 ﻿using App.EnglishBuddy.Application.Common.Exceptions;
 using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
+using App.EnglishBuddy.Application.Features.UserFeatures.UpdateUser;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
@@ -8,14 +9,14 @@ using Microsoft.Extensions.Logging;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
 
-public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, CreateUserResponse>
+public sealed class UpdateUserHandler : IRequestHandler<UpdateUserRequest, UpdateUserResponse>
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IUserRepository _userRepository;
     private readonly IMapper _mapper;
     private readonly ILogger<CreateUserHandler> _logger;
     private readonly IMediator _mediator;
-    public CreateUserHandler(IUnitOfWork unitOfWork, IUserRepository userRepository,
+    public UpdateUserHandler(IUnitOfWork unitOfWork, IUserRepository userRepository,
         IMapper mapper, ILogger<CreateUserHandler> logger, IMediator mediator)
     {
         _unitOfWork = unitOfWork;
@@ -25,23 +26,23 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
         _mediator = mediator;
     }
 
-    public async Task<CreateUserResponse> Handle(CreateUserRequest request, CancellationToken cancellationToken)
+    public async Task<UpdateUserResponse> Handle(UpdateUserRequest request, CancellationToken cancellationToken)
     {
-        CreateUserResponse response = new CreateUserResponse();
+        UpdateUserResponse response = new UpdateUserResponse();
         try
         {
-            Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email == request.Email, cancellationToken);
-            if (users == null)
+            Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Id == request.Id, cancellationToken);
+            if (users != null)
             {
                 var user = _mapper.Map<Users>(request);
-                _userRepository.Create(user);
+                _userRepository.Update(user);
                 await _unitOfWork.Save(cancellationToken);
                 response.IsSuccess = true;
                 response.Id = user.Id;
             }
             else
             {
-                throw new BadRequestException("Email already exist, please try with other Email");
+                throw new BadRequestException("User does not exist, please try agin");
             }
         }
         catch (BadRequestException ex)

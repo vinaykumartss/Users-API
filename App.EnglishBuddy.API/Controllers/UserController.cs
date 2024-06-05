@@ -4,6 +4,7 @@ using App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUserImage;
 using App.EnglishBuddy.Application.Features.UserFeatures.LoginByUserName;
 using App.EnglishBuddy.Application.Features.UserFeatures.Password;
+using App.EnglishBuddy.Application.Features.UserFeatures.UpdateUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -86,7 +87,14 @@ namespace App.EnglishBuddy.API.Controllers
         public async Task<ActionResult<PasswordResponse>> SetPassword(PasswordRequest request,
           CancellationToken cancellationToken)
         {
-            
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpPut("update/{id}")]
+        public async Task<ActionResult<UpdateUserResponse>> Update(UpdateUserRequest request,
+          CancellationToken cancellationToken)
+        {
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }
