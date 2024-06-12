@@ -1,20 +1,21 @@
-using App.EnglishBuddy.Application.Features.UserFeatures.ContactUs;
+using App.EnglishBuddy.Application.Features.UserFeatures.OtpTemplate;
 using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using App.EnglishBuddy.Application.Features.UserFeatures.ContactUs;
 
 namespace App.EnglishBuddy.API.Controllers
 {
     [ApiController]
     [Route("contact")]
-    public class ContactUsController : ControllerBase
+    public class ContactController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public ContactUsController(IMediator mediator)
+        public ContactController(IMediator mediator)
         {
             _mediator = mediator;
         }

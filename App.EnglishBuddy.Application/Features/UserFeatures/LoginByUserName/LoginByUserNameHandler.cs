@@ -1,4 +1,5 @@
 ﻿using App.EnglishBuddy.Application.Repositories;
+using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
 namespace App.EnglishBuddy.Application.Features.UserFeatures.LoginByUserName;
@@ -23,16 +24,19 @@ public sealed class LoginByUserNameHandler : IRequestHandler<LoginByUserNameRequ
     {
 
         LoginByUserNameResponse response = new LoginByUserNameResponse();
-        var paasword = await _userRepository.FindByUserId(x => x.Email == request.Login, cancellationToken);
+        var userInfo = await _userRepository.FindByUserId(x => x.Email.ToLower() == request.Email.ToLower() && x.Password == request.Password, cancellationToken);
         try
         {
-            if (paasword != null && paasword.Password == request.Password)
+            if (userInfo != null)
             {
+                response.EmailId = userInfo.Email;
+                response.FullName = $"{userInfo.FirstName} {userInfo.LastName}";
+                response.Mobile = userInfo.Mobile;
+                response.UserId = userInfo.Id;
                 response.IsSuccess = true;
             } else {
                 throw new Exception("User is not found");
             }
-            
         }
         catch (Exception ex)
         {

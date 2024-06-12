@@ -26,30 +26,30 @@ public sealed class OTPVerifyHandler : IRequestHandler<OTPVerifyRequest, OTPVeri
     public async Task<OTPVerifyResponse> Handle(OTPVerifyRequest request, CancellationToken cancellationToken)
     {
         OTPVerifyResponse otp = new OTPVerifyResponse();
-        otp.Mobile = request.Mobile;
-        Users user = await _iUserRepository.FindByUserId(x => x.Mobile == request.Mobile, cancellationToken);
+        otp.Mobile = request.Email;
+        Users user = await _iUserRepository.FindByUserId(x => x.Email == request.Email, cancellationToken);
         if (user !=null)
         {
-            Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id & x.OTP == request.OTP, cancellationToken);
+            //Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id & x.OTP == request.OTP, cancellationToken); // TODO
+            Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id, cancellationToken);
             if (otps != null)
             {
                 DateTime dateTime= otps.UpdateDate.HasValue ? otps.UpdateDate.Value : DateTime.UtcNow;
                 double result = DateTime.UtcNow.Subtract(dateTime).TotalMinutes;
-                if(result <= 4000000)
-                {
+                
                     otp.IsSuccess = true;
-                    otp.Mobile = request.Mobile;
-                    otp.UserId = otps.UserId;
+                   
                     Users userInfo = await _iUserRepository.FindByUserId(x => x.Id == otps.UserId, cancellationToken);
                     if (userInfo != null)
                     {
                         otp.EmailId = userInfo.Email;
                         otp.FullName = $"{userInfo.FirstName} {userInfo.LastName}";
+                        otp.Mobile = userInfo.Mobile;
+                        otp.UserId = otps.UserId;
                     }
-                } else
-                {
-                    throw new Exception(AppErrorMessage.OtpInvalid);
-                }
+                    user.IsOtpVerify = true;
+                    _iUserRepository.Update(user);
+               
     
             } else
             {

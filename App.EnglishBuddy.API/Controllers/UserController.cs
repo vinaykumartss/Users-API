@@ -1,10 +1,11 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
+using App.EnglishBuddy.Application.Features.UserFeatures.ForgotPassword;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUserImage;
 using App.EnglishBuddy.Application.Features.UserFeatures.LoginByUserName;
 using App.EnglishBuddy.Application.Features.UserFeatures.Password;
-using App.EnglishBuddy.Application.Features.UserFeatures.UpdateUser;
+using App.EnglishBuddy.Application.Features.UserFeatures.UpdateProfile;
 using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -53,13 +54,13 @@ namespace App.EnglishBuddy.API.Controllers
         public async Task<ActionResult<CreateUserResponse>> Upload(UsersImagesRequest file, Guid userId,
             CancellationToken cancellationToken)
         {
-           
+
             var response = await _mediator.Send(file, cancellationToken);
             return Ok(response);
         }
 
         [HttpGet("/upload/{userId}")]
-        public async Task<ActionResult<CreateUserResponse>> GetImage( Guid userId,
+        public async Task<ActionResult<CreateUserResponse>> GetImage(Guid userId,
            CancellationToken cancellationToken)
         {
             GetUserImageRequest file = new GetUserImageRequest()
@@ -70,32 +71,40 @@ namespace App.EnglishBuddy.API.Controllers
             return Ok(response);
         }
 
-        [HttpGet("/{loginId}/{password}")]
-        public async Task<ActionResult<LoginByUserNameResponse>> LoginByUserName(string? loginId, string? password, 
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginByUserNameResponse>> LoginByUserName(LoginByUserNameRequest login,
           CancellationToken cancellationToken)
         {
-            LoginByUserNameRequest file = new LoginByUserNameRequest()
-            {
-                Password = password,
-                Login   = loginId
-            };
-            var response = await _mediator.Send(file, cancellationToken);
+
+            var response = await _mediator.Send(login, cancellationToken);
             return Ok(response);
         }
 
-        [HttpPut("setPassword/{loginId}")]
+        [HttpPut("update-password")]
         public async Task<ActionResult<PasswordResponse>> SetPassword(PasswordRequest request,
           CancellationToken cancellationToken)
         {
+
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }
 
-        [HttpPut("update/{id}")]
-        public async Task<ActionResult<UpdateUserResponse>> Update(UpdateUserRequest request,
+
+
+        [HttpPut("forgot-password")]
+        public async Task<ActionResult<UpdateProfileResponse>> Update(ForgotPasswordRequest request,
           CancellationToken cancellationToken)
         {
             var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpPut("{id}/update-profile")]
+        public async Task<ActionResult<UpdateProfileResponse>> UpdateProfile(Guid id, UpdateProfileRequest request,
+          CancellationToken cancellationToken)
+        {
+            request.Id = id;
+            UpdateProfileResponse response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }
     }

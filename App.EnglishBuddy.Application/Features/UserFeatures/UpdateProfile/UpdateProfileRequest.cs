@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace App.EnglishBuddy.Application.Features.UserFeatures.UpdateUser
+namespace App.EnglishBuddy.Application.Features.UserFeatures.UpdateProfile
 {
-    public class UpdateUserRequest : IRequest<UpdateUserResponse>
+    public class UpdateProfileRequest : IRequest<UpdateProfileResponse>
     {
         public string? FirstName { get; set; }
         public string? LastName { get; set; }

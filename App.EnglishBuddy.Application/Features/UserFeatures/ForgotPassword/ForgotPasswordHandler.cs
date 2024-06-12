@@ -1,7 +1,6 @@
 ﻿using App.EnglishBuddy.Application.Common.Exceptions;
-using App.EnglishBuddy.Application.Features.UserFeatures.UpdateUser;
+using App.EnglishBuddy.Application.Common.Mail;
 using App.EnglishBuddy.Application.Repositories;
-using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -33,11 +32,16 @@ public sealed class ForgotPasswordHandler : IRequestHandler<ForgotPasswordReques
             Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email == request.Email, cancellationToken);
             if (users != null)
             {
-                var user = _mapper.Map<Users>(request);
-                _userRepository.Update(user);
-                await _unitOfWork.Save(cancellationToken);
+                var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));
+                //fileContents = fileContents.Replace("/", @"\");
+   
+                //fileContents = fileContents.Replace("@Name", "Test");
+                //fileContents = fileContents.Replace("@Mobile", "Test");
+                //fileContents = fileContents.Replace("@Question", "Test");
+                //fileContents = fileContents.Replace("@Email", "Test");
+                //fileContents = fileContents.Replace("@Comapnay", "India.com");
+                SendMail.SendEmail(fileContents);
                 response.IsSuccess = true;
-                response.Id = user.Id;
             }
             else
             {

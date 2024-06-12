@@ -2,6 +2,7 @@
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using App.EnglishBuddy.Infrastructure.Context;
+using System.ComponentModel;
 
 namespace App.EnglishBuddy.Infrastructure.Repositories;
 

@@ -40,6 +40,9 @@ namespace App.EnglishBuddy.Domain.Entities
 
         [Column("mobile_prefix")]
         public string? MobilePrefix { get; set; }
-        
+
+        [Column("isOtpVerify")]
+        public bool? IsOtpVerify { get; set; }
+
     }
 }

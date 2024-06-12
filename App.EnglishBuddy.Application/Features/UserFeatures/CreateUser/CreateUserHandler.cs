@@ -1,4 +1,5 @@
 ﻿using App.EnglishBuddy.Application.Common.Exceptions;
+using App.EnglishBuddy.Application.Common.Mail;
 using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
@@ -34,10 +35,21 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
             if (users == null)
             {
                 var user = _mapper.Map<Users>(request);
+                user.IsOtpVerify = true;
                 _userRepository.Create(user);
                 await _unitOfWork.Save(cancellationToken);
                 response.IsSuccess = true;
                 response.Id = user.Id;
+
+                //var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));
+                //fileContents = fileContents.Replace("/", @"\");
+                //string name = request.FirstName + " " + request?.LastName;
+                //fileContents = fileContents.Replace("@Name", name);
+                //fileContents = fileContents.Replace("@Mobile", "Test");
+                //fileContents = fileContents.Replace("@Question", "Test");
+                //fileContents = fileContents.Replace("@Email", "Test");
+                //fileContents = fileContents.Replace("@Comapnay", "India.com");
+                //SendMail.SendEmail(fileContents);
             }
             else
             {

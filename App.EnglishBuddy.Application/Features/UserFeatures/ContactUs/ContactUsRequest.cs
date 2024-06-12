@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.OtpTemplate;
+using MediatR;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.ContactUs
 {

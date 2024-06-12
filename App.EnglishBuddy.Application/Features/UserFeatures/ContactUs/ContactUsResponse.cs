@@ -1,4 +1,4 @@
-﻿namespace App.EnglishBuddy.Application.Features.UserFeatures.ContactUs;
+﻿namespace App.EnglishBuddy.Application.Features.UserFeatures.OtpTemplate;
 
 public sealed record ContactUsResponse
 {
