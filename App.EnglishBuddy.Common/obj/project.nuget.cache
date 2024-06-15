@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rzQLAf3Chd9vMK5WRZILSbDXdoAs30MuG/n1wMG+u3xVN54pVHqT7Vh4HSvYsVfAKJ4IYnn9leMdEfx/5zW+sA==",
+  "dgSpecHash": "HtCnUpkv/tfkMpVMbmSpQ1n8iDBCi02P19teHHCFaLxVNQZ24MjTZRaiKpRLBX4sVYJ8hVFwxsMBwM9+o5lUaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
+  "projectFilePath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vinay\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

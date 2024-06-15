@@ -1,5 +1,4 @@
-﻿using App.EnglishBuddy.Application.Common.Mail;
-using App.EnglishBuddy.Application.Features.UserFeatures.OtpTemplate;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.OtpTemplate;
 using App.EnglishBuddy.Application.Repositories;
 using AutoMapper;
 using MediatR;
@@ -11,7 +10,6 @@ public sealed class ContactUsHandler : IRequestHandler<ContactUsRequest, Contact
     private readonly IUnitOfWork _unitOfWork;
     private readonly IContactUsRepository _iContactUsRepository;
     private readonly IMapper _mapper;
-
     public ContactUsHandler(IUnitOfWork unitOfWork,
         IContactUsRepository iContactUsRepository,
         IMapper mapper
@@ -27,7 +25,7 @@ public sealed class ContactUsHandler : IRequestHandler<ContactUsRequest, Contact
         ContactUsResponse response = new ContactUsResponse();
         try
         {
-            Domain.Entities.ContactUs contactUs = new Domain.Entities.ContactUs()
+            Domain.Entities.ContactUs contactUs = new()
             {
                 FirstName = request.FirstName,
                 Mobile= request.Mobile,
@@ -37,15 +35,6 @@ public sealed class ContactUsHandler : IRequestHandler<ContactUsRequest, Contact
             };
             _iContactUsRepository.Update(contactUs);
             await _unitOfWork.Save(cancellationToken);
-            var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/ContactUs.html"));
-            //fileContents = fileContents.Replace("/", @"\");
-            //string name = request.FirstName + " " + request?.LastName;
-            //fileContents = fileContents.Replace("@Name", name);
-            //fileContents = fileContents.Replace("@Mobile", request?.Mobile);
-            //fileContents = fileContents.Replace("@Question", request?.Question);
-            //fileContents = fileContents.Replace("@Email", request.EmailAddress);
-            //fileContents = fileContents.Replace("@Comapnay", "India.com");
-            SendMail.SendEmail(fileContents);
             response.IsSuccess = true;
         }
         catch (Exception ex)

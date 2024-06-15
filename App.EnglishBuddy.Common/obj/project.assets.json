@@ -3515,11 +3515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
+      "projectUniqueName": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
       "projectName": "App.EnglishBuddy.Domain",
-      "projectPath": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
+      "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
       "packagesPath": "C:\\Users\\Vinay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.Common\\obj\\",
+      "outputPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",

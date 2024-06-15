@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BzRV8LY8Gr/DQJ1MPWM9ybJtnhodRCCnRECsDYVMs55TCKwVQmDk7kzdtF5cCcOEUIQmwjqMJAUZJXop8QzhdA==",
+  "dgSpecHash": "/sVhhWzPraPfFxmqLEW/OQmKb2wQYyeE6gAH15jIs7om5TX5ERo5ewi6NmKC5ZLel8QzTBxWmHmE8ut8D9wo9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vinay\\source\\repos\\App.EnglishBuddy.API\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj",
+  "projectFilePath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vinay\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
