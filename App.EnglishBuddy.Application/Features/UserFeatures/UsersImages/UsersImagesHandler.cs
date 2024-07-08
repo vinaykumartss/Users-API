@@ -45,14 +45,6 @@ public sealed class UsersImagesHandler : IRequestHandler<UsersImagesRequest, Use
 
             if (request.File.Length > 0)
             {
-                byte[] imgByteArray = Convert.FromBase64String(request.File);
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\user_images", fileName);
-                filePath = filePath.Replace("/", @"\");
-                var imageName = $"{filePath}.{request.FileType}";
-                File.WriteAllBytes(imageName, imgByteArray);
-               
-                response.ImagePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\user_images", fileName + "." + "jpeg");
-
                 Domain.Entities.UsersImages userImage = await _iUsersImagesRepository.FindByUserId(x => x.UserId == request.UserId, cancellationToken);
                 if (userImage == null)
                 {
@@ -60,14 +52,14 @@ public sealed class UsersImagesHandler : IRequestHandler<UsersImagesRequest, Use
                     {
                         UserId = request.UserId,
                         CreatedDate = DateTime.UtcNow,
-                        ImagePath = $"{fileName}.{request.FileType}"
+                        ImagePath = request.File
                     };
                     _iUsersImagesRepository.Create(usersImages);
                     await _unitOfWork.Save(cancellationToken);
                 }
                 else
                 {
-                    userImage.ImagePath = $"{fileName}.{request.FileType}";
+                    userImage.ImagePath = request.File;
                     userImage.CreatedDate = DateTime.UtcNow;
                     _iUsersImagesRepository.Update(userImage);
                     await _unitOfWork.Save(cancellationToken);
@@ -75,7 +67,7 @@ public sealed class UsersImagesHandler : IRequestHandler<UsersImagesRequest, Use
 
                 response.IsSuccess = true;
                 response.UserId = request.UserId;
-                response.ImagePath = $"/app-images/{fileName}.{request.FileType}";
+                response.ImagePath = request.File;
                 return response;
             }
         }

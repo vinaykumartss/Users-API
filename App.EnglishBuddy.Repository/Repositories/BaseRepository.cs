@@ -53,4 +53,16 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
         return await Context.Set<T>()
              .Where(expression).FirstOrDefaultAsync(cancellationToken);
     }
+
+    public List<T> FindByListSync(Expression<Func<T, bool>> expression)
+    {
+        return  Context.Set<T>()
+             .Where(expression).ToList();
+    }
+
+    public T FindByUserIdSync(Expression<Func<T, bool>> expression)
+    {
+        return  Context.Set<T>()
+             .Where(expression).FirstOrDefault();
+    }
 }

@@ -1,5 +1,6 @@
 ﻿using App.EnglishBuddy.Application.Common.Exceptions;
 using App.EnglishBuddy.Application.Common.Mail;
+using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 using App.EnglishBuddy.Application.Repositories;
 using AutoMapper;
 using MediatR;
@@ -29,18 +30,17 @@ public sealed class ForgotPasswordHandler : IRequestHandler<ForgotPasswordReques
         ForgotPasswordResponse response = new ForgotPasswordResponse();
         try
         {
-            Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email == request.Email, cancellationToken);
+            Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email == request.Email.ToLower(), cancellationToken);
             if (users != null)
             {
                 var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));
-                //fileContents = fileContents.Replace("/", @"\");
-   
-                //fileContents = fileContents.Replace("@Name", "Test");
-                //fileContents = fileContents.Replace("@Mobile", "Test");
-                //fileContents = fileContents.Replace("@Question", "Test");
-                //fileContents = fileContents.Replace("@Email", "Test");
-                //fileContents = fileContents.Replace("@Comapnay", "India.com");
-                SendMail.SendEmail(fileContents);
+                OTPRequest oTPRequest = new OTPRequest()
+                {
+                    Email = request.Email
+                };
+                var respnse = await _mediator.Send(oTPRequest);
+                fileContents = fileContents.Replace("{otp}", respnse.Otp);
+                SendMail.SendEmail(fileContents, request.Email);
                 response.IsSuccess = true;
             }
             else

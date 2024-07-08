@@ -28,30 +28,32 @@ public sealed class OTPVerifyHandler : IRequestHandler<OTPVerifyRequest, OTPVeri
         OTPVerifyResponse otp = new OTPVerifyResponse();
         otp.Mobile = request.Email;
         Users user = await _iUserRepository.FindByUserId(x => x.Email == request.Email, cancellationToken);
-        if (user !=null)
+        if (user != null)
         {
-            //Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id & x.OTP == request.OTP, cancellationToken); // TODO
-            Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id, cancellationToken);
+            Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id & x.OTP == request.OTP, cancellationToken); // TODO
+
             if (otps != null)
             {
-                DateTime dateTime= otps.UpdateDate.HasValue ? otps.UpdateDate.Value : DateTime.UtcNow;
+                DateTime dateTime = otps.UpdateDate.HasValue ? otps.UpdateDate.Value : DateTime.UtcNow;
                 double result = DateTime.UtcNow.Subtract(dateTime).TotalMinutes;
-                
-                    otp.IsSuccess = true;
+
+                otp.IsSuccess = true;
+
+                Users userInfo = await _iUserRepository.FindByUserId(x => x.Id == otps.UserId, cancellationToken);
+                if (userInfo != null)
+                {
+                    otp.EmailId = userInfo.Email;
+                    otp.FullName = $"{userInfo.FirstName} {userInfo.LastName}";
+                    otp.Mobile = userInfo.Mobile;
+                    otp.UserId = otps.UserId;
                    
-                    Users userInfo = await _iUserRepository.FindByUserId(x => x.Id == otps.UserId, cancellationToken);
-                    if (userInfo != null)
-                    {
-                        otp.EmailId = userInfo.Email;
-                        otp.FullName = $"{userInfo.FirstName} {userInfo.LastName}";
-                        otp.Mobile = userInfo.Mobile;
-                        otp.UserId = otps.UserId;
-                    }
-                    user.IsOtpVerify = true;
-                    _iUserRepository.Update(user);
-               
-    
-            } else
+                }
+                user.IsOtpVerify = true;
+                _iUserRepository.Update(user);
+                await _unitOfWork.Save(cancellationToken);
+
+            }
+            else
             {
                 throw new Exception(AppErrorMessage.OtpInvalid);
             }

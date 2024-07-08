@@ -39,10 +39,13 @@ public sealed class PasswordHandler : IRequestHandler<PasswordRequest, PasswordR
                     _userRepository.Update(paasword);
                     await _unitOfWork.Save(cancellationToken);
                     response.IsSuccess = true;
+                }else
+                {
+                    throw new Exception("Current Password is not correct, Please try with correct Password");
                 }
                 
             } else {
-                throw new Exception("User is not found, Please try with correct user");
+                throw new Exception("User is not found,Please try with correct user");
             }
         }
         catch (Exception ex)

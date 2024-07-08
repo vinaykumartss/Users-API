@@ -15,7 +15,7 @@ namespace App.EnglishBuddy.Application.Services
             string numbers = AppConstant.Numbers;
             Random random = new Random();
             string otp = string.Empty;
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i <= 4; i++)
             {
                 int tempval = random.Next(0, numbers.Length);
                 otp += tempval;
@@ -23,12 +23,6 @@ namespace App.EnglishBuddy.Application.Services
             return otp;
         }
 
-        public async Task<string> SendOTP(string? mobileNumber, int code)
-        {
-            string otp = GenerateOtp();
-            string otpUrls = string.Format(AppUrls.MessageAPI, mobileNumber, code, otp);
-            string message  = await Utility.CallAPIsAsync(otpUrls, MethodType.Get.ToString());
-            return otp;
-        }
+        
     }
 }

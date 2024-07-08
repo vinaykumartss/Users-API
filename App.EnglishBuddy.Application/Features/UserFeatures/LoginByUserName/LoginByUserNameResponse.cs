@@ -11,6 +11,6 @@ public sealed record LoginByUserNameResponse
 
     public string? FullName { get; set; }
 
-    public bool IsOtpVerify { get; set; }
+    public bool? IsOtpVerify { get; set; }
 
 }

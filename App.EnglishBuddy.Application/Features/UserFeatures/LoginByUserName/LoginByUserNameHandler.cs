@@ -34,6 +34,7 @@ public sealed class LoginByUserNameHandler : IRequestHandler<LoginByUserNameRequ
                 response.Mobile = userInfo.Mobile;
                 response.UserId = userInfo.Id;
                 response.IsSuccess = true;
+                response.IsOtpVerify = userInfo.IsOtpVerify;
             } else {
                 throw new Exception("User is not found");
             }

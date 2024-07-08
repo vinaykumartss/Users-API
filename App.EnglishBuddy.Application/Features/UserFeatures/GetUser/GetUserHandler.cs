@@ -39,7 +39,7 @@ public sealed class GetUserHandler : IRequestHandler<GetUserRequest, GetUserResp
             _logger.LogInformation("userImage" + JsonConvert.SerializeObject(userImage));
             if (userImage != null)
             {
-                response.ImagePath = $"/app-images/{userImage.ImagePath}";
+                response.ImagePath = $"{userImage.ImagePath}";
             }
             return response;
         }

@@ -91,7 +91,7 @@ namespace App.EnglishBuddy.API.Controllers
 
 
 
-        [HttpPut("forgot-password")]
+        [HttpPost("forgot-password")]
         public async Task<ActionResult<UpdateProfileResponse>> Update(ForgotPasswordRequest request,
           CancellationToken cancellationToken)
         {
@@ -102,6 +102,15 @@ namespace App.EnglishBuddy.API.Controllers
         [HttpPut("{id}/update-profile")]
         public async Task<ActionResult<UpdateProfileResponse>> UpdateProfile(Guid id, UpdateProfileRequest request,
           CancellationToken cancellationToken)
+        {
+            request.Id = id;
+            UpdateProfileResponse response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpPut("vinay-1")]
+        public async Task<ActionResult<UpdateProfileResponse>> Vinay(Guid id, UpdateProfileRequest request,
+        CancellationToken cancellationToken)
         {
             request.Id = id;
             UpdateProfileResponse response = await _mediator.Send(request, cancellationToken);

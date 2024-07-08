@@ -34,22 +34,37 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
             Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email == request.Email, cancellationToken);
             if (users == null)
             {
+
                 var user = _mapper.Map<Users>(request);
-                user.IsOtpVerify = true;
+                user.IsOtpVerify = false;
                 _userRepository.Create(user);
                 await _unitOfWork.Save(cancellationToken);
                 response.IsSuccess = true;
                 response.Id = user.Id;
+                response.IsOtpVerify = false;
 
-                //var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));
-                //fileContents = fileContents.Replace("/", @"\");
-                //string name = request.FirstName + " " + request?.LastName;
-                //fileContents = fileContents.Replace("@Name", name);
-                //fileContents = fileContents.Replace("@Mobile", "Test");
-                //fileContents = fileContents.Replace("@Question", "Test");
-                //fileContents = fileContents.Replace("@Email", "Test");
-                //fileContents = fileContents.Replace("@Comapnay", "India.com");
-                //SendMail.SendEmail(fileContents);
+                var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));
+                OTPRequest oTPRequest = new OTPRequest()
+                {
+                    Email = request.Email
+                };
+                var respnse = await _mediator.Send(oTPRequest);
+                fileContents = fileContents.Replace("{otp}", respnse.Otp);
+                SendMail.SendEmail(fileContents, request.Email);
+
+            }
+            else if (users != null && users.IsOtpVerify == false)
+            {
+
+                var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));
+                OTPRequest oTPRequest = new OTPRequest()
+                {
+                    Email = request.Email
+                };
+                var respnse = await _mediator.Send(oTPRequest);
+                fileContents = fileContents.Replace("{otp}", respnse.Otp);
+                SendMail.SendEmail(fileContents, request.Email);
+                response.IsOtpVerify = false;
             }
             else
             {

@@ -15,7 +15,7 @@ public sealed class RandomCallsHandler : IRequestHandler<RandomCallsRequest, Ran
 
     private readonly IUserRepository _iUserRepository;
     private readonly IMapper _mapper;
-
+    private static readonly object _lock = new();
     public RandomCallsHandler(IUnitOfWork unitOfWork,
         IRandomUsersRepository iRandomCallsRepository,
         IUserRepository iUserRepository,
@@ -34,67 +34,66 @@ public sealed class RandomCallsHandler : IRequestHandler<RandomCallsRequest, Ran
         RandomCallsResponse response = new RandomCallsResponse();
         try
         {
-
-             var isMeetingFind = await _iIMeetingIdsRepository.FindByUserId(x => (x.Status == 1 || x.Status == 2), cancellationToken);
-            if (isMeetingFind != null)
+            lock (_lock)
             {
+              
+                var isMeetingFind =  _iIMeetingIdsRepository.FindByUserIdSync(x => (x.Status == 1 || x.Status == 2));
+                if (isMeetingFind != null)
+                {
 
-                if (isMeetingFind.Status == 1 && isMeetingFind.FromUserId != request.UserId)
-                {
-                    isMeetingFind.Status = 2;
-                    isMeetingFind.ToUserId = request.UserId;
-                    isMeetingFind.ToToken = request.Token;
-                    _iIMeetingIdsRepository.Update(isMeetingFind);
-                    await _unitOfWork.Save(cancellationToken);
-                    response.Status = 2;
-                    response.JistiId = isMeetingFind.JitsiId;
-                    response.FromUserId = isMeetingFind.FromUserId;
-                    response.ToUserId = isMeetingFind.ToUserId;
-                    response.Token = isMeetingFind.FromToken;
+                    if (isMeetingFind.Status == 1 && isMeetingFind.FromUserId != request.UserId)
+                    {
+                        isMeetingFind.Status = 2;
+                        isMeetingFind.ToUserId = request.UserId;
+                        isMeetingFind.ToToken = request.Token;
+                        _iIMeetingIdsRepository.Update(isMeetingFind);
+                         _unitOfWork.Save(cancellationToken);
+                        response.Status = 2;
+                        response.JistiId = isMeetingFind.JitsiId;
+                        response.FromUserId = isMeetingFind.FromUserId;
+                        response.ToUserId = isMeetingFind.ToUserId;
+                        response.Token = isMeetingFind.FromToken;
+                        return response;
+                    }
+                    else
+                    {
+                        response.Status = isMeetingFind.Status;
+                        response.JistiId = isMeetingFind.JitsiId;
+                        response.FromUserId = isMeetingFind.FromUserId;
+                        response.ToUserId = isMeetingFind.ToUserId;
+                        response.Token = isMeetingFind.ToToken;
+                        return response;
+                    }
                 }
-                else
+                var isMeetingExist = _iIMeetingIdsRepository.FindByListSync(x => x.Status == 1);
+                if (isMeetingExist.Count == 0)
                 {
-                    response.Status = isMeetingFind.Status;
-                    response.JistiId = isMeetingFind.JitsiId;
-                    response.FromUserId = isMeetingFind.FromUserId;
-                    response.ToUserId = isMeetingFind.ToUserId;
-                    response.Token = isMeetingFind.ToToken;
+                    Guid id = Guid.NewGuid();
+                    MeetingIds entity = new MeetingIds()
+                    {
+                        Status = 1,
+                        Createdby = request.UserId,
+                        IsActive = true,
+                        CreatedDate = DateTime.UtcNow,
+                        JitsiId = id,
+                        FromUserId = request.UserId,
+                        FromToken = request.Token
+                    };
+                    _iIMeetingIdsRepository.Create(entity);
+                    _unitOfWork.Save(cancellationToken);
+                    response.Status = 1;
+                    response.JistiId = id;
+                    response.FromUserId = request.UserId;
+                    return response;
                 }
-               
-                
-                return response;
-            }
-
-            var isMeetingExist = await _iIMeetingIdsRepository.FindByCondition(x => x.Status == 1, cancellationToken);
-            if (isMeetingExist.Count == 0)
-            {
-                Guid id = Guid.NewGuid();
-                MeetingIds entity = new MeetingIds()
-                {
-                    Status = 1,
-                    Createdby = request.UserId,
-                    IsActive = true,
-                    CreatedDate = DateTime.UtcNow,
-                    JitsiId = id,
-                    FromUserId = request.UserId,
-                    FromToken  = request.Token
-                };
-                _iIMeetingIdsRepository.Create(entity);
-                await _unitOfWork.Save(cancellationToken);
-                response.Status = 1;
-                response.JistiId = id;
-                response.FromUserId = request.UserId;
-                return response;
             }
             
-
-          
         }
         catch (Exception ex)
         {
             throw;
         }
 
-        return response;
+        return await Task.FromResult(response);
     }
 }

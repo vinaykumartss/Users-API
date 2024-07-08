@@ -14,12 +14,12 @@ namespace App.EnglishBuddy.Application.Common.Mail
         static string subject = "Contact Us";
         static string body = "Hello, This is Email sending test using gmail.";
        
-        public static void SendEmail(string request)
+        public static void SendEmail(string request, string email)
         {
             using (MailMessage mail = new MailMessage())
             {
                 mail.From = new MailAddress(emailFromAddress);
-                mail.To.Add(emailToAddress);
+                mail.To.Add(email);
                 mail.Subject = subject;
                 mail.Body = request;
                 mail.IsBodyHtml = true;

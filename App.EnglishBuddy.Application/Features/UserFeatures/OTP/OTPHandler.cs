@@ -35,15 +35,15 @@ public sealed class OTPHandler : IRequestHandler<OTPRequest, OTPResponse>
         OTPResponse otp = new OTPResponse();
         try
         {
-            string otpResponse = "1234"; //await _iOTPServices.SendOTP(request.Mobile, request.Code);
-            Users user = await _iUserRepository.FindByUserId(x => x.Email == request.Email, cancellationToken);
+            string otpRespons =  _iOTPServices.GenerateOtp();
+            Users user = await _iUserRepository.FindByUserId(x => x.Email == request.Email.ToLower(), cancellationToken);
 
             if (user != null)
             {
                 Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id, cancellationToken);
                 if (otps != null)
                 {
-                    otps.OTP = otpResponse;
+                    otps.OTP = otpRespons;
                     otps.CreatedDate = DateTime.UtcNow;
                     otps.UpdateDate = DateTime.UtcNow;
                     _iOtpRepository.Update(otps);
@@ -53,7 +53,7 @@ public sealed class OTPHandler : IRequestHandler<OTPRequest, OTPResponse>
                     Otp otpCreate = new Otp()
                     {
                         UserId = user.Id,
-                        OTP = otpResponse,
+                        OTP = otpRespons,
                         Type = "1",
                         CreatedDate = DateTime.UtcNow,
                         UpdateDate = DateTime.UtcNow
@@ -61,10 +61,11 @@ public sealed class OTPHandler : IRequestHandler<OTPRequest, OTPResponse>
                     _iOtpRepository.Create(otpCreate);
                 }
                 await _unitOfWork.Save(cancellationToken);
-
-            }else
+                otp.Otp = otpRespons;
+            }
+            else
             {
-                throw new BadRequestException("Mobile does not exist; please complete the registration.");
+                throw new BadRequestException("EMail does not exist, Please try again");
             }
         }
         catch (BadRequestException ex)

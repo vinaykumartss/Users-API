@@ -7,7 +7,7 @@ public sealed class ForgotPasswordValidator : AbstractValidator<ForgotPasswordRe
     public ForgotPasswordValidator()
     {
 
-        RuleFor(x => x.Email).NotEmpty().WithMessage("First Name is required").EmailAddress().WithMessage("Please enetr valid email");
+        RuleFor(x => x.Email).NotEmpty().WithMessage("Email Id is required").EmailAddress().WithMessage("Please enetr valid email");
        
     }
 }

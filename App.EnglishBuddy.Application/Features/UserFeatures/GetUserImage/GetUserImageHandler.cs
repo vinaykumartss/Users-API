@@ -28,7 +28,7 @@ public sealed class GetUserImageHandler : IRequestHandler<GetUserImageRequest, G
         try
         {
             Domain.Entities.UsersImages userImage = await _iUsersImagesRepository.FindByUserId(x => x.UserId == request.UserId, cancellationToken);
-            response.ImagePath =  $"/app-images/{userImage.ImagePath}";
+            response.ImagePath = userImage.ImagePath;
             response.UserId = request.UserId;
         }
         catch (Exception ex)
