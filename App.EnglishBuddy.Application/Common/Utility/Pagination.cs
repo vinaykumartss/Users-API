@@ -21,7 +21,7 @@ namespace App.EnglishBuddy.Application.Common.Utility
             result.PageCount = (int)Math.Ceiling(pageCount);
 
             var skip = (page - 1) * pageSize;
-            result.Results = query.Skip(skip).Take(pageSize).ToList();
+           
 
             return result;
         }

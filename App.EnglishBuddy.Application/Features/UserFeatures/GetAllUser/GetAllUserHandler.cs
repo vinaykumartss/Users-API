@@ -17,7 +17,7 @@ public sealed class GetAllUserHandler : IRequestHandler<GetAllUserRequest, List<
     
     public async Task<List<GetAllUserResponse>> Handle(GetAllUserRequest request, CancellationToken cancellationToken)
     {
-        var users = await _userRepository.GetAll(cancellationToken);
+        var users = await _userRepository.GetAllUser(request, cancellationToken);
         return _mapper.Map<List<GetAllUserResponse>>(users);
     }
 }

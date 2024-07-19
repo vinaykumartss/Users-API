@@ -36,7 +36,7 @@ public sealed class OTPHandler : IRequestHandler<OTPRequest, OTPResponse>
         try
         {
             string otpRespons =  _iOTPServices.GenerateOtp();
-            Users user = await _iUserRepository.FindByUserId(x => x.Email == request.Email.ToLower(), cancellationToken);
+            Users user = await _iUserRepository.FindByUserId(x => x.Email.ToLower() == request.Email.ToLower(), cancellationToken);
 
             if (user != null)
             {

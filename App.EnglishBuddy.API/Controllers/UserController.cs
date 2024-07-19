@@ -23,10 +23,10 @@ namespace App.EnglishBuddy.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<GetAllUserResponse>>> GetAll(CancellationToken cancellationToken)
+        [HttpPost("list")]
+        public async Task<ActionResult<List<GetAllUserResponse>>> GetAll(GetAllUserRequest request,CancellationToken cancellationToken)
         {
-            var response = await _mediator.Send(new GetAllUserRequest(), cancellationToken);
+            var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }
 

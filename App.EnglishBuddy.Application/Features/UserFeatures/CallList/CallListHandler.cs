@@ -23,8 +23,8 @@ public sealed class CallListHandler : IRequestHandler<CallListRequest, CallListR
     {
         CallListResponse callListResponse = new CallListResponse();
         List<CallsDetailsResponse> result= await _iCallInfoRepository.CallDetails(request.Id, cancellationToken);
-        Common.Utility.PagedResult<CallsDetailsResponse> lstResult  = result.AsQueryable().GetPaged(request.PageIndex, request.PageSize);
-        callListResponse.Response = lstResult;
+        
+        callListResponse.Response = null;
         return callListResponse;
     }
 }

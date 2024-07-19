@@ -30,7 +30,7 @@ public sealed class ForgotPasswordHandler : IRequestHandler<ForgotPasswordReques
         ForgotPasswordResponse response = new ForgotPasswordResponse();
         try
         {
-            Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email == request.Email.ToLower(), cancellationToken);
+            Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email.ToLower() == request.Email.ToLower(), cancellationToken);
             if (users != null)
             {
                 var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));

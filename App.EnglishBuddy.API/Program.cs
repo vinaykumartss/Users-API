@@ -35,13 +35,6 @@ app.UseCors(builder =>
 });
 app.UseStaticFiles();
 
-
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-           Path.Combine(builder.Environment.ContentRootPath, "wwwroot/user_images")),
-    RequestPath = "/app-images"
-});
 app.UseForwardedHeaders();
 app.MapControllers();
 app.Run();

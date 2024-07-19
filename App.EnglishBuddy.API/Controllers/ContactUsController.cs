@@ -6,6 +6,7 @@ using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using App.EnglishBuddy.Application.Features.UserFeatures.ContactUs;
+using App.EnglishBuddy.Application.Features.UserFeatures.AllContactUs;
 
 namespace App.EnglishBuddy.API.Controllers
 {
@@ -29,6 +30,13 @@ namespace App.EnglishBuddy.API.Controllers
             return Ok(response);
         }
 
-        
+        [HttpPost("All")]
+        public async Task<ActionResult<ContactUsResponse>> All(AllContactUsRequest request,
+            CancellationToken cancellationToken)
+        {
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
     }
 }

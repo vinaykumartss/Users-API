@@ -22,19 +22,19 @@ public sealed class DeleteCallsHandler : IRequestHandler<DeleteCallsRequest, Del
     {
         DeleteCallsResponse result = new DeleteCallsResponse();
 
-        if (request.IsDeleted)
-        {
-            List<Calls> calls = await _iCallsRepository.GetAll(cancellationToken);
-            foreach (var call in calls)
-            {
-                 _iCallsRepository.Delete(call);
-                await _unitOfWork.Save(cancellationToken);
-            }
-            result.Result = null;
-        } else
-        {
-            result.Result = await _iCallsRepository.GetAll(cancellationToken);
-        }
+        //if (request.IsDeleted)
+        //{
+        //    //List<Calls> calls = await _iCallsRepository.GetAll(cancellationToken);
+        //    //foreach (var call in calls)
+        //    //{
+        //    //     _iCallsRepository.Delete(call);
+        //    //    await _unitOfWork.Save(cancellationToken);
+        //    //}
+        //    result.Result = null;
+        //} else
+        //{
+        //    result.Result = await _iCallsRepository.GetAll(cancellationToken);
+        //}
 
         return result;
     }
