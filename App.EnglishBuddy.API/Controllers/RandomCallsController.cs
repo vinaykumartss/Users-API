@@ -11,6 +11,7 @@ namespace App.EnglishBuddy.API.Controllers
 {
     [ApiController]
     [Route("random")]
+    
     public class RandomCallsController : ControllerBase
     {
         private readonly IMediator _mediator;

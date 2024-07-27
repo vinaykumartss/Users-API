@@ -5,6 +5,7 @@ using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace App.EnglishBuddy.API.Controllers
 {
     [ApiController]
@@ -22,6 +23,8 @@ namespace App.EnglishBuddy.API.Controllers
         public async Task<ActionResult<CallUsersResponse>> FindUser(CallUsersRequest request,
             CancellationToken cancellationToken)
         {
+
+            CallUsersRequest s= new CallUsersRequest();
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }

@@ -6,6 +6,8 @@ public sealed record CreateUserResponse
     public bool IsSuccess { get; set; }
 
     public bool IsOtpVerify { get; set; }
+
+    public string Message { get; set; }
 }
 
 

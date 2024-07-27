@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AYE6XKYWO7cxgZBQPCGQQgCu6Eh8q+VX/kkhtL+z/lSYvT1coz/bfG6hn77/j37tkmbQdZxRw0dUOZAGo0TcoQ==",
+  "dgSpecHash": "dpws/xCXd22hZtWB5Zb1hZqpRfSOB1ZfVTElCKqZpvBf0OcTDJbc1IEY6IZnzqVSmM1XWFan7GlYhdObTDRBzA==",
   "success": true,
   "projectFilePath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
   "expectedPackageFiles": [
@@ -50,8 +50,6 @@
     "C:\\Users\\Vinay\\.nuget\\packages\\runtime.any.system.runtime\\4.3.0\\runtime.any.system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\runtime.any.system.text.encoding\\4.3.0\\runtime.any.system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\runtime.any.system.threading.tasks\\4.3.0\\runtime.any.system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\Vinay\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
-    "C:\\Users\\Vinay\\.nuget\\packages\\runtime.unix.system.private.uri\\4.3.0\\runtime.unix.system.private.uri.4.3.0.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Vinay\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",

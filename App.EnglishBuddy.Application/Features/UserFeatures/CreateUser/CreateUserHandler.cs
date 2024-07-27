@@ -6,6 +6,7 @@ using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using Sentry;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
 
@@ -31,7 +32,7 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
         CreateUserResponse response = new CreateUserResponse();
         try
         {
-            Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email == request.Email, cancellationToken);
+            Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email.ToLower() == request.Email.ToLower(), cancellationToken);
             if (users == null)
             {
 
@@ -55,7 +56,7 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
             }
             else if (users != null && users.IsOtpVerify == false)
             {
-
+              
                 var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));
                 OTPRequest oTPRequest = new OTPRequest()
                 {
@@ -64,7 +65,17 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
                 var respnse = await _mediator.Send(oTPRequest);
                 fileContents = fileContents.Replace("{otp}", respnse.Otp);
                 SendMail.SendEmail(fileContents, request.Email);
+                users.Password = request.Password;
+                _userRepository.Update(users);
+                await _unitOfWork.Save(cancellationToken);
                 response.IsOtpVerify = false;
+                response.Message = "Otp has been sent to you registered mail Id, Please verify";
+            }
+            else if (users != null && users.IsOtpVerify == true)
+            {
+                response.IsSuccess = true;
+                response.IsOtpVerify = true;
+                response.Message = "You are already registred login with this mail or do forgot password";
             }
             else
             {
