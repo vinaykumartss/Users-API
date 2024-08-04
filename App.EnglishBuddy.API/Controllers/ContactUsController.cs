@@ -24,7 +24,7 @@ namespace App.EnglishBuddy.API.Controllers
         
         [HttpPost("create")]
         public async Task<ActionResult<ContactUsResponse>> Create(ContactUsRequest request,
-            CancellationToken cancellationToken)
+                                                                  CancellationToken cancellationToken)
         {
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
