@@ -29,7 +29,6 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
         {
             var user = _mapper.Map<Meetings>(request);
             user.MeetingId = Guid.NewGuid();
-            user.StartDate= DateTime.UtcNow;
             user.CreatedDate = DateTime.UtcNow;
             user.UpdateDate = DateTime.UtcNow;
             user.UserId= request.UserId;
@@ -49,6 +48,7 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
 
             response  = _mapper.Map<SaveMeetingsResponse>(request);
             response.MeetingId = user.Id;
+            response.IsSuccess= true;
 
         }
         catch (Exception ex)

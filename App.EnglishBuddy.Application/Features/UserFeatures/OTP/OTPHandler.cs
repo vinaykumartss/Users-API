@@ -1,4 +1,5 @@
 ﻿using App.EnglishBuddy.Application.Common.Exceptions;
+using App.EnglishBuddy.Application.Common.Mail;
 using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Application.Services;
@@ -40,40 +41,50 @@ public sealed class OTPHandler : IRequestHandler<OTPRequest, OTPResponse>
 
             if (user != null)
             {
-                Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id, cancellationToken);
-                if (otps != null)
+                List<Otp> otps = await _iOtpRepository.FindByCondition(x => x.UserId == user.Id, cancellationToken);
+                if(otps != null)
                 {
-                    otps.OTP = otpRespons;
-                    otps.CreatedDate = DateTime.UtcNow;
-                    otps.UpdateDate = DateTime.UtcNow;
-                    _iOtpRepository.Update(otps);
-                }
-                else
-                {
-                    Otp otpCreate = new Otp()
+                    foreach(var x in otps)
                     {
-                        UserId = user.Id,
-                        OTP = otpRespons,
-                        Type = "1",
-                        CreatedDate = DateTime.UtcNow,
-                        UpdateDate = DateTime.UtcNow
-                    };
-                    _iOtpRepository.Create(otpCreate);
+                        _iOtpRepository.Delete(x);
+                        await _unitOfWork.Save(cancellationToken);
+                    }
                 }
+
+                Otp otpCreate = new Otp()
+                {
+                    UserId = user.Id,
+                    OTP = otpRespons,
+                    Type = "1",
+                    CreatedDate = DateTime.UtcNow,
+                    UpdateDate = DateTime.UtcNow,
+                    Createdby = user.Id ,
+                    Updatedby = user.Id ,
+                    IsActive=true
+                };
+                _iOtpRepository.Create(otpCreate);
                 await _unitOfWork.Save(cancellationToken);
+
                 otp.Otp = otpRespons;
+                otp.IsSuccess = true;
+
+                if(request.IsResend)
+                {
+                    var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));
+                   
+                    fileContents = fileContents.Replace("{otp}", otpRespons);
+                    SendMail.SendEmail(fileContents, request.Email);
+                }
             }
             else
             {
                 throw new BadRequestException("EMail does not exist, Please try again");
             }
         }
-        catch (BadRequestException ex)
-        {
-            throw;
-        }
+        
         catch (Exception ex)
         {
+            otp.IsSuccess = false;
             throw new Exception("Something went wrong, please try again");
 
         }

@@ -35,6 +35,7 @@ public sealed class LoginByUserNameHandler : IRequestHandler<LoginByUserNameRequ
                 response.UserId = userInfo.Id;
                 response.IsSuccess = true;
                 response.IsOtpVerify = userInfo.IsOtpVerify;
+                response.FcmToken = userInfo.FcmToken;
             } else {
                 throw new Exception("User is not found");
             }

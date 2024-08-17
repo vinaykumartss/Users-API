@@ -1,5 +1,6 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllMeetings;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetMeetingsUsers;
+using App.EnglishBuddy.Application.Features.UserFeatures.MeetingInActive;
 using App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetings;
 using App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetingsUsers;
 using MediatR;
@@ -17,12 +18,12 @@ namespace App.EnglishBuddy.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("getAll/{isActive}")]
-        public async Task<ActionResult<List<GetAllMeetingsResponse>>> GetAll(bool isActive,CancellationToken cancellationToken)
+        [HttpGet("getAll")]
+        public async Task<ActionResult<List<GetAllMeetingsResponse>>> GetAll(CancellationToken cancellationToken)
         {
             GetAllMeetingsRequest request = new GetAllMeetingsRequest()
             {
-                IsActive = isActive,
+                IsActive = true,
             };
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
@@ -52,6 +53,14 @@ namespace App.EnglishBuddy.API.Controllers
             {
                 MeetingId = meetingId
             };
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpPost("leftmeeting")]
+        public async Task<ActionResult<SaveMeetingsResponse>> InActive(MeetingInActiveRequest request,
+            CancellationToken cancellationToken)
+        {
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }

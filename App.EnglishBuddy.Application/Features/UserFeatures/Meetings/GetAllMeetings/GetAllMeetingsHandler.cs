@@ -28,7 +28,6 @@ public sealed class GetAllMeetingsHandler : IRequestHandler<GetAllMeetingsReques
         }
         catch (Exception ex)
         {
-
             throw;
         }
         return response;

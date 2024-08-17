@@ -7,5 +7,6 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.LoginByUserName
     {
        public string? Password { get; set; }
        public string? Email { get; set; }
+
     }
 }

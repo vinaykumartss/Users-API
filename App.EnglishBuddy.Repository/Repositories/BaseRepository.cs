@@ -27,6 +27,8 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
 
     public void Update(T entity)
     {
+        
+
         Context.Update(entity);
     }
 

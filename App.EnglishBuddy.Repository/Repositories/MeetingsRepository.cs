@@ -22,17 +22,15 @@ public class MeetingsRepository : BaseRepository<Meetings>, IMeetingsRepository
                             join c in _context.Users on a.UserId equals c.Id
                             where a.IsActive == true && b.IsActive == true
 
-                            select new GetAllMeetingsResponse { MeetingId = a.Id, Subject = a.Subject, Name = a.Name , StartTime = a.StartTime , StartAmPm =a.StartAMPM, UserId= a.UserId, UserIsActive= b.IsActive, CreatedBy= c.FirstName +" " +c.LastName} into x
-                            group x by new { x.MeetingId, x.Subject, x.Name, x.StartTime , x.StartAmPm, x.UserIsActive, x.UserId, x.CreatedBy } into g
+                            select new GetAllMeetingsResponse { MeetingId = a.Id, Subject = a.Subject,UserId= a.UserId, UserIsActive= b.IsActive, CreatedBy= c.FirstName +" " +c.LastName} into x
+                            group x by new { x.MeetingId, x.Subject, x.UserIsActive, x.UserId, x.CreatedBy } into g
                           
                             select new GetAllMeetingsResponse
                             {
                                 MeetingId = g.Key.MeetingId,
                                 UserCount = g.Count(),
                                 Subject = g.Key.Subject,
-                                Name = g.Key.Name,
-                                StartTime = g.Key.StartTime,
-                                StartAmPm = g.Key.StartAmPm,
+ 
                                 CreatedBy = g.Key.CreatedBy,
                                 UserId = g.Key.UserId
                                 

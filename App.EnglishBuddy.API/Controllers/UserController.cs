@@ -1,4 +1,5 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.CreateUser;
+using App.EnglishBuddy.Application.Features.UserFeatures.FcmToken;
 using App.EnglishBuddy.Application.Features.UserFeatures.ForgotPassword;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
@@ -108,13 +109,15 @@ namespace App.EnglishBuddy.API.Controllers
             return Ok(response);
         }
 
-        [HttpPut("vinay-1")]
-        public async Task<ActionResult<UpdateProfileResponse>> Vinay(Guid id, UpdateProfileRequest request,
+        [HttpPut("fcmtoken/{userid}")]
+        public async Task<ActionResult<UpdateProfileResponse>> Vinay(Guid userid, FcmTokenRequest request,
         CancellationToken cancellationToken)
         {
-            request.Id = id;
-            UpdateProfileResponse response = await _mediator.Send(request, cancellationToken);
+            request.UserId = userid;
+            FcmTokenResponse response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }
+
+        
     }
 }

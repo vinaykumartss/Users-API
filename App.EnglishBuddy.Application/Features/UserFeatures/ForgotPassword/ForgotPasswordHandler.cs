@@ -42,6 +42,7 @@ public sealed class ForgotPasswordHandler : IRequestHandler<ForgotPasswordReques
                 fileContents = fileContents.Replace("{otp}", respnse.Otp);
                 SendMail.SendEmail(fileContents, request.Email);
                 response.IsSuccess = true;
+                response.Id = users.Id;
             }
             else
             {

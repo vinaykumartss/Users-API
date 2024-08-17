@@ -27,7 +27,7 @@ public sealed class OTPVerifyHandler : IRequestHandler<OTPVerifyRequest, OTPVeri
     {
         OTPVerifyResponse otp = new OTPVerifyResponse();
         otp.Mobile = request.Email;
-        Users user = await _iUserRepository.FindByUserId(x => x.Email == request.Email, cancellationToken);
+        Users user = await _iUserRepository.FindByUserId(x => x.Email.ToLower() == request.Email.ToLower(), cancellationToken);
         if (user != null)
         {
             Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id & x.OTP == request.OTP, cancellationToken); // TODO

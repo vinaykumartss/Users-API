@@ -56,7 +56,9 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
             }
             else if (users != null && users.IsOtpVerify == false)
             {
-              
+                _userRepository.Update(users);
+                await _unitOfWork.Save(cancellationToken);
+
                 var fileContents = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/OtpTemplate.html"));
                 OTPRequest oTPRequest = new OTPRequest()
                 {
@@ -66,10 +68,9 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
                 fileContents = fileContents.Replace("{otp}", respnse.Otp);
                 SendMail.SendEmail(fileContents, request.Email);
                 users.Password = request.Password;
-                _userRepository.Update(users);
-                await _unitOfWork.Save(cancellationToken);
                 response.IsOtpVerify = false;
                 response.Message = "Otp has been sent to you registered mail Id, Please verify";
+                response.IsSuccess = true;
             }
             else if (users != null && users.IsOtpVerify == true)
             {

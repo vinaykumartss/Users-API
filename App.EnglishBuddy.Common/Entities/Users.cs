@@ -44,5 +44,8 @@ namespace App.EnglishBuddy.Domain.Entities
         [Column("isOtpVerify")]
         public bool? IsOtpVerify { get; set; }
 
+        [Column("fcm_token")]
+        public string? FcmToken { get; set; }
+        
     }
 }

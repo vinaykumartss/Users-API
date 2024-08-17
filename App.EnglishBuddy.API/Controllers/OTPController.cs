@@ -18,6 +18,7 @@ namespace App.EnglishBuddy.API.Controllers
         public async Task<ActionResult<OTPResponse>> Create(OTPRequest request,
             CancellationToken cancellationToken)
         {
+            request.IsResend = true;
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }
