@@ -38,6 +38,7 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
                         MeetingUsers meetingUsers = await _iMeetingsUserRepository.FindByUserId(x => x.Id == request.MeetingId && x.UserId == request.UserId, cancellationToken);
                         if (meetingUsers != null)
                         {
+                              meetingUsers.IsmeetingAdmin = true;
                             meetingUsers.IsActive = request.Isactive;
                             _iMeetingsUserRepository.Update(meetingUsers);
                         }
@@ -47,6 +48,7 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
                             user.IsActive = request.Isactive;
                             user.UpdateDate = DateTime.UtcNow;
                             user.CreatedDate = DateTime.UtcNow;
+                            user.IsmeetingAdmin = true;
                             _iMeetingsUserRepository.Create(user);
                         }
 
@@ -74,6 +76,7 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
                     MeetingUsers meetingUsers = await _iMeetingsUserRepository.FindByUserId(x => x.MeetingId == request.MeetingId && x.UserId == request.UserId, cancellation);
                     if (meetingUsers != null)
                     {
+                        meetingUsers.IsmeetingAdmin = false;
                         meetingUsers.IsActive = request.Isactive;
                         _iMeetingsUserRepository.Update(meetingUsers);
                     }
@@ -83,6 +86,7 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
                         user.IsActive = request.Isactive;
                         user.UpdateDate = DateTime.UtcNow;
                         user.CreatedDate = DateTime.UtcNow;
+                        user.IsmeetingAdmin=false;
                         _iMeetingsUserRepository.Create(user);
                     }
 

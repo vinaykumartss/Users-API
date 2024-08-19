@@ -1,4 +1,6 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.GetAllMeetings;
+using App.EnglishBuddy.Application.Features.UserFeatures.GetMeetingCreatedBy;
+using App.EnglishBuddy.Application.Features.UserFeatures.GetMeetingJoined;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetMeetingsUsers;
 using App.EnglishBuddy.Application.Features.UserFeatures.MeetingInActive;
 using App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetings;
@@ -61,6 +63,18 @@ namespace App.EnglishBuddy.API.Controllers
         public async Task<ActionResult<SaveMeetingsResponse>> InActive(MeetingInActiveRequest request,
             CancellationToken cancellationToken)
         {
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpGet("getMeetingJoined/{userId}")]
+        public async Task<ActionResult<SaveMeetingsResponse>> GetMeetings(Guid userId,
+            CancellationToken cancellationToken)
+        {
+            GetMeetingJoinedRequest request = new GetMeetingJoinedRequest()
+            {
+                UserId =userId
+            };
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }

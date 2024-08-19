@@ -18,6 +18,10 @@ namespace App.EnglishBuddy.Domain.Entities
 
         [Column("meeting_id")]
         public Guid? MeetingId { get; set; }
+
+        
+
+        
         
     }
 }

@@ -1,9 +1,10 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.MeetingInActive;
+using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
 
-namespace App.EnglishBuddy.Application.Features.UserFeatures.MeetingInActive;
+namespace App.EnglishBuddy.Application.Features.UserFeatures.GetMeetingCreatedBy;
 
 public sealed class MeetingInActiveHandler : IRequestHandler<MeetingInActiveRequest, MeetingInActiveResponse>
 {

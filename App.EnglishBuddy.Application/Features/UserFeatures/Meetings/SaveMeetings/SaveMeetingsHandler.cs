@@ -32,6 +32,7 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
             user.CreatedDate = DateTime.UtcNow;
             user.UpdateDate = DateTime.UtcNow;
             user.UserId= request.UserId;
+            
             user.IsActive = true;
             _iMeetingsRepository.Create(user);
             await _unitOfWork.Save(cancellationToken);
@@ -40,6 +41,7 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
             meetingUsers.IsActive = true;
             meetingUsers.UserId = request.UserId;
             meetingUsers.MeetingId = user.Id;
+            meetingUsers.IsmeetingAdmin = true;
             meetingUsers.CreatedDate = DateTime.UtcNow;
             meetingUsers.UpdateDate = DateTime.UtcNow;
             _iMeetingsUserRepository.Create(meetingUsers);
