@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "TJrzvZjRLlnPlPp5d4XMTkiJUJOa7TLAdqZLcWFbm7Y=",
+  "Source": "App.EventManagement.API",
+  "BasePath": "_content/App.EventManagement.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "App.EventManagement.API\\wwwroot",
+      "Source": "App.EventManagement.API",
+      "ContentRoot": "D:\\Vinay_RandomCalls\\App.EventManagement.API\\wwwroot\\",
+      "BasePath": "_content/App.EventManagement.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Vinay_RandomCalls\\App.EventManagement.API\\wwwroot\\MailTempate\\ContactUs.html",
+      "SourceId": "App.EventManagement.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Vinay_RandomCalls\\App.EventManagement.API\\wwwroot\\",
+      "BasePath": "_content/App.EventManagement.API",
+      "RelativePath": "MailTempate/ContactUs.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MailTempate\\ContactUs.html"
+    },
+    {
+      "Identity": "D:\\Vinay_RandomCalls\\App.EventManagement.API\\wwwroot\\MailTempate\\OtpTemplate.html",
+      "SourceId": "App.EventManagement.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Vinay_RandomCalls\\App.EventManagement.API\\wwwroot\\",
+      "BasePath": "_content/App.EventManagement.API",
+      "RelativePath": "MailTempate/OtpTemplate.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MailTempate\\OtpTemplate.html"
+    }
+  ]
+}

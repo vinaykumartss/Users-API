@@ -3510,24 +3510,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/vinayrathore/.nuget/packages/": {}
+    "C:\\Users\\Vinay\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj",
-      "projectName": "App.EnglishBuddy.Domain",
-      "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj",
-      "packagesPath": "/Users/vinayrathore/.nuget/packages/",
-      "outputPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/obj/",
+      "projectUniqueName": "D:\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EventManagement.Domain.csproj",
+      "projectName": "App.EventManagement.Domain",
+      "projectPath": "D:\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EventManagement.Domain.csproj",
+      "packagesPath": "C:\\Users\\Vinay\\.nuget\\packages\\",
+      "outputPath": "D:\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/vinayrathore/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3540,11 +3542,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3582,7 +3579,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

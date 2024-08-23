@@ -1381,7 +1381,7 @@
           }
         }
       },
-      "App.EnglishBuddy.Domain/1.0.0": {
+      "App.EventManagement.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -1389,10 +1389,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/App.EnglishBuddy.Domain.dll": {}
+          "bin/placeholder/App.EventManagement.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/App.EnglishBuddy.Domain.dll": {}
+          "bin/placeholder/App.EventManagement.Domain.dll": {}
         }
       }
     }
@@ -4123,15 +4123,15 @@
         "version.txt"
       ]
     },
-    "App.EnglishBuddy.Domain/1.0.0": {
+    "App.EventManagement.Domain/1.0.0": {
       "type": "project",
-      "path": "../App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj",
-      "msbuildProject": "../App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj"
+      "path": "../App.EnglishBuddy.Common/App.EventManagement.Domain.csproj",
+      "msbuildProject": "../App.EnglishBuddy.Common/App.EventManagement.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "App.EnglishBuddy.Domain >= 1.0.0",
+      "App.EventManagement.Domain >= 1.0.0",
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "FluentValidation >= 11.5.1",
@@ -4147,32 +4147,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/vinayrathore/.nuget/packages/": {}
+    "C:\\Users\\Vinay\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj",
-      "projectName": "App.EnglishBuddy.Application",
-      "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj",
-      "packagesPath": "/Users/vinayrathore/.nuget/packages/",
-      "outputPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/obj/",
+      "projectUniqueName": "D:\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EventManagement.Application.csproj",
+      "projectName": "App.EventManagement.Application",
+      "projectPath": "D:\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EventManagement.Application.csproj",
+      "packagesPath": "C:\\Users\\Vinay\\.nuget\\packages\\",
+      "outputPath": "D:\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/vinayrathore/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj": {
-              "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj"
+            "D:\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EventManagement.Domain.csproj": {
+              "projectPath": "D:\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EventManagement.Domain.csproj"
             }
           }
         }
@@ -4181,11 +4183,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4257,7 +4254,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
