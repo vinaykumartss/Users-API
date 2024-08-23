@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qo7SSYx6CnAqdBuqjWLemRJk0HJsZWmFNFqiVkcgdPY=",
+  "Hash": "1w/qDUUmiVgYNziKVx1uS84JSGmXs/ZCJekW2y/zA5Y=",
   "Source": "App.EnglishBuddy.API",
   "BasePath": "_content/App.EnglishBuddy.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "App.EnglishBuddy.API/wwwroot",
       "Source": "App.EnglishBuddy.API",
-      "ContentRoot": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/",
+      "ContentRoot": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/",
       "BasePath": "_content/App.EnglishBuddy.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/MailTempate/ContactUs.html",
+      "Identity": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/MailTempate/ContactUs.html",
       "SourceId": "App.EnglishBuddy.API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/",
+      "ContentRoot": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/",
       "BasePath": "_content/App.EnglishBuddy.API",
       "RelativePath": "MailTempate/ContactUs.html",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot/MailTempate/ContactUs.html"
     },
     {
-      "Identity": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/MailTempate/OtpTemplate.html",
+      "Identity": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/MailTempate/OtpTemplate.html",
       "SourceId": "App.EnglishBuddy.API",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/",
+      "ContentRoot": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/wwwroot/",
       "BasePath": "_content/App.EnglishBuddy.API",
       "RelativePath": "MailTempate/OtpTemplate.html",
       "AssetKind": "All",

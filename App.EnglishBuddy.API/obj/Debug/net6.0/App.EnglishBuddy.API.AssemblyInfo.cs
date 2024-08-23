@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("App.EnglishBuddy.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+004fff053369656ea359bd7994eb69287340e4ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2dd33938faf19de64268060d9cff230044c5517")]
 [assembly: System.Reflection.AssemblyProductAttribute("App.EnglishBuddy.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("App.EnglishBuddy.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

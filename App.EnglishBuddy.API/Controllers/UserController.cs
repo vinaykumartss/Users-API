@@ -8,6 +8,7 @@ using App.EnglishBuddy.Application.Features.UserFeatures.LoginByUserName;
 using App.EnglishBuddy.Application.Features.UserFeatures.Password;
 using App.EnglishBuddy.Application.Features.UserFeatures.UpdateProfile;
 using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
+using App.EnglishBuddy.Application.Features.UserFeatures.AccessToken;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,7 +26,7 @@ namespace App.EnglishBuddy.API.Controllers
         }
 
         [HttpPost("list")]
-        public async Task<ActionResult<List<GetAllUserResponse>>> GetAll(GetAllUserRequest request,CancellationToken cancellationToken)
+        public async Task<ActionResult<List<GetAllUserResponse>>> GetAll(GetAllUserRequest request, CancellationToken cancellationToken)
         {
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
@@ -118,6 +119,15 @@ namespace App.EnglishBuddy.API.Controllers
             return Ok(response);
         }
 
-        
+        [HttpGet("accessToken")]
+        public async Task<ActionResult<AccessTokenResponse>> SetPassword(
+           CancellationToken cancellationToken)
+        {
+            AccessTokenRequest request= new AccessTokenRequestAccessTokenRequest();
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+
     }
 }

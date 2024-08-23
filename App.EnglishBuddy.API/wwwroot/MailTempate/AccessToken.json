@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "buddymeet-6dcc6",
+    "private_key_id": "130fa2dc9e08563e924079d10bb2be528aa40966",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDnQA+WhIi3VZ07\nPZo54eZYBSECQYtcR75tVpVnQ0FZ9OYOaVGh5NVVY0NxpytkP4cV9aIu/TdpgeVj\n6VuqJrdzUOt9SKgAGjyXHaHyrkQN6MmIis79Ps/d1aXrg6tuoTzoV1EJJ/fIad5v\n5xrREyDIW+69qevO6cQ6RvaZsET/jTYaWwAOR/fi66MwNB8VugOEVON+I2+8d4ar\njRDEKYXskqY5XxnwPFusf0BJNW2hi4uhiX7VFI/NZzQfuPJXt7Hg5dlWUWQs7pCR\nny/VBDSBAu2w/33jQddlwtz6BnmFNAaZx9zGbzgGjpZHgCLqzUUog/sTvcYvKDm1\n93DPZAy9AgMBAAECggEAMu3jYPlwaLwkxDLFgCD1y4XZprcLu7ebQ1ZR0iu4PVkX\nv63HSjntGACkDmhMQKhTFm2CGgovhX+TpyTySK99MJruOinhwiAFHxzqGVny6ANQ\nO0+i1ZhbTFZs08ksXNGK6fqtALC6O/vA/vEtcUVer3G7yy6cnfXS/yi4z9FH6OXj\n+2RMBrzVCOg6dT8n2a2FqOz5hV6yk5w9x3ee5QA4LWM5cDSs/DTCVW4iroQag5Vp\njfLH0sWJd7R1ZPF/tt7lxmJjSN/uUawUp2l/tpw0yXrYMNOAg9AacqS5MifE/Peq\nlGxb56nz49w0SqOzO07qws2o8AKKKnFXua8grWoeuwKBgQD74xXV7kAW3VGx5RRK\nIGfzj1aLIS6+2nVIxhpl74uksgNsokT8vdAOWwJ28J5NMA7dfnkfkoLc2iCmcT8a\nQQjnwHg4UIxzS59VUYxHAbpLtzEMxlJvwRbjVUXEL/e/VnlJkLm+jb5xi5GEVb7H\nrI+O27H4xWa0vRw3ZSNM6mIeQwKBgQDrBrYlybWsnXcws7JjEPKLkpSA4osbPkb/\n1R+MLf90Pq0UH4LzgmbLTCPzgMj7yZgv5liODpFyS+EyRO/MSYpNjuEnHWP40wG8\nHXVWBvKe8qxvC5UqvKRR2clE5vNv5danpL9TnegPH6cW8uZCcD8csGdGduUib/i5\n+hT8xF34/wKBgDGA37m7qTzVIkkkDGjFFaj4crnFO7qmlIZI6Mc/3OHxWlrvST+i\nzlED8egOQg5Jc6J0SLm7wZxGAkSz3QL75RQm73mh2viN1DKgZEFQRZy71Bf+ohT0\njdr/10ZHZxljlVKv7tFUailGlMK9V1FGyK/63W9W3GiJAhKg/d8P8VihAoGBAIpp\nVXRDqp6RzdP8wB3fqTfRh2uv/0R4FNAt73pazIrlLoEfXbuTHH61xKZvPe4q91me\nSqC+q6GoVmOIfcDNvomWj7q9cFblzau/nY6gYNqDCFINfDfDCPK7U/EkIlHQBe6M\n87CG2letyHWXb0vJVyHKMcgp1R/G2bCNOzbxXnZ5AoGBAOUVg7qb564npWVqVxd7\nk0FZjegLiheA0vvckcGVQqbsdulVQehHyXCHfDBNpY7jS+P9SK4aMYMi83IXV6VY\ncrjMmq8SE9cmWMcRV23yvmyy7sAa6A9Cbz2I71C1fdIl621zJ9+C/6nxmGGI6hTP\n5rdDsrCQtPan+gkC6hkVbcZM\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-a7act@buddymeet-6dcc6.iam.gserviceaccount.com",
+    "client_id": "101612374418178682140",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-a7act%40buddymeet-6dcc6.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }

@@ -5311,11 +5311,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj",
+      "projectUniqueName": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj",
       "projectName": "App.EnglishBuddy.API",
-      "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj",
+      "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj",
       "packagesPath": "/Users/vinayrathore/.nuget/packages/",
-      "outputPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/obj/",
+      "outputPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/vinayrathore/.nuget/NuGet/NuGet.Config"
@@ -5330,11 +5330,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {
-              "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj"
+            "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {
+              "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj"
             },
-            "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj": {
-              "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj"
+            "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj": {
+              "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj"
             }
           }
         }

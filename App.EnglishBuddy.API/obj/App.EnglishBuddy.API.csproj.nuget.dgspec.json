@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj": {}
+    "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj": {}
   },
   "projects": {
-    "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj": {
+    "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj",
+        "projectUniqueName": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj",
         "projectName": "App.EnglishBuddy.API",
-        "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj",
+        "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/App.EnglishBuddy.API.csproj",
         "packagesPath": "/Users/vinayrathore/.nuget/packages/",
-        "outputPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.API/obj/",
+        "outputPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vinayrathore/.nuget/NuGet/NuGet.Config"
@@ -26,11 +26,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {
-                "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj"
+              "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {
+                "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj"
               },
-              "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj": {
-                "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj"
+              "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj": {
+                "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj"
               }
             }
           }
@@ -86,14 +86,14 @@
         }
       }
     },
-    "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {
+    "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj",
+        "projectUniqueName": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj",
         "projectName": "App.EnglishBuddy.Application",
-        "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj",
+        "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj",
         "packagesPath": "/Users/vinayrathore/.nuget/packages/",
-        "outputPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/obj/",
+        "outputPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vinayrathore/.nuget/NuGet/NuGet.Config"
@@ -108,8 +108,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj": {
-                "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj"
+              "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj": {
+                "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj"
               }
             }
           }
@@ -198,14 +198,14 @@
         }
       }
     },
-    "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj": {
+    "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj",
+        "projectUniqueName": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj",
         "projectName": "App.EnglishBuddy.Domain",
-        "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj",
+        "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj",
         "packagesPath": "/Users/vinayrathore/.nuget/packages/",
-        "outputPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/obj/",
+        "outputPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vinayrathore/.nuget/NuGet/NuGet.Config"
@@ -272,14 +272,14 @@
         }
       }
     },
-    "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj": {
+    "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj",
+        "projectUniqueName": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj",
         "projectName": "App.EnglishBuddy.Infrastructure",
-        "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj",
+        "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Repository/App.EnglishBuddy.Infrastructure.csproj",
         "packagesPath": "/Users/vinayrathore/.nuget/packages/",
-        "outputPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Repository/obj/",
+        "outputPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Repository/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vinayrathore/.nuget/NuGet/NuGet.Config"
@@ -294,11 +294,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {
-                "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj"
+              "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {
+                "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj"
               },
-              "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj": {
-                "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj"
+              "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj": {
+                "projectPath": "/Users/vinayrathore/Documents/backened/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj"
               }
             }
           }
