@@ -9,19 +9,10 @@ namespace App.EnglishBuddy.Domain.Entities
         [Column("user_id")]
         public Guid UserId { get; set; }
 
-       
-
         [Column("subject")]
         public string? Subject { get; set; }
 
-       
-
         [Column("meeting_id")]
         public Guid? MeetingId { get; set; }
-
-        
-
-        
-        
     }
 }

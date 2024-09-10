@@ -1,4 +1,5 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Common.Exceptions;
+using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
@@ -34,12 +35,18 @@ public sealed class GetUserHandler : IRequestHandler<GetUserRequest, GetUserResp
         {
             Users user = await _userRepository.GetById(request.Id, cancellationToken);
             _logger.LogInformation("user" + JsonConvert.SerializeObject(user));
-            response = _mapper.Map<GetUserResponse>(user);
-            Domain.Entities.UsersImages userImage = await _iUsersImagesRepository.FindByUserId(x => x.UserId == user.Id, cancellationToken);
-            _logger.LogInformation("userImage" + JsonConvert.SerializeObject(userImage));
-            if (userImage != null)
+            if (user != null)
             {
-                response.ImagePath = $"{userImage.ImagePath}";
+                response = _mapper.Map<GetUserResponse>(user);
+                Domain.Entities.UsersImages userImage = await _iUsersImagesRepository.FindByUserId(x => x.UserId == user.Id, cancellationToken);
+                _logger.LogInformation("userImage" + JsonConvert.SerializeObject(userImage));
+                if (userImage != null)
+                {
+                    response.ImagePath = $"{userImage.ImagePath}";
+                }
+            } else
+            {
+                throw new NotFoundException("No Record Found");
             }
             return response;
         }

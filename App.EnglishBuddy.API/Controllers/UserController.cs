@@ -8,7 +8,6 @@ using App.EnglishBuddy.Application.Features.UserFeatures.LoginByUserName;
 using App.EnglishBuddy.Application.Features.UserFeatures.Password;
 using App.EnglishBuddy.Application.Features.UserFeatures.UpdateProfile;
 using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
-using App.EnglishBuddy.Application.Features.UserFeatures.AccessToken;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -111,7 +110,7 @@ namespace App.EnglishBuddy.API.Controllers
         }
 
         [HttpPut("fcmtoken/{userid}")]
-        public async Task<ActionResult<UpdateProfileResponse>> Vinay(Guid userid, FcmTokenRequest request,
+        public async Task<ActionResult<UpdateProfileResponse>> Fcmtoken(Guid userid, FcmTokenRequest request,
         CancellationToken cancellationToken)
         {
             request.UserId = userid;
@@ -120,14 +119,12 @@ namespace App.EnglishBuddy.API.Controllers
         }
 
         [HttpGet("accessToken")]
-        public async Task<ActionResult<AccessTokenResponse>> SetPassword(
+        public async Task<ActionResult<AccessTokenResponse>> AccessToken(
            CancellationToken cancellationToken)
         {
-            AccessTokenRequest request= new AccessTokenRequestAccessTokenRequest();
+            AccessTokenRequest request= new AccessTokenRequest();
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }
-
-
     }
 }

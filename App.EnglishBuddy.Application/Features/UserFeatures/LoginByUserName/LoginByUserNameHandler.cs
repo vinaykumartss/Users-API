@@ -1,4 +1,5 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Common.Exceptions;
+using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
@@ -37,7 +38,7 @@ public sealed class LoginByUserNameHandler : IRequestHandler<LoginByUserNameRequ
                 response.IsOtpVerify = userInfo.IsOtpVerify;
                 response.FcmToken = userInfo.FcmToken;
             } else {
-                throw new Exception("User is not found");
+                throw new NotFoundException("User is not found");
             }
         }
         catch (Exception ex)

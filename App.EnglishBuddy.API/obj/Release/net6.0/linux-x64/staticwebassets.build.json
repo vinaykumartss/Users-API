@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oYs79CG2GW9uZpT6GMo8BHWOI+FW5NzqL7nwc7pxnoM=",
+  "Hash": "kUS9TmzGFSlE1/bfBYsan0hOspn6dlLVeuj+mtAPjtk=",
   "Source": "App.EnglishBuddy.API",
   "BasePath": "_content/App.EnglishBuddy.API",
   "Mode": "Default",
@@ -10,17 +10,34 @@
     {
       "Name": "App.EnglishBuddy.API\\wwwroot",
       "Source": "App.EnglishBuddy.API",
-      "ContentRoot": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\",
+      "ContentRoot": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\",
       "BasePath": "_content/App.EnglishBuddy.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\ContactUs.html",
+      "Identity": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\AccessToken.json",
       "SourceId": "App.EnglishBuddy.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\",
+      "ContentRoot": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\",
+      "BasePath": "_content/App.EnglishBuddy.API",
+      "RelativePath": "MailTempate/AccessToken.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MailTempate\\AccessToken.json"
+    },
+    {
+      "Identity": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\ContactUs.html",
+      "SourceId": "App.EnglishBuddy.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\",
       "BasePath": "_content/App.EnglishBuddy.API",
       "RelativePath": "MailTempate/ContactUs.html",
       "AssetKind": "All",
@@ -34,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\MailTempate\\ContactUs.html"
     },
     {
-      "Identity": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\OtpTemplate.html",
+      "Identity": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\OtpTemplate.html",
       "SourceId": "App.EnglishBuddy.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\",
+      "ContentRoot": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\",
       "BasePath": "_content/App.EnglishBuddy.API",
       "RelativePath": "MailTempate/OtpTemplate.html",
       "AssetKind": "All",

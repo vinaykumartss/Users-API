@@ -28,7 +28,7 @@ public sealed class GetMeetingJoinedHandler : IRequestHandler<GetMeetingJoinedRe
         try
         {
             int totalMeeting = 0;
-            var meetingUser = _iMeetingsUserRepository.FindByListSync(x => x.UserId == request.UserId && x.IsmeetingAdmin == false));
+            var meetingUser =  _iMeetingsUserRepository.FindByListSync(x => x.UserId == request.UserId && x.IsmeetingAdmin == false);
             if (meetingUser != null)
             {
                 totalMeeting = meetingUser.Count;

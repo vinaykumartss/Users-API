@@ -1,11 +1,15 @@
 {
   "Files": [
     {
-      "Id": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\ContactUs.html",
+      "Id": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\AccessToken.json",
+      "PackagePath": "staticwebassets\\MailTempate\\AccessToken.json"
+    },
+    {
+      "Id": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\ContactUs.html",
       "PackagePath": "staticwebassets\\MailTempate\\ContactUs.html"
     },
     {
-      "Id": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\OtpTemplate.html",
+      "Id": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\wwwroot\\MailTempate\\OtpTemplate.html",
       "PackagePath": "staticwebassets\\MailTempate\\OtpTemplate.html"
     },
     {

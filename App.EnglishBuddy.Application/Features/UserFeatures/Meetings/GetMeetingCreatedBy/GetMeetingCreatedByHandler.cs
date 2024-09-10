@@ -10,16 +10,15 @@ public sealed class GetMeetingCreatedByHandler : IRequestHandler<GetMeetingCreat
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
     private readonly IMeetingsRepository _iMeetingsRepository;
-    private readonly IMeetingsUsersRepository _iMeetingsUserRepository;
+    
     public GetMeetingCreatedByHandler(IUnitOfWork unitOfWork,
-        IMapper mapper, IMeetingsRepository iMeetingsRepository,
-        IMeetingsUsersRepository iMeetingsUserRepository
+        IMapper mapper, IMeetingsRepository iMeetingsRepository
+        
        )
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _iMeetingsRepository = iMeetingsRepository;
-        _iMeetingsUserRepository = iMeetingsUserRepository;
     }
 
     public async Task<GetMeetingCreatedByResponse> Handle(GetMeetingCreatedByRequest request, CancellationToken cancellationToken)
@@ -28,7 +27,7 @@ public sealed class GetMeetingCreatedByHandler : IRequestHandler<GetMeetingCreat
         try
         {
             int totalMeeting = 0;
-            var meetingUser = _iMeetingsUserRepository.FindByListSync(x => x.UserId == request.UserId && x.IsmeetingAdmin ==true);
+            var meetingUser = _iMeetingsRepository.FindByListSync(x => x.UserId == request.UserId );
             if (meetingUser != null)
             {
                 totalMeeting = meetingUser.Count;

@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {}
+    "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj": {}
   },
   "projects": {
-    "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj": {
+    "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj",
+        "projectUniqueName": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj",
         "projectName": "App.EnglishBuddy.Application",
-        "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/App.EnglishBuddy.Application.csproj",
-        "packagesPath": "/Users/vinayrathore/.nuget/packages/",
-        "outputPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Application/obj/",
+        "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj",
+        "packagesPath": "C:\\Users\\Vinay\\.nuget\\packages\\",
+        "outputPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vinayrathore/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj": {
-                "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj"
+              "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj": {
+                "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj"
               }
             }
           }
@@ -36,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -62,6 +59,10 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.4.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -112,26 +113,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj": {
+    "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj",
+        "projectUniqueName": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
         "projectName": "App.EnglishBuddy.Domain",
-        "projectPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/App.EnglishBuddy.Domain.csproj",
-        "packagesPath": "/Users/vinayrathore/.nuget/packages/",
-        "outputPath": "/Users/vinayrathore/Documents/Code/Vinay_RandomCalls/App.EnglishBuddy.Common/obj/",
+        "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
+        "packagesPath": "C:\\Users\\Vinay\\.nuget\\packages\\",
+        "outputPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/vinayrathore/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -144,11 +147,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -186,7 +184,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

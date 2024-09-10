@@ -26,3 +26,17 @@ D:\05June\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\refint\Ap
 D:\05June\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.pdb
 D:\05June\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.genruntimeconfig.cache
 D:\05June\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\ref\App.EnglishBuddy.Domain.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\bin\Release\net6.0\App.EnglishBuddy.Domain.deps.json
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\bin\Release\net6.0\App.EnglishBuddy.Domain.runtimeconfig.json
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\bin\Release\net6.0\App.EnglishBuddy.Domain.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\bin\Release\net6.0\App.EnglishBuddy.Domain.pdb
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.csproj.AssemblyReference.cache
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.AssemblyInfoInputs.cache
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.AssemblyInfo.cs
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.csproj.CoreCompileInputs.cache
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\refint\App.EnglishBuddy.Domain.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.pdb
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\App.EnglishBuddy.Domain.genruntimeconfig.cache
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Release\net6.0\ref\App.EnglishBuddy.Domain.dll

@@ -18,4 +18,5 @@ public interface IBaseRepository<T> where T : BaseEntity
     T FindByUserIdSync(Expression<Func<T, bool>> expression);
     Task<List<Domain.Entities.Users>> GetAllUser(GetAllUserRequest request, CancellationToken cancellationToken);
     Task<List<Domain.Entities.ContactUs>> GetAllContact(AllContactUsRequest request, CancellationToken cancellationToken);
+
 }

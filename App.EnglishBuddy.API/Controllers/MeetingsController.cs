@@ -78,5 +78,20 @@ namespace App.EnglishBuddy.API.Controllers
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }
+
+        [HttpGet("getMeetingCreatedBy/{userId}")]
+        public async Task<ActionResult<SaveMeetingsResponse>> MeetingCreatedBy(Guid userId,
+           CancellationToken cancellationToken)
+        {
+            GetMeetingCreatedByRequest request = new GetMeetingCreatedByRequest()
+            {
+                UserId = userId
+            };
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+
+        
     }
 }

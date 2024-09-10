@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\App.EnglishBuddy.API.csproj": {}
+    "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\App.EnglishBuddy.API.csproj": {}
   },
   "projects": {
-    "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\App.EnglishBuddy.API.csproj": {
+    "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\App.EnglishBuddy.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\App.EnglishBuddy.API.csproj",
+        "projectUniqueName": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\App.EnglishBuddy.API.csproj",
         "projectName": "App.EnglishBuddy.API",
-        "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\App.EnglishBuddy.API.csproj",
+        "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\App.EnglishBuddy.API.csproj",
         "packagesPath": "C:\\Users\\Vinay\\.nuget\\packages\\",
-        "outputPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.API\\obj\\publish\\linux-x64\\",
+        "outputPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.API\\obj\\publish\\linux-x64\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj": {
-                "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj"
+              "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj": {
+                "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj"
               },
-              "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj": {
-                "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj"
+              "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj": {
+                "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj"
               }
             }
           }
@@ -102,14 +102,14 @@
         }
       }
     },
-    "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj": {
+    "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj",
+        "projectUniqueName": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj",
         "projectName": "App.EnglishBuddy.Application",
-        "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj",
+        "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj",
         "packagesPath": "C:\\Users\\Vinay\\.nuget\\packages\\",
-        "outputPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\obj\\",
+        "outputPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -126,8 +126,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj": {
-                "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj"
+              "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj": {
+                "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj"
               }
             }
           }
@@ -157,6 +157,10 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[11.4.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -216,14 +220,14 @@
         }
       }
     },
-    "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj": {
+    "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
+        "projectUniqueName": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
         "projectName": "App.EnglishBuddy.Domain",
-        "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
+        "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj",
         "packagesPath": "C:\\Users\\Vinay\\.nuget\\packages\\",
-        "outputPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\obj\\",
+        "outputPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -292,14 +296,14 @@
         }
       }
     },
-    "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj": {
+    "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj",
+        "projectUniqueName": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj",
         "projectName": "App.EnglishBuddy.Infrastructure",
-        "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj",
+        "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\App.EnglishBuddy.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Vinay\\.nuget\\packages\\",
-        "outputPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\obj\\",
+        "outputPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vinay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -316,11 +320,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj": {
-                "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj"
+              "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj": {
+                "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Application\\App.EnglishBuddy.Application.csproj"
               },
-              "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj": {
-                "projectPath": "D:\\05June\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj"
+              "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj": {
+                "projectPath": "D:\\24Aug\\Vinay_RandomCalls\\App.EnglishBuddy.Common\\App.EnglishBuddy.Domain.csproj"
               }
             }
           }
