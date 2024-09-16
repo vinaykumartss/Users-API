@@ -40,7 +40,7 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
             MeetingUsers meetingUsers = new MeetingUsers();
             meetingUsers.IsActive = true;
             meetingUsers.UserId = request.UserId;
-            meetingUsers.MeetingId = user.Id;
+            meetingUsers.MeetingId = user.MeetingId;
             meetingUsers.IsmeetingAdmin = true;
             meetingUsers.CreatedDate = DateTime.UtcNow;
             meetingUsers.UpdateDate = DateTime.UtcNow;

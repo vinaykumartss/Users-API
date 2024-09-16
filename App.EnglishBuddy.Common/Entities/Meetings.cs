@@ -13,6 +13,6 @@ namespace App.EnglishBuddy.Domain.Entities
         public string? Subject { get; set; }
 
         [Column("meeting_id")]
-        public Guid? MeetingId { get; set; }
+        public Guid MeetingId { get; set; }
     }
 }

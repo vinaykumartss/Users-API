@@ -701,3 +701,7 @@ D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Debug\net6.0\Google.Apis.Cor
 D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Debug\net6.0\System.CodeDom.dll
 D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Debug\net6.0\System.Management.dll
 D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Management.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Debug\net6.0\FirebaseAdmin.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Debug\net6.0\Google.Api.Gax.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Debug\net6.0\Google.Api.Gax.Rest.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Debug\net6.0\System.Collections.Immutable.dll

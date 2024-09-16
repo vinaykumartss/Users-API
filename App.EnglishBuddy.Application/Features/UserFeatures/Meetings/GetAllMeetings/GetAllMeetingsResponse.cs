@@ -13,4 +13,5 @@ public sealed record GetAllMeetingsResponse
     public int UserCount { get; set; }
 
     public string? CreatedBy { get; set; }
+    public string? ImagePath { get; set; }
 }

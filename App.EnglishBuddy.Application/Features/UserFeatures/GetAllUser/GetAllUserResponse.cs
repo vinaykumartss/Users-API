@@ -9,4 +9,5 @@ public sealed record GetAllUserResponse
     public string? Address { get; set; }
 
     public string? FcmToken { get; set; }
+    public string? Image { get; set; }
 }
