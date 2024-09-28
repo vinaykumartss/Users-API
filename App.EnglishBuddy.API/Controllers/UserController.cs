@@ -5,6 +5,7 @@ using App.EnglishBuddy.Application.Features.UserFeatures.GetAllUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUser;
 using App.EnglishBuddy.Application.Features.UserFeatures.GetUserImage;
 using App.EnglishBuddy.Application.Features.UserFeatures.LoginByUserName;
+using App.EnglishBuddy.Application.Features.UserFeatures.NotificationToAllHandler;
 using App.EnglishBuddy.Application.Features.UserFeatures.Password;
 using App.EnglishBuddy.Application.Features.UserFeatures.UpdateProfile;
 using App.EnglishBuddy.Application.Features.UserFeatures.UsersImages;
@@ -123,6 +124,15 @@ namespace App.EnglishBuddy.API.Controllers
            CancellationToken cancellationToken)
         {
             AccessTokenRequest request= new AccessTokenRequest();
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpGet("notificationToAll")]
+        public async Task<ActionResult<NotificationToAllResponse>> NotificationToAll(
+          CancellationToken cancellationToken)
+        {
+            NotificationToAllRequest request = new NotificationToAllRequest();
             var response = await _mediator.Send(request, cancellationToken);
             return Ok(response);
         }

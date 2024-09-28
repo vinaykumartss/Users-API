@@ -13,5 +13,7 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.UpdateProfile
         public string? State { get; set; }
         public string? City { get; set; }
 
+       
+
     }
 }

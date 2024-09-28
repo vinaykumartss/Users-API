@@ -40,6 +40,8 @@ public sealed class UpdateProfileHandler : IRequestHandler<UpdateProfileRequest,
                 await _unitOfWork.Save(cancellationToken);
                 response.Id = users.Id;
                 response.IsSuccess = true;
+                users.CityId = request.CityId;
+                users.StateId = request.StateId;
             }
             else
             {

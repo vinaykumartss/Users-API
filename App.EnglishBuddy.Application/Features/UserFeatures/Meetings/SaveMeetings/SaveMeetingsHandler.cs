@@ -1,4 +1,5 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.NotificationToAllHandler;
+using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
@@ -11,15 +12,18 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
     private readonly IMapper _mapper;
     private readonly IMeetingsRepository _iMeetingsRepository;
     private readonly IMeetingsUsersRepository _iMeetingsUserRepository;
+    private readonly IMediator _iMediator;
     public SaveMeetingsHandler(IUnitOfWork unitOfWork,
         IMapper mapper, IMeetingsRepository iMeetingsRepository,
-        IMeetingsUsersRepository iMeetingsUserRepository
+        IMeetingsUsersRepository iMeetingsUserRepository,
+         IMediator iMediator
        )
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _iMeetingsRepository = iMeetingsRepository;
         _iMeetingsUserRepository = iMeetingsUserRepository;
+        _iMediator = iMediator;
     }
 
     public async Task<SaveMeetingsResponse> Handle(SaveMeetingsRequest request, CancellationToken cancellationToken)
@@ -49,7 +53,9 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
             response.IsSuccess = true;
 
             response  = _mapper.Map<SaveMeetingsResponse>(request);
-            response.MeetingId = user.Id;
+            response.MeetingId = user.MeetingId;
+            NotificationToAllRequest req =new NotificationToAllRequest();
+            await _iMediator.Send(req);
             response.IsSuccess= true;
 
         }

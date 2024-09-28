@@ -33,6 +33,9 @@ public class MeetingsRepository : BaseRepository<Meetings>, IMeetingsRepository
                                     UserId = a.UserId,
                                     Subject = a.Subject,
                                     UserCount = _context.MeetingUsers.Where(x=>x.MeetingId ==a.MeetingId && x.IsActive ==true).Count(),
+                                    CreatedBy = uuu.FirstName + " " +uuu.LastName,
+                                   // ImagePath =nnn.ImagePath,
+                                   
 
                             }
                             ).ToListAsync(cancellationToken); 

@@ -1206,3 +1206,6 @@ D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\ref
 D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\App.EnglishBuddy.API.pdb
 D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\App.EnglishBuddy.API.genruntimeconfig.cache
 D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\obj\Release\net6.0\linux-x64\ref\App.EnglishBuddy.API.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\FirebaseAdmin.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\Google.Api.Gax.dll
+D:\24Aug\Vinay_RandomCalls\App.EnglishBuddy.API\bin\Release\net6.0\linux-x64\Google.Api.Gax.Rest.dll

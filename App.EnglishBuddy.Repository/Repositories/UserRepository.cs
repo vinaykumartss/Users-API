@@ -26,7 +26,7 @@ public class UserRepository : BaseRepository<Users>, IUserRepository
                                                     Address= u.CityName,
                                                     FcmToken= u.FcmToken,
                                                     Mobile = u.Mobile,
-                                                    Image = x.ImagePath
+                                                  //  Image = x.ImagePath
                                                 })
                                                .Skip((request.PageNumber - 1) * request.PageSize)
                                                .Take(request.PageSize).ToListAsync(cancellationToken);

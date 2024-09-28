@@ -5670,6 +5670,7 @@
     "net6.0": [
       "App.EnglishBuddy.Application >= 1.0.0",
       "App.EnglishBuddy.Infrastructure >= 1.0.0",
+      "FirebaseAdmin >= 3.0.1",
       "Microsoft.AspNetCore.HttpOverrides >= 2.2.0",
       "Microsoft.Extensions.Logging.Log4Net.AspNetCore >= 6.1.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
@@ -5721,6 +5722,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "FirebaseAdmin": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
           "Microsoft.AspNetCore.HttpOverrides": {
             "target": "Package",
             "version": "[2.2.0, )"
