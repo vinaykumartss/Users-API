@@ -42,7 +42,7 @@ public sealed class GetUserHandler : IRequestHandler<GetUserRequest, GetUserResp
                 _logger.LogInformation("userImage" + JsonConvert.SerializeObject(userImage));
                 if (userImage != null)
                 {
-                    response.ImagePath = $"{userImage.ImagePath}";
+                    response.ImagePath = $"https://insightxdev.com:801/{userImage.ImagePath}";
                 }
             } else
             {

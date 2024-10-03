@@ -27,4 +27,8 @@
     <ProjectReference Include="..\App.EnglishBuddy.Common\App.EnglishBuddy.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\UserFeatures\AccessToken\NewFolder\" />
+  </ItemGroup>
+
 </Project>

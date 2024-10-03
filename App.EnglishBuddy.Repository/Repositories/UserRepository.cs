@@ -26,12 +26,10 @@ public class UserRepository : BaseRepository<Users>, IUserRepository
                                                     Address= u.CityName,
                                                     FcmToken= u.FcmToken,
                                                     Mobile = u.Mobile,
-                                                  //  Image = x.ImagePath
-                                                })
+                                                    Image = !string.IsNullOrEmpty(x.ImagePath) ? $"https://insightxdev.com:801/{x.ImagePath}" : null
+    })
                                                .Skip((request.PageNumber - 1) * request.PageSize)
-                                               .Take(request.PageSize).ToListAsync(cancellationToken);
-
-                                                   
+                                               .Take(request.PageSize).ToListAsync(cancellationToken);                                                 
         return query;
     }
 
