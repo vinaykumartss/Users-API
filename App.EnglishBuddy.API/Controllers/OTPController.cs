@@ -1,4 +1,5 @@
 using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
+using App.EnglishBuddy.Application.Features.UserFeatures.MobileOtp;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +24,14 @@ namespace App.EnglishBuddy.API.Controllers
             return Ok(response);
         }
 
+        [HttpPost("mobileOtp")]
+        public async Task<ActionResult<MobileOtpResponse>> MobileOtp(MobileOtpRequest request,
+            CancellationToken cancellationToken)
+        {
+            request.IsResend = true;
+            var response = await _mediator.Send(request, cancellationToken);
+            return Ok(response);
+        }
         [HttpPost("verify")]
         public async Task<ActionResult<OTPResponse>> Verify(OTPVerifyRequest request,
             CancellationToken cancellationToken)
