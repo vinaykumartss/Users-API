@@ -12,5 +12,7 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.CallList
         public string? Name { get; set; }
         public string? TotalMinutes { get; set; }
         public DateTime? Date { get; set; }
+        public Guid FromUserId { get; set; }
+        public string? FromName { get; set; }
     }
 }
