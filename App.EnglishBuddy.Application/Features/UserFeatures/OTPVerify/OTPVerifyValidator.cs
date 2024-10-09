@@ -6,7 +6,7 @@ public sealed class OTPVerifyValidator : AbstractValidator<OTPVerifyRequest>
 {
     public OTPVerifyValidator()
     {
-        RuleFor(x => x.Email)
+        RuleFor(x => x.Mobile)
           .NotEmpty();
             
 

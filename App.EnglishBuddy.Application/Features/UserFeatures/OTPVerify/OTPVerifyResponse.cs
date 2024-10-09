@@ -10,4 +10,6 @@ public sealed record OTPVerifyResponse
     public string? EmailId { get; set; }
 
     public string? FullName { get; set; }
+
+    public bool IsProfileComplete { get; set; } = false;
 }

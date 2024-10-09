@@ -26,8 +26,8 @@ public sealed class OTPVerifyHandler : IRequestHandler<OTPVerifyRequest, OTPVeri
     public async Task<OTPVerifyResponse> Handle(OTPVerifyRequest request, CancellationToken cancellationToken)
     {
         OTPVerifyResponse otp = new OTPVerifyResponse();
-        otp.Mobile = request.Email;
-        Users user = await _iUserRepository.FindByUserId(x => x.Email.ToLower() == request.Email.ToLower(), cancellationToken);
+        otp.Mobile = request.Mobile;
+        Users user = await _iUserRepository.FindByUserId(x => x.Mobile.ToLower() == request.Mobile.ToLower(), cancellationToken);
         if (user != null)
         {
             Otp otps = await _iOtpRepository.FindByUserId(x => x.UserId == user.Id & x.OTP == request.OTP, cancellationToken); // TODO
@@ -46,9 +46,20 @@ public sealed class OTPVerifyHandler : IRequestHandler<OTPVerifyRequest, OTPVeri
                     otp.FullName = $"{userInfo.FirstName} {userInfo.LastName}";
                     otp.Mobile = userInfo.Mobile;
                     otp.UserId = otps.UserId;
-                   
+                    if (!string.IsNullOrEmpty(userInfo.FirstName))
+                    {
+                        otp.IsProfileComplete = true;
+                    }
+                    else
+                    {
+                        otp.IsProfileComplete = false;
+                    }
+
                 }
                 user.IsOtpVerify = true;
+                
+
+                
                 _iUserRepository.Update(user);
                 await _unitOfWork.Save(cancellationToken);
 

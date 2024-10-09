@@ -34,7 +34,7 @@ namespace App.EnglishBuddy.Application.Common.Mail
         }
         public static async Task SendMobile(string mobile, string otp)
         {
-            await Common.Utility.Utility.CallAPIsAsync($"https://2factor.in/API/V1/6da908fb-8491-11ef-8b17-0200cd936042/SMS/{mobile}/{otp}/OTP1", "get");
+            await Common.Utility.Utility.CallAPIsAsync($"https://2factor.in/API/V1/6da908fb-8491-11ef-8b17-0200cd936042/SMS/{mobile}/{otp}/OTP1", "Get");
         }
     }
 }
