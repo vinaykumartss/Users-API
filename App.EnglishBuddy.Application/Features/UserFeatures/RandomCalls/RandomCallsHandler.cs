@@ -1,9 +1,13 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Common.Exceptions;
+using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using cashfreepg.Model;
 using MediatR;
 using RestSharp;
+using System;
+using System.CodeDom;
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.RandomCalls;
@@ -20,6 +24,12 @@ public sealed class RandomCallsHandler : IRequestHandler<RandomCallsRequest, Ran
 
     private static Dictionary<Guid, RandomCallsMatch> _myList = new Dictionary<Guid, RandomCallsMatch>();
     private static bool _record;
+
+    private static Dictionary<Guid, RandomCallsMatch> dictPeople = new Dictionary<Guid, RandomCallsMatch>();
+    private static Dictionary<Guid, Guid> pairedPeople = new Dictionary<Guid, Guid>();
+    public List<string> lstPeople = new List<string>();
+    private static Random _random = new Random();
+
     public RandomCallsHandler(IUnitOfWork unitOfWork,
         IRandomUsersRepository iRandomCallsRepository,
         IUserRepository iUserRepository,
@@ -35,29 +45,70 @@ public sealed class RandomCallsHandler : IRequestHandler<RandomCallsRequest, Ran
 
     public async Task<RandomCallsResponse> Handle(RandomCallsRequest request, CancellationToken cancellationToken)
     {
+        bool isFound = false;
         RandomCallsResponse response = new RandomCallsResponse();
         try
         {
             int count = _myList.Count;
-            _record = true;
-            lock (_myList)
+            if (!dictPeople.ContainsKey(request.UserId))
             {
-                if (_record)
-                {
-                    if (!_myList.ContainsKey(request.UserId))
-                    {
-                        _myList.Add(request.UserId, new RandomCallsMatch { FromId = request.UserId, Status = 1, ToId = null, Order = count + 1 });
-                    }
-                    if (_myList.Count >= 1)
-                    {
-                        var dict = _myList.Where(x => x.Key != request.UserId).OrderBy(x => x.Value.Order)?.FirstOrDefault().Key;
-                       // if(_myList.Count)
-                    }
-
-
-                    _record = false;
-                }
+                dictPeople.Add(request.UserId, new RandomCallsMatch { FromId = request.UserId, Status = 1 });
+                count = count + 1;
             }
+            if (lstPeople.Count < 2)
+            {
+                throw new BadRequestException("Not enough people to connect.");
+            }
+            foreach(KeyValuePair<string,book> kvp in dictPeople) {
+                if (kvp.Value.toUserId == request.UserId)
+                {
+                    kvp.Value.toUserId =2;
+                    isFound =true;
+                    myDic.Remove(kvp.Value.UserId);
+                    myDic.Remove(kvp.Value.toUserId);
+                }
+            if(isFound == false)
+            {
+                string toUserId = GetRandomPerson(request.UserId.ToString());
+                if (toUserId != null)
+                {
+                    dictPeople[request.UserId] = new RandomCallsMatch { ToId = Guid.Parse(toUserId??string.Empty), MeetingId =Guid.NewGuid()};
+                }
+            } 
+            
+            
+}
+            
+            
+
+
+
+
+            //var person2 = GetRandomPerson(person1);
+
+            //// Return the result as a JSON response
+            //new { Person1 = person1, Person2 = person2 });
+
+            //int count = _myList.Count;
+            //_record = true;
+            //lock (_myList)
+            //{
+            //    if (_record)
+            //    {
+            //        if (!_myList.ContainsKey(request.UserId))
+            //        {
+            //            _myList.Add(request.UserId, new RandomCallsMatch { FromId = request.UserId, Status = 1, ToId = null, Order = count + 1 });
+            //        }
+            //        if (_myList.Count >= 1)
+            //        {
+            //            var dict = _myList.Where(x => x.Key != request.UserId).OrderBy(x => x.Value.Order)?.FirstOrDefault().Key;
+            //           // if(_myList.Count)
+            //        }
+
+
+            //        _record = false;
+            //    }
+            //}
             //
 
             //lock (_lock)
@@ -132,5 +183,16 @@ public sealed class RandomCallsHandler : IRequestHandler<RandomCallsRequest, Ran
         }
 
         return await Task.FromResult(response);
+    }
+
+    private string GetRandomPerson(string excludePerson = null)
+    {
+        lstPeople = dictPeople.Select(x => x.Key.ToString()).ToList<string>();
+        string selectedPerson;
+        do
+        {
+            selectedPerson = lstPeople[_random.Next(lstPeople.Count)];
+        } while (selectedPerson == excludePerson);  // Avoid selecting the same person twice
+        return selectedPerson;
     }
 }
