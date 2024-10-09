@@ -55,31 +55,57 @@ public sealed class RandomCallsHandler : IRequestHandler<RandomCallsRequest, Ran
                 dictPeople.Add(request.UserId, new RandomCallsMatch { FromId = request.UserId, Status = 1 });
                 count = count + 1;
             }
-            if (lstPeople.Count < 2)
+            if (dictPeople.Count < 2)
             {
                 throw new BadRequestException("Not enough people to connect.");
             }
-            foreach(KeyValuePair<string,book> kvp in dictPeople) {
-                if (kvp.Value.toUserId == request.UserId)
+            
+           
+
+            foreach (KeyValuePair<Guid, RandomCallsMatch> kvp in dictPeople)
+            {
+                if (kvp.Value.ToId == request.UserId)
                 {
-                    kvp.Value.toUserId =2;
-                    isFound =true;
-                    myDic.Remove(kvp.Value.UserId);
-                    myDic.Remove(kvp.Value.toUserId);
+                    kvp.Value.Status = 2;
+                    isFound = true;
+                    dictPeople.Remove(kvp.Value.FromId);
+                    dictPeople.Remove(kvp.Value.ToId);
+
+                    response.Status = 2;
+                    response.JistiId = kvp.Value.MeetingId;
+                    response.FromUserId = kvp.Value.FromId;
+                    response.ToUserId = kvp.Value.ToId;
+
                 }
-            if(isFound == false)
+                else if (kvp.Value.FromId == request.UserId && kvp.Value.ToId != request.UserId)
+                {
+                    kvp.Value.Status = 2;
+                    response.Status = 2;
+                    response.JistiId = kvp.Value.MeetingId;
+                    response.FromUserId = request.UserId;
+                    response.ToUserId = kvp.Value.ToId;
+                }
+            }
+
+            if (isFound == false)
             {
                 string toUserId = GetRandomPerson(request.UserId.ToString());
+                Guid meetingId = Guid.NewGuid();
                 if (toUserId != null)
                 {
-                    dictPeople[request.UserId] = new RandomCallsMatch { ToId = Guid.Parse(toUserId??string.Empty), MeetingId =Guid.NewGuid()};
+                    dictPeople[request.UserId] = new RandomCallsMatch { ToId = Guid.Parse(toUserId ?? string.Empty), MeetingId = meetingId };
                 }
-            } 
-            
-            
-}
-            
-            
+
+                response.Status = 2;
+                response.JistiId = meetingId;
+                response.FromUserId = request.UserId;
+                response.ToUserId = Guid.Parse(toUserId ?? string.Empty);
+            }
+
+
+
+
+
 
 
 

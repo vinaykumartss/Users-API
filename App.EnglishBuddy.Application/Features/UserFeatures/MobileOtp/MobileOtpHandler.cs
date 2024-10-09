@@ -38,11 +38,26 @@ public sealed class MobileOtpHandler : IRequestHandler<MobileOtpRequest, MobileO
         {
             string otpRespons =  _iOTPServices.GenerateOtp();
             Users user = await _iUserRepository.FindByUserId(x => x.Mobile.ToLower() == request.Mobile.ToLower(), cancellationToken);
-
-            if (user != null)
+            if (user == null)
             {
-                List<Otp> otps = await _iOtpRepository.FindByCondition(x => x.UserId == user.Id, cancellationToken);
-                if(otps != null)
+                Users otpCreate = new Users()
+                {
+                    Mobile = request.Mobile,
+                    CreatedDate = DateTime.UtcNow,
+                    UpdateDate = DateTime.UtcNow,
+                    Createdby = user?.Id,
+                    Updatedby = user?.Id,
+                    IsActive = true,
+                    Gender = null
+                };
+               _iUserRepository.Create(otpCreate);
+                await _unitOfWork.Save(cancellationToken);
+            }
+            Users checkUser = await _iUserRepository.FindByUserId(x => x.Mobile.ToLower() == request.Mobile.ToLower(), cancellationToken);
+            if (checkUser != null)
+            {
+                List<Otp> otps = await _iOtpRepository.FindByCondition(x => x.UserId == checkUser.Id, cancellationToken);
+                if(otps != null && otps.Count>0)
                 {
                     foreach(var x in otps)
                     {
@@ -53,13 +68,13 @@ public sealed class MobileOtpHandler : IRequestHandler<MobileOtpRequest, MobileO
 
                 Otp otpCreate = new Otp()
                 {
-                    UserId = user.Id,
+                    UserId = checkUser.Id,
                     OTP = otpRespons,
                     Type = "1",
                     CreatedDate = DateTime.UtcNow,
                     UpdateDate = DateTime.UtcNow,
-                    Createdby = user.Id ,
-                    Updatedby = user.Id ,
+                    Createdby = checkUser.Id ,
+                    Updatedby = checkUser.Id ,
                     IsActive=true
                 };
                 _iOtpRepository.Create(otpCreate);
@@ -68,7 +83,7 @@ public sealed class MobileOtpHandler : IRequestHandler<MobileOtpRequest, MobileO
                 otp.Otp = otpRespons;
                 otp.IsSuccess = true;
 
-                 SendMail.SendMobile(request.Mobile, otpRespons);
+               SendMail.SendMobile(request.Mobile, otpRespons);
             }
             else
             {

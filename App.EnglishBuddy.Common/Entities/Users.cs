@@ -46,6 +46,9 @@ namespace App.EnglishBuddy.Domain.Entities
 
         [Column("fcm_token")]
         public string? FcmToken { get; set; }
-        
+
+        [Column("Gender")]
+        public int? Gender { get; set; }
+
     }
 }

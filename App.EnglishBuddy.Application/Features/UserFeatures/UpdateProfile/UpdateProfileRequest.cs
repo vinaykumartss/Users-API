@@ -17,5 +17,7 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.UpdateProfile
 
         public string? CityId { get; set; }
 
+        public int? Gender { get; set; }
+
     }
 }

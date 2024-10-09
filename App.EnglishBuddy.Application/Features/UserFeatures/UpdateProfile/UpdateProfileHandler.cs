@@ -38,6 +38,7 @@ public sealed class UpdateProfileHandler : IRequestHandler<UpdateProfileRequest,
                 users.LastName = request.LastName;
                 users.CityId = request.CityId;
                 users.StateId = request.StateId;
+                users.Gender = request.Gender;
                 _userRepository.Update(users);
                 await _unitOfWork.Save(cancellationToken);
                 response.Id = users.Id;

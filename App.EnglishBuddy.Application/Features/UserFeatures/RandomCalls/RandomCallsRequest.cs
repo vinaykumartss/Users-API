@@ -12,11 +12,12 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.RandomCalls
     public class RandomCallsMatch
     {
      
-        public Guid? FromId { get; set; }
-        public Guid? ToId { get; set; }
+        public Guid FromId { get; set; }
+        public Guid ToId { get; set; }
 
         public int Status { get; set; }
         public int Order  { get; set; }
+        public Guid MeetingId { get; set; }
     }
 
 }
