@@ -39,11 +39,13 @@ public sealed class UpdateProfileHandler : IRequestHandler<UpdateProfileRequest,
                 users.CityId = request.CityId;
                 users.StateId = request.StateId;
                 users.Gender = request.Gender;
+                users.Email = request.Email;
+                
                 _userRepository.Update(users);
                 await _unitOfWork.Save(cancellationToken);
                 response.Id = users.Id;
                 response.IsSuccess = true;
-                
+                response.Name = $"{request.FirstName} {request.LastName}";
             }
             else
             {

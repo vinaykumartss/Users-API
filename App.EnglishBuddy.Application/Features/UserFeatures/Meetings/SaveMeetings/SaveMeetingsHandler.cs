@@ -58,6 +58,7 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
             await _iMediator.Send(req);
             response.IsSuccess= true;
 
+           
         }
         catch (Exception ex)
         {

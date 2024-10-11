@@ -6,7 +6,6 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.NotificationToAllHa
 {
     public class NotificationToAllRequest : IRequest<NotificationToAllResponse>
     {
-        public string? FcmToken { get; set; }
-        public Guid? UserId { get; set; }
+        
     }
 }

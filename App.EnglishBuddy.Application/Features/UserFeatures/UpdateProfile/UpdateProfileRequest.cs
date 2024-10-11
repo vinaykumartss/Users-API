@@ -19,5 +19,7 @@ namespace App.EnglishBuddy.Application.Features.UserFeatures.UpdateProfile
 
         public int? Gender { get; set; }
 
+        public string? Email { get; set; }
+
     }
 }

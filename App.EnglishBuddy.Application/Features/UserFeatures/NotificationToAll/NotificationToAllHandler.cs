@@ -30,11 +30,15 @@ public sealed class NotificationToAllHandler : IRequestHandler<NotificationToAll
         NotificationToAllResponse response = new NotificationToAllResponse();
         try
         {
+            var app = FirebaseApp.DefaultInstance;
             string fileName = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/MailTempate/AccessToken.json");
-            FirebaseApp.Create(new AppOptions()
+            if (app == null)
             {
-                Credential = GoogleCredential.FromFile(fileName),
-            });
+                FirebaseApp.Create(new AppOptions()
+                {
+                    Credential = GoogleCredential.FromFile(fileName),
+                });
+            }
 
             // Send notification to all devices
             await SendNotificationToAllDevices("Reload", "MeetingScreen");

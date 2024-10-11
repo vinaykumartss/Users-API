@@ -10,4 +10,6 @@ public sealed record GetAllUserResponse
 
     public string? FcmToken { get; set; }
     public string? Image { get; set; }
+
+    public Guid UserId { get; set; }
 }
