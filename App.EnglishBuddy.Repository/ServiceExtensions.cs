@@ -25,5 +25,6 @@ public static class ServiceExtensions
         services.AddScoped<IUsersImagesRepository, UsersImagesRepository>();
         services.AddScoped<IMeetingsUsersRepository, MeetingsUsersRepository>();
         services.AddScoped<IFriendRepository, FriendRepository>();
+        services.AddScoped<IRandomCallTrackingRepository, RandomCallTrackingRepository>();
     }
 }

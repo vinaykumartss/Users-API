@@ -26,4 +26,6 @@ public class EnglishBuddyDbContext : DbContext
     public DbSet<MeetingUsers> MeetingUsers { get; set; }
     public DbSet<Friend> Friend { get; set; }
 
+     public DbSet<RandomCallingTracking> RandomCallingTracking { get; set; }
+
 }
