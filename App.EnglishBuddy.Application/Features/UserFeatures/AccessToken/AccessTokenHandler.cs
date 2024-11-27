@@ -13,6 +13,7 @@ public sealed class AccessTokenHandler : IRequestHandler<AccessTokenRequest, Acc
     private readonly IMapper _mapper;
     private readonly ILogger<AccessTokenHandler> _logger;
     private readonly IMediator _mediator;
+     
     public AccessTokenHandler(IUnitOfWork unitOfWork, IUserRepository userRepository,
         IMapper mapper, ILogger<AccessTokenHandler> logger, IMediator mediator)
     {
@@ -25,6 +26,7 @@ public sealed class AccessTokenHandler : IRequestHandler<AccessTokenRequest, Acc
 
     public async Task<AccessTokenResponse> Handle(AccessTokenRequest request, CancellationToken cancellationToken)
     {
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         AccessTokenResponse response = new AccessTokenResponse();
         try
         {
@@ -39,12 +41,14 @@ public sealed class AccessTokenHandler : IRequestHandler<AccessTokenRequest, Acc
                   .UnderlyingCredential // Gets the credentials
                   .GetAccessTokenForRequestAsync().Result; // Gets the Access Token
             }
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
             response.AccessToken = bearertoken;
             response.IsSuccess = true;
         }
         catch (Exception ex)
         {
             response.IsSuccess = false;
+            _logger.LogError(ex.Message);
             throw new Exception(ex.Message);
         }
         

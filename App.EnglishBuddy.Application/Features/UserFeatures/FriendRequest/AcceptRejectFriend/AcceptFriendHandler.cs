@@ -30,6 +30,7 @@ public sealed class AcceptFriendHandler : IRequestHandler<AcceptFriendRequest, A
 
     public async Task<AcceptFriendResponse> Handle(AcceptFriendRequest request, CancellationToken cancellationToken)
     {
+         _logger.LogDebug($"Statring method {nameof(Handle)}");
         AcceptFriendResponse response = new AcceptFriendResponse();
         try
         {
@@ -38,13 +39,16 @@ public sealed class AcceptFriendHandler : IRequestHandler<AcceptFriendRequest, A
             _friendRepository.Update(users);
             await _unitOfWork.Save(cancellationToken);
             response.IsSuccess = true;
+              _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         catch (BadRequestException ex)
         {
+             _logger.LogError(ex.Message);
             throw;
         }
         catch (Exception ex)
         {
+             _logger.LogError(ex.Message);
             throw new Exception("Something went wrong, please try again");
 
         }

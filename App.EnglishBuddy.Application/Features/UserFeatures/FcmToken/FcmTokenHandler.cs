@@ -27,6 +27,7 @@ public sealed class FcmTokenHandler : IRequestHandler<FcmTokenRequest, FcmTokenR
     public async Task<FcmTokenResponse> Handle(FcmTokenRequest request, CancellationToken cancellationToken)
     {
         FcmTokenResponse response = new FcmTokenResponse();
+           _logger.LogDebug($"Statring method {nameof(Handle)}");
         try
         {
             Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Id == request.UserId, cancellationToken);
@@ -43,9 +44,11 @@ public sealed class FcmTokenHandler : IRequestHandler<FcmTokenRequest, FcmTokenR
             {
                 throw new BadRequestException("User does not exist, please try agin");
             }
+              _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         catch (Exception ex)
         {
+             _logger.LogError(ex.Message);
             throw new Exception("Something went wrong, please try again");
 
         }

@@ -29,6 +29,7 @@ public sealed class GetAllFriendHandler : IRequestHandler<GetAllFriendRequest, G
 
     public async Task<GetAllFriendResponse> Handle(GetAllFriendRequest request, CancellationToken cancellationToken)
     {
+         _logger.LogDebug($"Statring method {nameof(Handle)}");
         GetAllFriendResponse response = new GetAllFriendResponse();
         try
         {
@@ -43,13 +44,16 @@ public sealed class GetAllFriendHandler : IRequestHandler<GetAllFriendRequest, G
             _friendRepository.Create(contactUs);
             await _unitOfWork.Save(cancellationToken);
             response.IsSuccess = true;
+              _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         catch (BadRequestException ex)
         {
+             _logger.LogError(ex.Message);
             throw;
         }
         catch (Exception ex)
         {
+             _logger.LogError(ex.Message);
             throw new Exception("Something went wrong, please try again");
 
         }

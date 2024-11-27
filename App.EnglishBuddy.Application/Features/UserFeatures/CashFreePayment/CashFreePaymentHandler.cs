@@ -6,20 +6,25 @@ using cashfreepg.Model;
 using cashfreepg.Interface;
 using cashfreepg.Client;
 using System.Net.Http.Headers;
+using Microsoft.Extensions.Logging;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.CashFreePayment;
 
 public sealed class CashFreePaymentHandler : IRequestHandler<CashFreePaymentRequest, CashFreePaymentResponse>
 {
     private readonly IMapper _mapper;
+    private readonly ILogger<CashFreePaymentHandler> _logger;
     public CashFreePaymentHandler(
-        IMapper mapper)
+        IMapper mapper,
+        ILogger<CashFreePaymentHandler> logger)
     {
         _mapper = mapper;
+        _logger = logger;
     }
 
     public async Task<CashFreePaymentResponse> Handle(CashFreePaymentRequest request, CancellationToken cancellationToken)
     {
+         _logger.LogDebug($"Statring method {nameof(Handle)}");
         CashFreePaymentResponse response = new CashFreePaymentResponse();
         var customerDetails = new CFCustomerDetails(
                  customerId: request?.Customer_Details?.Customer_Id,
@@ -54,9 +59,11 @@ public sealed class CashFreePaymentHandler : IRequestHandler<CashFreePaymentRequ
                 response.Created_At = DateTime.UtcNow;
                 response.Cf_Order_Id = result?.cfOrder?.CfOrderId;
             }
+             _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
-        catch (ApiException e)
+        catch (Exception e)
         {
+             _logger.LogError(e.Message);
             throw e;
         }
         return response;

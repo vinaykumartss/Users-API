@@ -2,6 +2,7 @@
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 
@@ -11,20 +12,23 @@ public sealed class CallUsersHandler : IRequestHandler<CallUsersRequest, CallUse
     private readonly ICallsRepository _iCallsRepository;
     private readonly IUserRepository _iUserRepository;
     private readonly IMapper _mapper;
-
+    private readonly ILogger<CallUsersHandler> _logger;
     public CallUsersHandler(IUnitOfWork unitOfWork,
         ICallsRepository iCallsRepository,
         IUserRepository iUserRepository,
-        IMapper mapper)
+        IMapper mapper,
+        ILogger<CallUsersHandler> logger)
     {
         _unitOfWork = unitOfWork;
         _iCallsRepository = iCallsRepository;
         _iUserRepository = iUserRepository;
         _mapper = mapper;
+        _logger = logger;
     }
 
     public async Task<CallUsersResponse> Handle(CallUsersRequest request, CancellationToken cancellationToken)
     {
+          _logger.LogDebug($"Statring method {nameof(Handle)}");
         var user = _mapper.Map<Calls>(request);
         CallUsersResponse response = new CallUsersResponse();
         response.UserId = request.UserId;
@@ -139,10 +143,12 @@ public sealed class CallUsersHandler : IRequestHandler<CallUsersRequest, CallUse
                 {
                     response.IsUserFound = false;
                 }
+                   _logger.LogDebug($"Ending method {nameof(Handle)}");
             }
         }
         catch (Exception ex)
         { 
+               _logger.LogError(ex.Message);
             throw;
         }
         return response;

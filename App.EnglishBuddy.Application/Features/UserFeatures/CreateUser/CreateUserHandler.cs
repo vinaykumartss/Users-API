@@ -32,6 +32,7 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
         CreateUserResponse response = new CreateUserResponse();
         try
         {
+              _logger.LogDebug($"Statring method {nameof(Handle)}");
             Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email.ToLower() == request.Email.ToLower(), cancellationToken);
             if (users == null)
             {
@@ -71,6 +72,7 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
                 response.IsOtpVerify = false;
                 response.Message = "Otp has been sent to you registered mail Id, Please verify";
                 response.IsSuccess = true;
+                 
             }
             else if (users != null && users.IsOtpVerify == true)
             {
@@ -82,13 +84,16 @@ public sealed class CreateUserHandler : IRequestHandler<CreateUserRequest, Creat
             {
                 throw new BadRequestException("Email already exist, please try with other Email");
             }
+             _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         catch (BadRequestException ex)
         {
+             _logger.LogError(ex.Message);
             throw;
         }
         catch (Exception ex)
         {
+             _logger.LogError(ex.Message);
             throw new Exception("Something went wrong, please try again");
 
         }

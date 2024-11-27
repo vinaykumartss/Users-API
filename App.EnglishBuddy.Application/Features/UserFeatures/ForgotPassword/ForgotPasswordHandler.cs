@@ -28,6 +28,7 @@ public sealed class ForgotPasswordHandler : IRequestHandler<ForgotPasswordReques
     public async Task<ForgotPasswordResponse> Handle(ForgotPasswordRequest request, CancellationToken cancellationToken)
     {
         ForgotPasswordResponse response = new ForgotPasswordResponse();
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         try
         {
             Domain.Entities.Users users = await _userRepository.FindByUserId(x => x.Email.ToLower() == request.Email.ToLower(), cancellationToken);
@@ -48,13 +49,16 @@ public sealed class ForgotPasswordHandler : IRequestHandler<ForgotPasswordReques
             {
                 throw new BadRequestException("Email does not exist, please try agin");
             }
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         catch (BadRequestException ex)
         {
+              _logger.LogError(ex.Message);
             throw;
         }
         catch (Exception ex)
         {
+              _logger.LogError(ex.Message);
             throw new Exception("Something went wrong, please try again");
 
         }
