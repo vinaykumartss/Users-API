@@ -1,13 +1,8 @@
 ﻿using App.EnglishBuddy.Application.Common.Exceptions;
-using App.EnglishBuddy.Application.Common.Mail;
-using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
 using App.EnglishBuddy.Application.Repositories;
-using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using Sentry;
-using System.Net.NetworkInformation;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.FriendRequest.AcceptFriend;
 

@@ -32,6 +32,7 @@ public sealed class SendFriendHandler : IRequestHandler<SendFriendRequest, SendF
         SendFriendResponse response = new SendFriendResponse();
         try
         {
+            _logger.LogDebug($"Statring method {nameof(Handle)}");
             Domain.Entities.Friend contactUs = new()
             {
                UserId = request.UserId,
@@ -43,13 +44,12 @@ public sealed class SendFriendHandler : IRequestHandler<SendFriendRequest, SendF
             _friendRepository.Create(contactUs);
             await _unitOfWork.Save(cancellationToken);
             response.IsSuccess = true;
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
-        catch (BadRequestException ex)
-        {
-            throw;
-        }
+       
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             throw new Exception("Something went wrong, please try again");
 
         }

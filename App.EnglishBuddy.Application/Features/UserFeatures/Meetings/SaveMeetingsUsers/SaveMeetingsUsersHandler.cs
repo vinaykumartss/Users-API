@@ -1,7 +1,9 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.FcmToken;
+using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using Sentry;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetingsUsers;
@@ -12,20 +14,23 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
     private readonly IMapper _mapper;
     private readonly IMeetingsRepository _iMeetingsRepository;
     private readonly IMeetingsUsersRepository _iMeetingsUserRepository;
-
+    private readonly ILogger<SaveMeetingsUsersHandler> _logger;
     public SaveMeetingsUsersHandler(IUnitOfWork unitOfWork,
         IMapper mapper, IMeetingsRepository iMeetingsRepository,
-        IMeetingsUsersRepository iMeetingsUserRepository
+        IMeetingsUsersRepository iMeetingsUserRepository,
+        ILogger<SaveMeetingsUsersHandler> logger
        )
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
         _iMeetingsRepository = iMeetingsRepository;
         _iMeetingsUserRepository = iMeetingsUserRepository;
+          _logger = logger;
     }
     public async Task<SaveMeetingsUsersResponse> Handle(SaveMeetingsUsersRequest request, CancellationToken cancellationToken)
     {
 
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         SaveMeetingsUsersResponse response = new SaveMeetingsUsersResponse();
         try
         {
@@ -95,6 +100,7 @@ public sealed class SaveMeetingsUsersHandler : IRequestHandler<SaveMeetingsUsers
 
                 }
             }
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
 
         }
         catch (Exception ex)

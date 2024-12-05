@@ -1,4 +1,5 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.FcmToken;
+using App.EnglishBuddy.Application.Repositories;
 using AutoMapper;
 using FirebaseAdmin;
 using FirebaseAdmin.Messaging;
@@ -15,6 +16,7 @@ public sealed class NotificationToAllHandler : IRequestHandler<NotificationToAll
     private readonly IMapper _mapper;
     private readonly ILogger<NotificationToAllHandler> _logger;
     private readonly IMediator _mediator;
+
     public NotificationToAllHandler(IUnitOfWork unitOfWork, IUserRepository userRepository,
         IMapper mapper, ILogger<NotificationToAllHandler> logger, IMediator mediator)
     {
@@ -28,6 +30,7 @@ public sealed class NotificationToAllHandler : IRequestHandler<NotificationToAll
     public async Task<NotificationToAllResponse> Handle(NotificationToAllRequest request, CancellationToken cancellationToken)
     {
         NotificationToAllResponse response = new NotificationToAllResponse();
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         try
         {
             var app = FirebaseApp.DefaultInstance;
@@ -45,9 +48,11 @@ public sealed class NotificationToAllHandler : IRequestHandler<NotificationToAll
 
             response.AccessToken = "";
             response.IsSuccess = true;
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             response.IsSuccess = false;
             throw new Exception(ex.Message);
         }

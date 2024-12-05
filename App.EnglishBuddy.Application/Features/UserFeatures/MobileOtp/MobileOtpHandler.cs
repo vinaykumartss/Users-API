@@ -1,11 +1,13 @@
 ﻿using App.EnglishBuddy.Application.Common.Exceptions;
 using App.EnglishBuddy.Application.Common.Mail;
 using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
+using App.EnglishBuddy.Application.Features.UserFeatures.FcmToken;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Application.Services;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.MobileOtp;
 
@@ -16,18 +18,20 @@ public sealed class MobileOtpHandler : IRequestHandler<MobileOtpRequest, MobileO
     private readonly IMapper _mapper;
     private readonly IUserRepository _iUserRepository;
     private readonly IOTPRepository _iOtpRepository;
-  
+    private readonly ILogger<MobileOtpHandler> _logger;
     public MobileOtpHandler(IUnitOfWork unitOfWork,
         IOTPServices iOTPServices,
         IUserRepository iUserRepository,
         IMapper mapper,
-        IOTPRepository iOtpRepository)
+        IOTPRepository iOtpRepository,
+         ILogger<MobileOtpHandler> logger)
     {
         _unitOfWork = unitOfWork;
         _iOTPServices = iOTPServices;
         _mapper = mapper;
         _iUserRepository = iUserRepository;
         _iOtpRepository = iOtpRepository;
+        _logger = logger;
 
     }
 
@@ -36,6 +40,7 @@ public sealed class MobileOtpHandler : IRequestHandler<MobileOtpRequest, MobileO
         MobileOtpResponse otp = new MobileOtpResponse();
         try
         {
+            _logger.LogDebug($"Statring method {nameof(Handle)}");
             string otpRespons =  _iOTPServices.GenerateOtp();
             Users user = await _iUserRepository.FindByUserId(x => x.Mobile.ToLower() == request.Mobile.ToLower(), cancellationToken);
             if (user == null)
@@ -89,10 +94,13 @@ public sealed class MobileOtpHandler : IRequestHandler<MobileOtpRequest, MobileO
             {
                 throw new BadRequestException("EMail does not exist, Please try again");
             }
+
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             otp.IsSuccess = false;
             throw new Exception("Something went wrong, please try again");
 

@@ -1,9 +1,11 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.FcmToken;
+using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.SqlServer.Server;
 using Microsoft.VisualBasic.FileIO;
 using RestSharp;
@@ -19,21 +21,23 @@ public sealed class UsersImagesHandler : IRequestHandler<UsersImagesRequest, Use
     private readonly IUnitOfWork _unitOfWork;
     private readonly IUsersImagesRepository _iUsersImagesRepository;
     private readonly IMapper _mapper;
-
+    private readonly ILogger<UsersImagesHandler> _logger;
     public UsersImagesHandler(IUnitOfWork unitOfWork,
        IUsersImagesRepository iUsersImagesRepository,
-        IMapper mapper
+        IMapper mapper,
+         ILogger<UsersImagesHandler> logger
         )
     {
         _iUsersImagesRepository = iUsersImagesRepository;
         _unitOfWork = unitOfWork;
         _mapper = mapper;
+        _logger = logger;
     }
 
     public async Task<UsersImagesResponse> Handle(UsersImagesRequest request, CancellationToken cancellationToken)
     {
         var fileName = Path.GetFileName($"{Guid.NewGuid()}");
-
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         UsersImagesResponse response = new UsersImagesResponse();
         try
         {
@@ -72,10 +76,12 @@ public sealed class UsersImagesHandler : IRequestHandler<UsersImagesRequest, Use
                 response.UserId = request.UserId;
                 response.ImagePath = $"https://insightxdev.com:801/{myfilename}.jpeg";
                 return response;
+                _logger.LogDebug($"Ending method {nameof(Handle)}");
             }
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             throw;
         }
 

@@ -53,7 +53,7 @@ namespace App.EnglishBuddy.API.Controllers
         }
 
         [HttpPost("/upload/{userId}")]
-        public async Task<ActionResult<CreateUserResponse>> Upload(UsersImagesRequest file, Guid userId,
+        public async Task<ActionResult<UsersImagesResponse>> Upload(UsersImagesRequest file, Guid userId,
             CancellationToken cancellationToken)
         {
 

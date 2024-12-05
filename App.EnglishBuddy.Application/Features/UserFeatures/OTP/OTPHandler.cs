@@ -1,11 +1,13 @@
 ﻿using App.EnglishBuddy.Application.Common.Exceptions;
 using App.EnglishBuddy.Application.Common.Mail;
 using App.EnglishBuddy.Application.Features.UserFeatures.CallUsers;
+using App.EnglishBuddy.Application.Features.UserFeatures.FcmToken;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Application.Services;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.OTP;
 
@@ -16,23 +18,26 @@ public sealed class OTPHandler : IRequestHandler<OTPRequest, OTPResponse>
     private readonly IMapper _mapper;
     private readonly IUserRepository _iUserRepository;
     private readonly IOTPRepository _iOtpRepository;
-  
+    private readonly ILogger<OTPHandler> _logger;
     public OTPHandler(IUnitOfWork unitOfWork,
         IOTPServices iOTPServices,
         IUserRepository iUserRepository,
         IMapper mapper,
-        IOTPRepository iOtpRepository)
+        IOTPRepository iOtpRepository,
+         ILogger<OTPHandler> logger)
     {
         _unitOfWork = unitOfWork;
         _iOTPServices = iOTPServices;
         _mapper = mapper;
         _iUserRepository = iUserRepository;
         _iOtpRepository = iOtpRepository;
+        _logger = logger;
 
     }
 
     public async Task<OTPResponse> Handle(OTPRequest request, CancellationToken cancellationToken)
     {
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         OTPResponse otp = new OTPResponse();
         try
         {
@@ -80,10 +85,12 @@ public sealed class OTPHandler : IRequestHandler<OTPRequest, OTPResponse>
             {
                 throw new BadRequestException("EMail does not exist, Please try again");
             }
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             otp.IsSuccess = false;
             throw new Exception("Something went wrong, please try again");
 

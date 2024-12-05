@@ -8,6 +8,8 @@ public sealed record CreateUserResponse
     public bool IsOtpVerify { get; set; }
 
     public string Message { get; set; }
+
+ 
 }
 
 

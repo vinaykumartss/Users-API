@@ -26,6 +26,7 @@ public sealed class UpdateProfileHandler : IRequestHandler<UpdateProfileRequest,
 
     public async Task<UpdateProfileResponse> Handle(UpdateProfileRequest request, CancellationToken cancellationToken)
     {
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         UpdateProfileResponse response = new UpdateProfileResponse();
         try
         {
@@ -51,9 +52,12 @@ public sealed class UpdateProfileHandler : IRequestHandler<UpdateProfileRequest,
             {
                 throw new BadRequestException("User does not exist, please try agin");
             }
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
+
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             throw new Exception("Something went wrong, please try again");
 
         }

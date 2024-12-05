@@ -1,7 +1,9 @@
-﻿using App.EnglishBuddy.Application.Repositories;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.FcmToken;
+using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using RestSharp;
 using System.Security.Cryptography.X509Certificates;
 
@@ -14,21 +16,25 @@ public sealed class RandomCallEndHandler : IRequestHandler<RandomCallEndRequest,
     private readonly IMeetingIdsRepository _iIMeetingIdsRepository;
     private readonly IUserRepository _iUserRepository;
     private readonly IMapper _mapper;
+    private readonly ILogger<RandomCallEndHandler> _logger;
     public RandomCallEndHandler(IUnitOfWork unitOfWork,
         IRandomUsersRepository iRandomCallsRepository,
         IUserRepository iUserRepository,
         IMeetingIdsRepository iIMeetingIdsRepository,
-        IMapper mapper)
+        IMapper mapper,
+         ILogger<RandomCallEndHandler> logger)
     {
         _unitOfWork = unitOfWork;
         _iRandomCallsRepository = iRandomCallsRepository;
         _iUserRepository = iUserRepository;
         _mapper = mapper;
         _iIMeetingIdsRepository = iIMeetingIdsRepository;
+        _logger = logger;
     }
 
     public async Task<RandomCallEndResponse> Handle(RandomCallEndRequest request, CancellationToken cancellationToken)
     {
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         CancellationToken token = new CancellationToken();
         RandomCallEndResponse response = new RandomCallEndResponse();
         try
@@ -52,10 +58,12 @@ public sealed class RandomCallEndHandler : IRequestHandler<RandomCallEndRequest,
                
             }
             await _unitOfWork.Save(token);
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
             response.Status = true;
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             response.Status = false;
             throw;
            

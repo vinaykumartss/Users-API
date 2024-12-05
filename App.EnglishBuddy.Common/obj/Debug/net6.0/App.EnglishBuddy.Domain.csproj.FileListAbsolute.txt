@@ -70,3 +70,17 @@ D:/24Aug/Vinay_RandomCalls/App.EnglishBuddy.Common/obj/Debug/net6.0/ref/App.Engl
 /Users/vinayrathore/Documents/BuddyMeet/Vinay_RandomCalls/App.EnglishBuddy.Common/obj/Debug/net6.0/App.EnglishBuddy.Domain.pdb
 /Users/vinayrathore/Documents/BuddyMeet/Vinay_RandomCalls/App.EnglishBuddy.Common/obj/Debug/net6.0/App.EnglishBuddy.Domain.genruntimeconfig.cache
 /Users/vinayrathore/Documents/BuddyMeet/Vinay_RandomCalls/App.EnglishBuddy.Common/obj/Debug/net6.0/ref/App.EnglishBuddy.Domain.dll
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\bin\Debug\net6.0\App.EnglishBuddy.Domain.deps.json
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\bin\Debug\net6.0\App.EnglishBuddy.Domain.runtimeconfig.json
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\bin\Debug\net6.0\App.EnglishBuddy.Domain.dll
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\bin\Debug\net6.0\App.EnglishBuddy.Domain.pdb
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\App.EnglishBuddy.Domain.csproj.AssemblyReference.cache
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\App.EnglishBuddy.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\App.EnglishBuddy.Domain.AssemblyInfoInputs.cache
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\App.EnglishBuddy.Domain.AssemblyInfo.cs
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\App.EnglishBuddy.Domain.csproj.CoreCompileInputs.cache
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\App.EnglishBuddy.Domain.dll
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\refint\App.EnglishBuddy.Domain.dll
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\App.EnglishBuddy.Domain.pdb
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\App.EnglishBuddy.Domain.genruntimeconfig.cache
+E:\29-NOV-2024\Vinay_RandomCalls\App.EnglishBuddy.Common\obj\Debug\net6.0\ref\App.EnglishBuddy.Domain.dll

@@ -30,6 +30,7 @@ public sealed class GetUserHandler : IRequestHandler<GetUserRequest, GetUserResp
 
     public async Task<GetUserResponse> Handle(GetUserRequest request, CancellationToken cancellationToken)
     {
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         GetUserResponse response = new GetUserResponse();
         try
         {
@@ -48,6 +49,7 @@ public sealed class GetUserHandler : IRequestHandler<GetUserRequest, GetUserResp
             {
                 throw new NotFoundException("No Record Found");
             }
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
             return response;
         }
         catch (Exception ex)

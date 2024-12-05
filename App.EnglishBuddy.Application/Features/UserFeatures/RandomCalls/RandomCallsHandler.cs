@@ -1,9 +1,11 @@
 ﻿using App.EnglishBuddy.Application.Common.Exceptions;
+using App.EnglishBuddy.Application.Features.UserFeatures.FcmToken;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using cashfreepg.Model;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using RestSharp;
 using System;
 using System.CodeDom;
@@ -29,22 +31,26 @@ public sealed class RandomCallsHandler : IRequestHandler<RandomCallsRequest, Ran
     private static Dictionary<Guid, Guid> pairedPeople = new Dictionary<Guid, Guid>();
     public List<string> lstPeople = new List<string>();
     private static Random _random = new Random();
+    private readonly ILogger<RandomCallsHandler> _logger;
 
     public RandomCallsHandler(IUnitOfWork unitOfWork,
         IRandomUsersRepository iRandomCallsRepository,
         IUserRepository iUserRepository,
         IMeetingIdsRepository iIMeetingIdsRepository,
-        IMapper mapper)
+        IMapper mapper,
+        ILogger<RandomCallsHandler> logger)
     {
         _unitOfWork = unitOfWork;
         _iRandomCallsRepository = iRandomCallsRepository;
         _iUserRepository = iUserRepository;
         _mapper = mapper;
         _iIMeetingIdsRepository = iIMeetingIdsRepository;
+        _logger = logger;
     }
 
     public async Task<RandomCallsResponse> Handle(RandomCallsRequest request, CancellationToken cancellationToken)
     {
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
         bool isFound = false;
         RandomCallsResponse response = new RandomCallsResponse();
         try
@@ -101,110 +107,11 @@ public sealed class RandomCallsHandler : IRequestHandler<RandomCallsRequest, Ran
                 response.FromUserId = request.UserId;
                 response.ToUserId = Guid.Parse(toUserId ?? string.Empty);
             }
-
-
-
-
-
-
-
-
-
-            //var person2 = GetRandomPerson(person1);
-
-            //// Return the result as a JSON response
-            //new { Person1 = person1, Person2 = person2 });
-
-            //int count = _myList.Count;
-            //_record = true;
-            //lock (_myList)
-            //{
-            //    if (_record)
-            //    {
-            //        if (!_myList.ContainsKey(request.UserId))
-            //        {
-            //            _myList.Add(request.UserId, new RandomCallsMatch { FromId = request.UserId, Status = 1, ToId = null, Order = count + 1 });
-            //        }
-            //        if (_myList.Count >= 1)
-            //        {
-            //            var dict = _myList.Where(x => x.Key != request.UserId).OrderBy(x => x.Value.Order)?.FirstOrDefault().Key;
-            //           // if(_myList.Count)
-            //        }
-
-
-            //        _record = false;
-            //    }
-            //}
-            //
-
-            //lock (_lock)
-            //{
-
-            //    var allstatus = _iIMeetingIdsRepository.FindByListSync(x => (x.Status == 1 || x.Status == 2 || x.Status ==3));
-            //    var isMeetingFind = allstatus.Where(x => (x.Status == 1 || x.Status == 2)).FirstOrDefault();
-            //    if (isMeetingFind != null)
-            //    {
-            //        if (isMeetingFind.Status == 1 && isMeetingFind.FromUserId != request.UserId)
-            //        {
-            //            isMeetingFind.Status = 2;
-            //            isMeetingFind.ToUserId = request.UserId;
-            //            isMeetingFind.ToToken = request.Token;
-            //            _iIMeetingIdsRepository.Update(isMeetingFind);
-            //            _unitOfWork.Save(cancellationToken);
-            //            response.Status = 2;
-            //            response.JistiId = isMeetingFind.JitsiId;
-            //            response.FromUserId = isMeetingFind.FromUserId;
-            //            response.ToUserId = isMeetingFind.ToUserId;
-            //            response.Token = isMeetingFind.FromToken;
-            //            return response;
-            //        }
-            //        else
-            //        {
-            //            response.Status = isMeetingFind.Status;
-            //            response.JistiId = isMeetingFind.JitsiId;
-            //            response.FromUserId = isMeetingFind.FromUserId;
-            //            response.ToUserId = isMeetingFind.ToUserId;
-            //            response.Token = isMeetingFind.ToToken;
-            //            return response;
-            //        }
-            //    }
-            //    var allConnectedstatus = allstatus.Where(x => x.Status == 3).FirstOrDefault();
-            //    if (allConnectedstatus != null && (allConnectedstatus.FromUserId == request.UserId || allConnectedstatus.ToUserId == request.UserId)) {
-
-            //        response.Status = allConnectedstatus.Status;
-            //        response.JistiId = allConnectedstatus.JitsiId;
-            //        response.FromUserId = allConnectedstatus.FromUserId;
-            //        response.ToUserId = allConnectedstatus.ToUserId;
-            //        response.Token = allConnectedstatus.ToToken;
-            //        return response;
-            //    }
-
-            //    var isMeetingExist = allstatus.Where(x => x.Status == 1).FirstOrDefault();
-            //    if (isMeetingExist == null)
-            //    {
-            //        Guid id = Guid.NewGuid();
-            //        MeetingIds entity = new MeetingIds()
-            //        {
-            //            Status = 1,
-            //            Createdby = request.UserId,
-            //            IsActive = true,
-            //            CreatedDate = DateTime.UtcNow,
-            //            JitsiId = id,
-            //            FromUserId = request.UserId,
-            //            FromToken = request.Token
-            //        };
-            //        _iIMeetingIdsRepository.Create(entity);
-            //        _unitOfWork.Save(cancellationToken);
-            //        response.Status = 1;
-            //        response.JistiId = id;
-            //        response.FromUserId = request.UserId;
-            //        return response;
-            //    }
-            //}
-
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             throw;
         }
 

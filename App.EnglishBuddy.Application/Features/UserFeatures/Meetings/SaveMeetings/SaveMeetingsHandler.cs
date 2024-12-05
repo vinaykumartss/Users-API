@@ -1,8 +1,10 @@
-﻿using App.EnglishBuddy.Application.Features.UserFeatures.NotificationToAllHandler;
+﻿using App.EnglishBuddy.Application.Features.UserFeatures.FcmToken;
+using App.EnglishBuddy.Application.Features.UserFeatures.NotificationToAllHandler;
 using App.EnglishBuddy.Application.Repositories;
 using App.EnglishBuddy.Domain.Entities;
 using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace App.EnglishBuddy.Application.Features.UserFeatures.SaveMeetings;
 
@@ -13,10 +15,12 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
     private readonly IMeetingsRepository _iMeetingsRepository;
     private readonly IMeetingsUsersRepository _iMeetingsUserRepository;
     private readonly IMediator _iMediator;
+    private readonly ILogger<SaveMeetingsHandler> _logger;
     public SaveMeetingsHandler(IUnitOfWork unitOfWork,
         IMapper mapper, IMeetingsRepository iMeetingsRepository,
         IMeetingsUsersRepository iMeetingsUserRepository,
-         IMediator iMediator
+         IMediator iMediator,
+          ILogger<SaveMeetingsHandler> logger
        )
     {
         _unitOfWork = unitOfWork;
@@ -24,10 +28,13 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
         _iMeetingsRepository = iMeetingsRepository;
         _iMeetingsUserRepository = iMeetingsUserRepository;
         _iMediator = iMediator;
+        _logger = logger;
     }
 
     public async Task<SaveMeetingsResponse> Handle(SaveMeetingsRequest request, CancellationToken cancellationToken)
     {
+        _logger.LogDebug($"Statring method {nameof(Handle)}");
+
         SaveMeetingsResponse response = new SaveMeetingsResponse();
         try
         {
@@ -58,10 +65,11 @@ public sealed class SaveMeetingsHandler : IRequestHandler<SaveMeetingsRequest, S
             await _iMediator.Send(req);
             response.IsSuccess= true;
 
-           
+            _logger.LogDebug($"Ending method {nameof(Handle)}");
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex.Message);
             response.IsSuccess = false;
             throw;
         }
